@@ -146,6 +146,9 @@ img {
   padding-left: 12px;
   padding-top: 12px; }
 
+#min-height {
+  min-height: 200px; }
+
 #contact-text {
   color: white; }
 

@@ -74,14 +74,15 @@
 			</carousel>
 		</div>
 		<div id="carousel-index"> {{getActiveSlide().number}} av {{slides.length}} </div>
-		<div id="pt-name">{{getActiveSlide().text}} </div>
+		<div id="pt-name">{{getActiveSlide().name}} </div>
+		<div class="text second-layer-text" id="min-height">{{getActiveSlide().text}} </div>
 
 
 		<div class="layer-container">
-			<h3 class="text second-layer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+			<h3 class="text second-layer-text"> 
 			</h3>
-			<div class="center">
-				<Button ng-click="login()" class="train-btn"> <div id="inner-text-btn"> Tren med {{getActiveSlide().name}} </Button> 
+			<div class="center" >
+				<Button ng-click="login()" class="train-btn"> <div id="inner-text-btn"> Tren med {{getActiveSlide().name.split(" ")[0]}} </Button> 
 			</div>
 			<p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
 		</div>
@@ -99,7 +100,7 @@
 			<h3 id="contact-us"> Kontakt oss</h3>
 			<i class="fa fa-mobile fa-2x"> 99 27 10 36 </i>
 			<br>
-			<i class="fa fa-envelope fa-2x">online-pt@iterate.no</i>
+			<i class="fa fa-envelope fa-2x"> online-pt@iterate.no</i>
 			<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
 		</div>
 	</div>

@@ -7,23 +7,21 @@ angular.module('app').controller('CarouselDemoCtrl', function ($scope, $window, 
 	$scope.currentText ='';
 	var counter = 1;
 	var slides = $scope.slides = [];
-	$scope.t={
-		t:'sapda'
-	};
+
 	$scope.sap ='';
 	$scope.addSlide = function() {
 		slides.push({
 			image: '/img/Brynjar.jpg',
-			text:"Brynjar McSwaggy",
-			name:"Brynjar",
+			name:"Brynjar McSwaggy",
+			text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
 			number:counter,
 			id:1337
 		});
 		counter++;
 		slides.push({
 			image: '/img/Henrik.jpg',
-			text:"Henrik Von Helvete",
-			name:"Henrik",
+			name:"Henrik Von Helvete",
+			text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
 			number:counter,
 			id:1337
 		});
