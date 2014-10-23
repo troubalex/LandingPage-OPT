@@ -48,7 +48,9 @@
 
 	<div class="layer-container">
 		<div class="price">
-			<h1> kr 995 <h4 id="month"> / måned. </h4> </h1>
+			<div class="text-center">
+				<span id="current-price"> kr 995  </span> <span id="month"> / måned. </span>
+			</div>
 			<h4 class="text-center"> Abonnement er uten bindingstid </h4>
 			<div class="text-center" id="padding">
 				<Button class="btn"> <div id=""> Velg din personlige trener her <div> </Button>
@@ -58,7 +60,7 @@
 
 	<div class="layer-container">
 		<div class="quotes">
-			<p class="text second-layer-text"> onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+			<h3 class="text second-layer-text"> onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </h3>
 		</div>
 	</div>
 	
@@ -66,19 +68,19 @@
 	<div ng-controller="CarouselDemoCtrl">
 		<div>
 			<carousel  class="slides">
-
 				<slide ng-repeat="slide in slides" active="slide.active">
 					<img ng-src="{{slide.image}}">	
 				</slide>
 			</carousel>
 		</div>
-		{{getActiveSlide().text}}
+		<div id="carousel-index"> {{getActiveSlide().number}} av {{slides.length}} </div>
+		<div id="pt-name">{{getActiveSlide().text}} </div>
 
 		<div class="layer-container">
-			<h3 class="text" style="color:black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+			<h3 class="text second-layer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
 			</h3>
 			<div class="center">
-				<Button class="train-btn"> <div id="inner-text-btn"> Tren med {{getActiveSlide().name}} </Button> 
+				<Button ng-click="login()" class="train-btn"> <div id="inner-text-btn"> Tren med {{getActiveSlide().name}} </Button> 
 			</div>
 			<p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
 		</div>
@@ -87,13 +89,13 @@
 
 	<div class="layer-container">
 		<div class="quotes">
-			<p class="text second-layer-text"> onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+			<h3 class="text second-layer-text" > onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </h3>
 		</div>
 	</div>
 
 	<div class="layer-container">
 		<div class="contact" id="contact-text">
-			<h3> Kontakt oss</h3>
+			<h3 id="contact-us"> Kontakt oss</h3>
 			<i class="fa fa-mobile fa-2x"> 99 27 10 36 </i>
 			<br>
 			<i class="fa fa-envelope fa-2x">online-pt@iterate.no</i>
@@ -105,13 +107,14 @@
 </body>
 
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="style/bootstrap-theme.min.css" media="screen" />
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style/style.css" media="screen" />
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.2.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/angular-resource.js"></script>
+
 
 
 </html>

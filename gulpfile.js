@@ -11,7 +11,8 @@ gulp.task('default', ['webserver', 'sass','watch']);
 gulp.task('webserver', function() {
 	gulp.src('app')
 	.pipe(webserver({
-		fallback: 'index.html'
+		proxies: [{source:'/opt',
+		target:"https://online-pt-mvp.app.iterate.no/"}]
 	}));
 
 });
