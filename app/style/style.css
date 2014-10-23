@@ -1,5 +1,142 @@
-.btn {
-  background-color: #EE0974;
+#logo {
+  padding-top: 15px;
   color: white; }
 
-/*# sourceMappingURL=style.css.map */
+#second-logo {
+  font-family: "proxima-nova";
+  font-size: 20px;
+  line: 130%;
+  color: white;
+  box-shadow: 1px 1px 4px #000000 0, 0, 0; }
+
+#slides_control > div {
+  height: 200px; }
+
+img {
+  margin: auto;
+  width: 400px; }
+
+#slides_control {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  top: 20px;
+  margin-left: -200px; }
+
+#background {
+  background: url("../img/hero_image.jpg") center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-top: -20px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.second-layer {
+  background-color: white; }
+
+.text {
+  font-family: ProximaNova-Semibold;
+  color: white;
+  padding: 0px 20px 25px 20px; }
+
+#padding-text-first {
+  padding-top: 35%;
+  padding-bottom: 20px; }
+
+#padding-text-second {
+  padding-bottom: 23px; }
+
+#fb-info {
+  padding: 25px 20px 20px 20px;
+  font-style: italic; }
+
+.train-btn {
+  background-color: #ee0974;
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 52px; }
+  .train-btn #inner-text-btn {
+    font-size: 20px; }
+
+.btn {
+  background-color: rgba(238, 9, 116, 0.6);
+  color: white;
+  width: 100%; }
+
+.text-center {
+  text-align: center; }
+
+#inner-text {
+  font-size: 40px; }
+
+.header-text {
+  text-align: center;
+  color: black; }
+
+.fa {
+  font-size: 30px;
+  padding-bottom: 10px;
+  padding-left: 15px; }
+
+.second-layer-heading {
+  padding-bottom: 10px;
+  size: 18px;
+  line: 145%;
+  font-family: 'ProximaNovaBold'; }
+
+#last-second-layer-text {
+  padding-bottom: 30px; }
+
+.second-layer-text {
+  color: black;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+  line: 150%; }
+
+.price {
+  background-color: #EE0974;
+  color: white;
+  line: 100%;
+  font-family: ProximaNovaLight;
+  padding-bottom: 10px; }
+  .price h1 {
+    padding-left: 48px; }
+  .price #month {
+    text-align: right;
+    padding-right: 47px; }
+  .price .btn {
+    border: 2px solid;
+    width: 50%;
+    font-size: 14px;
+    text-align: center; }
+  .price #padding {
+    padding-bottom: 10px; }
+
+.layer-container {
+  height: 50%;
+  padding-top: 10px; }
+
+.quotes {
+  background-color: rgba(188, 228, 249, 0.6); }
+
+.center {
+  text-align: center; }
+
+.slides {
+  margin: 0px;
+  padding: 0px; }
+  .slides img {
+    width: 100%; }
+  .slides .item {
+    padding: 0px; }
+
+#contact-text {
+  color: white; }
+
+.contact {
+  text-align: left;
+  background-color: black;
+  padding-left: 10px; }
