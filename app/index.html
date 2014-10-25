@@ -75,17 +75,32 @@
                             </slide>
                         </carousel>
                     </div>
-                    <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
-                    <div id="pt-name">{{getActiveSlide().name}}</div>
-                    <div class="text second-layer-text" id="pt-text">{{getActiveSlide().text}}</div>
+                    <div ng-hide="showTwoSlides" id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
+                    <div ng-class="imgClass()">
+                        <div id="pt-name">{{getActiveSlide().name}}</div>
+                        <div class="text second-layer-text" id="pt-text">{{getActiveSlide().text}}</div>
+                        <div class="center">
+                            <Button ng-click="login()" class="train-btn">
+                                <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
+                            </Button>
+                        </div>
+                    </div>
+
+                    <div class="two-slides">
+                        <div id="pt-name">{{getNextActiveSlide().name}}</div>
+                        <div class="text second-layer-text" id="pt-text">{{getNextActiveSlide().text}}</div>
+                        <div class="center">
+
+                            <Button ng-click="login()" class="train-btn">
+                                <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
+                            </Button>
+                        </div>
+                    </div>
+
                     <div class="layer-container">
                         <h3 class="text second-layer-text">
                         </h3>
                         <div class="center">
-                            <Button ng-click="login()" class="train-btn">
-                                <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</Button>
-
-                            </div>
                             <p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
                         </div>
                     </div>

@@ -11,7 +11,6 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
     $scope.showTwoSlides = true;
 
     $scope.imgClass = function() {
-        console.log($scope.showTwoSlides);
         if ($scope.showTwoSlides)
             return "two-slides";
         else
@@ -19,7 +18,6 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
     }
 
     $scope.$watch(function() {
-        console.log($window.innerWidth);
         if ($window.innerWidth < 700) {
             $scope.showTwoSlides = false;
             console.log("asdas");
