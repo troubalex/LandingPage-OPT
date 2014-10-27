@@ -7,42 +7,44 @@
 </head>
 
 <body>
-    <div id="background">
-        <div class="text-center">
-            <h1 id="logo">SATS ELIXIA</h1>
-            <h2 id="second-logo">Online Personlig Trener</h2>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div>
-                        <h2 class="text" id="padding-text-first">Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
-                        </h2>
-                        <h3 id="padding-text-second">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </h3>
+    <div class="layer-container col-xs-7">
+        <div id="background">
+            <div class="text-center">
+                <h1 id="logo">SATS ELIXIA</h1>
+                <h2 id="second-logo">Online Personlig Trener</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <h2 class="text" id="padding-text-first">Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+                            </h2>
+                            <h3 id="padding-text-second">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </h3>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="btn">
-            <div id="inner-text">Dette får du <i class="fa fa-chevron-down"></i>
+
+            <div class="btn" ng-hide="showTwoSlides">
+                <div id="inner-text">Dette får du <i class="fa fa-chevron-down"></i>
+                </div>
             </div>
         </div>
     </div>
-    <div class="second-layer">
-        <div class="layer-container">
-            <h1 class="header-text second-layer-heading">Få Personlig oppfølgning</h1>
-            <h3 class="text second-layer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-            </h3>
-            <h1 class="header-text second-layer-heading">Betal en fast pris</h1>
-            <h3 class="text second-layer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-            </h3>
-            <h1 class="header-text second-layer-heading">Få individuelle planer</h1>
-            <h3 class="text second-layer-text" id="last-second-layer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-            </h3>
-        </div>
+    <div class="layer-container col-xs-5" id="second-layer">
+        <h1 class="header-text second-layer-heading">Få Personlig oppfølgning</h1>
+        <h3 class="text second-layer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </h3>
+        <h1 class="header-text second-layer-heading">Betal en fast pris</h1>
+        <h3 class="text second-layer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </h3>
+        <h1 class="header-text second-layer-heading">Få individuelle planer</h1>
+        <h3 class="text second-layer-text" id="last-second-layer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </h3>
 
-        <div class="layer-container" id="price-color">
+
+        <div id="price-color">
             <div class="price">
                 <div class="text-center">
                     <span id="current-price">kr 995</span>
@@ -52,72 +54,74 @@
                 <div class="text-center" id="padding">
                     <button class="btn-choose-trainer">
                         <div id="inner-text-choose-trainer">Velg din PT her
-                            <div>
+                        </div>
                     </button>
-                    </div>
-                    </div>
                 </div>
-                <div class="layer-container">
-                    <div class="quotes">
-                        <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
-                        <p id="feedback-text">- Ola Nordmann</p>
-                    </div>
-                </div>
-                <p id="our-coach">Våre trenere</p>
-                <div ng-controller="CarouselDemoCtrl">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="layer-container">
+        <div class="quotes">
+            <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
+            <p id="feedback-text">- Ola Nordmann</p>
+        </div>
+    </div>
+    <p id="our-coach">Våre trenere</p>
+    <div ng-controller="CarouselDemoCtrl">
+        <div>
+            <carousel class="slides">
+                <slide ng-repeat="slide in slides" active="slide.active">
                     <div>
-                        <carousel class="slides">
-                            <slide ng-repeat="slide in slides" active="slide.active">
-                                <div>
-                                    <img ng-src="{{slide.image}}" ng-class="imgClass()">
-                                    <img ng-show="showTwoSlides" class="two-slides" ng-src="{{getNextActiveSlide().image}}">
-                                </div>
-                            </slide>
-                        </carousel>
+                        <img ng-src="{{slide.image}}" ng-class="imgClass()">
+                        <img ng-show="showTwoSlides" class="two-slides" ng-src="{{getNextActiveSlide().image}}">
                     </div>
-                    <div ng-hide="showTwoSlides" id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
-                    <div ng-class="imgClass()">
-                        <div id="pt-name">{{getActiveSlide().name}}</div>
-                        <div class="text second-layer-text" id="pt-text">{{getActiveSlide().text}}</div>
-                        <div class="center">
-                            <Button ng-click="login()" class="train-btn">
-                                <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
-                            </Button>
-                        </div>
-                    </div>
+                </slide>
+            </carousel>
+        </div>
+        <div ng-hide="showTwoSlides" id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
+        <div ng-class="imgClass()">
+            <div id="pt-name">{{getActiveSlide().name}}</div>
+            <div class="text second-layer-text" id="pt-text">{{getActiveSlide().text}}</div>
+            <div class="center">
+                <Button ng-click="login()" class="train-btn">
+                    <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
+                </Button>
+            </div>
+        </div>
 
-                    <div class="two-slides">
-                        <div id="pt-name">{{getNextActiveSlide().name}}</div>
-                        <div class="text second-layer-text" id="pt-text">{{getNextActiveSlide().text}}</div>
-                        <div class="center">
+        <div class="two-slides" ng-show="showTwoSlides">
+            <div id="pt-name">{{getNextActiveSlide().name}}</div>
+            <div class="text second-layer-text" id="pt-text">{{getNextActiveSlide().text}}</div>
+            <div class="center">
 
-                            <Button ng-click="login()" class="train-btn">
-                                <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
-                            </Button>
-                        </div>
-                    </div>
+                <Button ng-click="login()" class="train-btn">
+                    <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
+                </Button>
+            </div>
+        </div>
 
-                    <div class="layer-container">
-                        <h3 class="text second-layer-text">
-                        </h3>
-                        <div class="center">
-                            <p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
-                        </div>
-                    </div>
-                    <div class="layer-container">
-                        <div class="quotes">
-                            <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
-                            <p id="feedback-text">- Kari Nordmann</p>
-                        </div>
-                    </div>
-                    <div class="contact" id="contact-text">
-                        <h3 id="contact-us">Kontakt oss</h3>
-                        <i class="fa fa-envelope fa-2x contact-info"> online-pt@iterate.no</i>
-                        <br>
-                        <i class="fa fa-mobile fa-2x contact-info"> 99 27 10 36 </i>
-                        <p id="contact-footer">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                    </div>
-                    } }
+        <div class="layer-container">
+            <h3 class="text second-layer-text">
+            </h3>
+            <div class="center">
+                <p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
+            </div>
+        </div>
+        <div class="layer-container">
+            <div class="quotes">
+                <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
+                <p id="feedback-text">- Kari Nordmann</p>
+            </div>
+        </div>
+        <div class="contact" id="contact-text">
+            <h3 id="contact-us">Kontakt oss</h3>
+            <i class="fa fa-envelope fa-2x contact-info"> online-pt@iterate.no</i>
+            <br>
+            <i class="fa fa-mobile fa-2x contact-info"> 99 27 10 36 </i>
+            <p id="contact-footer">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </div>
 </body>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">

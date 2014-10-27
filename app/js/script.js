@@ -18,13 +18,11 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
     }
 
     $scope.$watch(function() {
-        if ($window.innerWidth < 700) {
+        if ($window.innerWidth < 600) {
             $scope.showTwoSlides = false;
-            console.log("asdas");
         } else {
             $scope.showTwoSlides = true;
         }
-
     }, function(value) {
         console.log(value);
     });
