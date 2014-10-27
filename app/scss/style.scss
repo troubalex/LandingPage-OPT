@@ -52,20 +52,22 @@ img {
 #padding-text-first {
     padding-top: 45%;
     padding-bottom: 20px;
-    font-family: proxima-nova, sans-serif;
+    // font-family: proxima-nova, sans-serif;
     font-size: 20px;
     color: #FFFFFF;
     line-height: 26px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.50);
+    font-family: 'ProximaNovaBold';
+    font-weight: normal;
 }
 #padding-text-second {
     padding-bottom: 23px;
-    font-family: proxima-nova, sans-serif;
     font-size: 16px;
     color: #FFFFFF;
     line-height: 20px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.50);
     padding: 0px 20px 25px 20px;
+    font-family: 'ProximaNova-Light';
 }
 #fb-info {
     padding: 25px 20px 20px 20px;
@@ -118,7 +120,7 @@ img {
 }
 .second-layer-text {
     color: $black;
-    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-family: arial;
     font-size: 14px;
 }
 #carousel-index {
@@ -154,6 +156,8 @@ img {
         background: #4B186C;
         outline: 0;
         color: white;
+        height: 47px;
+
     }
     #padding {
         padding-bottom: 10px;
@@ -167,8 +171,7 @@ img {
 .layer-container {
     background: #FFFFFF;
     border-bottom: 1px solid #ababab;
-    padding-top: 10px;
-    padding-left: 0px;
+    padding: 10px 0px 0px 0px;
 }
 .center {
     text-align: center;
