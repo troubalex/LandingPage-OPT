@@ -14,13 +14,15 @@ body {
     line: 130%;
     color: white;
     box-shadow: 1px 1px 4px #000000 0, 0, 0;
+    top: -120px;
+    position: relative;
 }
 #slides_control > div {
     height: 200px;
 }
-img {
-    margin: auto;
-    width: 400px;
+#logo {
+    top: -130px;
+    position: relative;
 }
 #slides_control {
     position: absolute;
@@ -176,7 +178,11 @@ img {
     border-radius: 4px;
 }
 #hero-btn {
-  padding-bottom:60px;
+    padding-bottom: 60px;
+}
+#hero-btn-text {
+    font-family: arial;
+    text-transform: uppercase;
 }
 .price #padding {
     padding-bottom: 10px;
@@ -216,6 +222,7 @@ img {
     font-style: italic;
     font-size: 16;
     padding: 0 0 57px 30px;
+    background-color: #EFEFEF;
 }
 #contact-us {
     padding-left: 12px;
@@ -274,7 +281,10 @@ img {
 .carousel-indicators {
     display: none;
 }
-@media (max-width: 560px) {
+#pay-one-price {
+    padding-bottom: 20px;
+}
+@media (max-width: 600px) {
     .layer-container {
         width: 100%;
     }
@@ -301,11 +311,13 @@ img {
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
         text-indent: 0%;
     }
+    .col-xs-6 {
+        width: 100%;
+    }
 }
 @media (min-width: 600px) {
-#background {
-    background: url("../img/hero_tablet.jpg") center;
-    padding-top: 150px;
-
-}
+    #background {
+        background: url("../img/hero_tablet.jpg") center;
+        padding-top: 150px;
+    }
 }
