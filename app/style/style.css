@@ -116,7 +116,7 @@ body {
     font-family: 'proxima-nova';
     font-weight: 300;
 }
-.fa {
+.contact .fa {
     color: #FFFFFF;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     font-size: 14px;
@@ -136,6 +136,7 @@ body {
     font-size: 14px;
     line-height: 1.2em;
 }
+
 #carousel-index {
     text-align: center;
     font-size: 14px;
@@ -319,5 +320,6 @@ body {
     #background {
         background: url("../img/hero_tablet.jpg") center;
         padding-top: 150px;
+        background-repeat: no-repeat;
     }
 }
