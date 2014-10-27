@@ -165,15 +165,18 @@ img {
     font-weight: 300;
 }
 .btn-choose-trainer {
-    border: 2px solid;
+    border: 2px solid #4B186C;
     width: 50%;
     font-size: 14px;
     text-align: center;
-    background: #4B186C;
+    background-color: #4B186C;
     outline: 0;
     color: white;
     height: 47px;
     border-radius: 4px;
+}
+#hero-btn {
+  padding-bottom:60px;
 }
 .price #padding {
     padding-bottom: 10px;
@@ -271,7 +274,7 @@ img {
 .carousel-indicators {
     display: none;
 }
-@media (max-width: 1200px) {
+@media (max-width: 560px) {
     .layer-container {
         width: 100%;
     }
@@ -299,8 +302,10 @@ img {
         text-indent: 0%;
     }
 }
-* //*@media (min-width: 600px) {
+@media (min-width: 600px) {
 #background {
     background: url("../img/hero_tablet.jpg") center;
+    padding-top: 150px;
+
 }
 }

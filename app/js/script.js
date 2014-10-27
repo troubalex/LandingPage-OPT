@@ -18,7 +18,7 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
     }
 
     $scope.$watch(function() {
-        if ($window.innerWidth < 600) {
+        if ($window.innerWidth < 560) {
             $scope.showTwoSlides = false;
         } else {
             $scope.showTwoSlides = true;
