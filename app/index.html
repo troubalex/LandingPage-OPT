@@ -89,7 +89,7 @@
             <div class="col-xs-12" id="carousel-start"></div>
         </div>
     </div>
-    <div class="col-xs-12 " style="padding-top:10px">
+    <div class="col-xs-12" style="padding-top:10px">
         <carousel class="slides">
             <slide ng-repeat="slide in slides" active="slide.active">
                 <div>
@@ -98,38 +98,40 @@
                 </div>
             </slide>
         </carousel>
-    </div>
-    <div ng-hide="showTwoSlides" id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
-    <div ng-class="imgClass()">
-        <div id="pt-name">{{getActiveSlide().name}}</div>
-        <div class="text second-layer-text" id="pt-text">{{getActiveSlide().text}}</div>
-        <div class="center">
-            <Button ng-click="login()" class="btn-choose-trainer">
-                <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
-            </Button>
+
+
+        <div ng-class="imgClass()">
+            <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
+            <div id="pt-name">{{getActiveSlide().name}}</div>
+            <div class="text second-layer-text" id="pt-text">{{getActiveSlide().text}}</div>
+            <div class="center">
+                <Button ng-click="login()" class="btn-choose-trainer">
+                    <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
+                </Button>
+            </div>
         </div>
-    </div>
 
-    <div class="two-slides" ng-show="showTwoSlides">
-        <div id="pt-name">{{getNextActiveSlide().name}}</div>
-        <div class="text second-layer-text" id="pt-text">{{getNextActiveSlide().text}}</div>
-        <div class="center">
+        <div class="two-slides" ng-show="showTwoSlides">
+            <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
+            <div id="pt-name">{{getNextActiveSlide().name}}</div>
+            <div class="text second-layer-text" id="pt-text">{{getNextActiveSlide().text}}</div>
+            <div class="center">
 
-            <Button ng-click="login()" class="btn-choose-trainer">
-                <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
-            </Button>
+                <Button ng-click="login()" class="btn-choose-trainer">
+                    <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
+                </Button>
+            </div>
         </div>
-    </div>
-
-    <div class="layer-container">
-        <h3 class="text second-layer-text">
-        </h3>
-        <div class="center">
-            <p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
+        <div class="col-xs-12" id="fb-padding">
+            <h3 class="text second-layer-text">
+            </h3>
+            <div class="center">
+                <p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
+            </div>
         </div>
+
+
     </div>
-
-
     <div class="contact col-xs-12 " id="contact-text">
         <h3 id="contact-us">Kontakt oss</h3>
         <i class="fa fa-envelope fa-2x contact-info"> online-pt@iterate.no</i>

@@ -136,7 +136,9 @@ body {
     font-size: 14px;
     line-height: 1.2em;
 }
-
+#fb-padding {
+  padding-top: 25px;
+}
 #carousel-index {
     text-align: center;
     font-size: 14px;
@@ -149,6 +151,7 @@ body {
     font-size: 18px;
     text-align: center;
     padding-top: 10px;
+    text-transform: uppercase;
 }
 .price {
     color: #222222;
