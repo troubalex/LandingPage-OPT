@@ -6,7 +6,7 @@
     <title>Ladning Page Online-PT</title>
 </head>
 
-<body>
+<body ng-controller="CarouselDemoCtrl">
     <div class="layer-container col-xs-7">
         <div id="background">
             <div class="text-center">
@@ -46,81 +46,86 @@
 
         <div id="price-color">
             <div class="price">
-                <div class="text-center">
+                <div class="text-center money-box">
                     <span id="current-price">kr 995</span>
                     <span id="month">/ måned</span>
+
+                    <h4 class="text-center">Abonnement er uten bindingstid</h4>
                 </div>
-                <h4 class="text-center">Abonnement er uten bindingstid</h4>
                 <div class="text-center" id="padding">
                     <button class="btn-choose-trainer">
                         <div id="inner-text-choose-trainer">Velg din PT her
                         </div>
+
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-        <div class="layer-container">
-            <div class="quotes">
-                <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
-                <p id="feedback-text">- Ola Nordmann</p>
-            </div>
+    <div class="quotes col-xs-12" style="border-bottom: 5px solid #ababab;">
+        <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
+        <p id="feedback-text">- Ola Nordmann</p>
+    </div>
+    <div class="col-xs-12">
+        <p id="our-coach">Våre trenere</p>
+        <div class="text-center">
+            <div class="col-xs-12" id="carousel-start"></div>
         </div>
-    <p id="our-coach">Våre trenere</p>
-    <div ng-controller="CarouselDemoCtrl">
-        <div>
-            <carousel class="slides">
-                <slide ng-repeat="slide in slides" active="slide.active">
-                    <div>
-                        <img ng-src="{{slide.image}}" ng-class="imgClass()">
-                        <img ng-show="showTwoSlides" class="two-slides" ng-src="{{getNextActiveSlide().image}}">
-                    </div>
-                </slide>
-            </carousel>
+    </div>
+    <div class="col-xs-12 " style="padding-top:10px">
+        <carousel class="slides">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <div>
+                    <img ng-src="{{slide.image}}" ng-class="imgClass()">
+                    <img ng-show="showTwoSlides" class="two-slides" ng-src="{{getNextActiveSlide().image}}">
+                </div>
+            </slide>
+        </carousel>
+    </div>
+    <div ng-hide="showTwoSlides" id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
+    <div ng-class="imgClass()">
+        <div id="pt-name">{{getActiveSlide().name}}</div>
+        <div class="text second-layer-text" id="pt-text">{{getActiveSlide().text}}</div>
+        <div class="center">
+            <Button ng-click="login()" class="btn-choose-trainer">
+                <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
+            </Button>
         </div>
-        <div ng-hide="showTwoSlides" id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
-        <div ng-class="imgClass()">
-            <div id="pt-name">{{getActiveSlide().name}}</div>
-            <div class="text second-layer-text" id="pt-text">{{getActiveSlide().text}}</div>
-            <div class="center">
-                <Button ng-click="login()" class="train-btn">
-                    <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
-                </Button>
-            </div>
-        </div>
+    </div>
 
-        <div class="two-slides" ng-show="showTwoSlides">
-            <div id="pt-name">{{getNextActiveSlide().name}}</div>
-            <div class="text second-layer-text" id="pt-text">{{getNextActiveSlide().text}}</div>
-            <div class="center">
+    <div class="two-slides" ng-show="showTwoSlides">
+        <div id="pt-name">{{getNextActiveSlide().name}}</div>
+        <div class="text second-layer-text" id="pt-text">{{getNextActiveSlide().text}}</div>
+        <div class="center">
 
-                <Button ng-click="login()" class="train-btn">
-                    <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
-                </Button>
-            </div>
+            <Button ng-click="login()" class="btn-choose-trainer">
+                <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
+            </Button>
         </div>
+    </div>
 
-        <div class="layer-container">
-            <h3 class="text second-layer-text">
-            </h3>
-            <div class="center">
-                <p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
-            </div>
+    <div class="layer-container">
+        <h3 class="text second-layer-text">
+        </h3>
+        <div class="center">
+            <p id="fb-info">Online Personlig Trener krever en facebook konto i pilotfasen. Vi kommer aldri til å poste på din profile eller lese data</p>
         </div>
-        <div class="layer-container">
-            <div class="quotes">
-                <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
-                <p id="feedback-text">- Kari Nordmann</p>
-            </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="quotes">
+            <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
+            <p id="feedback-text">- Kari Nordmann</p>
         </div>
-        <div class="contact" id="contact-text">
-            <h3 id="contact-us">Kontakt oss</h3>
-            <i class="fa fa-envelope fa-2x contact-info"> online-pt@iterate.no</i>
-            <br>
-            <i class="fa fa-mobile fa-2x contact-info"> 99 27 10 36 </i>
-            <p id="contact-footer">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-        </div>
+    </div>
+
+    <div class="contact col-xs-12 " id="contact-text">
+        <h3 id="contact-us">Kontakt oss</h3>
+        <i class="fa fa-envelope fa-2x contact-info"> online-pt@iterate.no</i>
+        <br>
+        <i class="fa fa-mobile fa-2x contact-info"> 99 27 10 36 </i>
+        <p id="contact-footer">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+    </div>
 </body>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">

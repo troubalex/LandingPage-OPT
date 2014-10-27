@@ -157,7 +157,6 @@ img {
         outline: 0;
         color: white;
         height: 47px;
-
     }
     #padding {
         padding-bottom: 10px;
@@ -268,7 +267,10 @@ img {
             color: #FFFFFF;
             line-height: 26px;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.50);
-            text-indent:0%;
+            text-indent: 0%;
         }
     }
+}
+@media (min-width: 600px) {
+	background: url("../img/hero_tablet.jpg");
 }
