@@ -23,6 +23,8 @@ body {
 #logo {
     top: -130px;
     position: relative;
+    background: url("../img/SaEx_logo_white_tablet@2x.png") center;
+    background-repeat: no-repeat;
 }
 #slides_control {
     position: absolute;
@@ -112,9 +114,16 @@ body {
     text-align: center;
     color: #222222;
 }
+
+.header-text i{
+  margin-right: 3px;
+}
 .money-box {
     font-family: 'proxima-nova';
     font-weight: 300;
+}
+#our-coach-background {
+    background-color: #FFFFFF;
 }
 .contact .fa {
     color: #FFFFFF;
@@ -137,7 +146,7 @@ body {
     line-height: 1.2em;
 }
 #fb-padding {
-  padding-top: 25px;
+    padding-top: 25px;
 }
 #carousel-index {
     text-align: center;
@@ -287,6 +296,10 @@ body {
 }
 #pay-one-price {
     padding-bottom: 20px;
+}
+#carousel-background {
+    padding-top: 10px;
+    background-color: #FFFFFF;
 }
 @media (max-width: 600px) {
     .layer-container {
