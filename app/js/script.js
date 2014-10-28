@@ -41,27 +41,36 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
 
     $scope.addSlide = function() {
         slides.push({
-            image: '/img/Brynjar.jpg',
-            name: 'Brynjar McSwaggy',
-            path: '../brynjar.txt',
+            image:  '/img/erik.jpg',
+            name:   'Erik Fl&aring;gen',
+            path: '../text/erik.html',
             text: '',
             number: counter,
             id: 1337
         });
         counter++;
         slides.push({
-            image: '/img/Henrik.jpg',
-            name: 'Henrik Von Helvete',
-            path: '../brynjar.txt',
+            image: '/img/mikael.jpg',
+            name: 'Mikael Johansson',
+            path: '../text/mikael.html',
             text: '',
             number: counter,
             id: 1337,
         });
         counter++;
         slides.push({
-            image: '/img/magnus.jpg',
-            name: 'Makn0Z SR.Swag',
-            path: '../brynjar.txt',
+            image: '/img/john-ole.jpg',
+            name: 'John Ole B. Elvehaug',
+            path: '../text/john-ole.html',
+            text: '',
+            number: counter,
+            id: 1337,
+        });
+        counter++;
+        slides.push({
+            image: '/img/sondre.jpg',
+            name: 'Sondre Krogh-Bjerke',
+            path: '../text/sondre.html',
             text: '',
             number: counter,
             id: 1337,

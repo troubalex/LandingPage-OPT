@@ -1,8 +1,6 @@
 body {
     background-color: #efefef;
 }
-
-
 #second-logo {
     font-family: proxima-nova, sans-serif;
     font-size: 20px;
@@ -18,8 +16,8 @@ body {
 #logo {
     top: 15px;
     position: relative;
-/*    background: url("../img/SaEx_logo_white_tablet@2x.png") center;
-*/    background-repeat: no-repeat;
+    background: url("../img/SaEx_logo_white_tablet@2x.png") center;
+    background-repeat: no-repeat;
     padding-top: 15px;
 }
 #slides_control {
@@ -42,6 +40,8 @@ body {
     -o-background-size: cover;
     background-size: cover;
     padding-top: 1px;
+    position: relative;
+    top: -15px;
 }
 .second-layer {
     background-color: white;
@@ -338,6 +338,6 @@ body {
         background-repeat: no-repeat;
     }
     #logo {
-        top: -130px;
+        top: -120px;
     }
 }
