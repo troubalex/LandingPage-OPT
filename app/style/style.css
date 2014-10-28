@@ -104,7 +104,6 @@ body {
     text-indent: 100%;
 }
 #inner-text-choose-trainer {
-    font-size: 16px;
     white-space: nowrap;
     font-family: arial;
 }
@@ -178,8 +177,9 @@ body {
 }
 .btn-choose-trainer {
     border: 2px solid #4B186C;
-    width: 50%;
-    font-size: 14px;
+    width: 35%;
+    font-size: 22px;
+    line-height: 22px;
     text-align: center;
     background-color: #4B186C;
     outline: 0;
@@ -269,7 +269,6 @@ body {
     font-size: 2.5em;
 }
 #inner-text-train-btn {
-    font-size: 16px;
     font-family: Arial;
 }
 #feedback-text {
