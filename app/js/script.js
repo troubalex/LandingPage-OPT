@@ -16,8 +16,6 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         } else {
             $scope.showTwoSlides = true;
         }
-    }, function(value) {
-        console.log(value);
     });
 
 
@@ -83,7 +81,6 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
 
 
     $scope.login = function(PT) {
-        console.log(PT);
         FB.login(function(response) {
 
             $scope.userData = response;
@@ -102,7 +99,6 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
 
                 $http.post('/opt/api/auth', requestData)
                     .success(function(data) {
-                        console.log(data);
                         $window.location.href = "http://online-pt-test.herokuapp.com/#/";
                     })
                     .error(function(e) {
