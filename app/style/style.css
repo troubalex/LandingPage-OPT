@@ -14,8 +14,8 @@ body {
     line: 130%;
     color: white;
     box-shadow: 1px 1px 4px #000000 0, 0, 0;
-    top: -120px;
     position: relative;
+    top: 30px;
 }
 #slides_control > div {
     height: 200px;
@@ -114,9 +114,8 @@ body {
     text-align: center;
     color: #222222;
 }
-
-.header-text i{
-  margin-right: 3px;
+.header-text i {
+    margin-right: 3px;
 }
 .money-box {
     font-family: 'proxima-nova';
