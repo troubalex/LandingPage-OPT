@@ -18,7 +18,7 @@ body {
 #logo {
     top: 15px;
     position: relative;
-    background: url("../img/SaEx_logo_white_tablet@2x.png") center;
+    background: url("../img/SaEx_logo_white_mobil@2x.png") center;
     background-repeat: no-repeat;
     padding-top: 15px;
 }
@@ -36,7 +36,6 @@ body {
     background: url("../img/hero_image.jpg") center;
     background-repeat: no-repeat;
     width: 100%;
-    margin-top: -20px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -55,8 +54,8 @@ body {
     margin: 0px;
 }
 #padding-text-first {
-    padding-top: 45%;
-    padding-bottom: 20px;
+    padding-top: 80%;
+    padding-bottom: 35px;
     font-size: 20px;
     color: #FFFFFF;
     line-height: 26px;
@@ -96,6 +95,8 @@ body {
 }
 .btn {
     background-color: rgba(0, 0, 0, 0);
+    font-family: proxima-nova, sans-serif;
+    font-weight: 600;
 }
 .text-center {
     text-align: center;
@@ -104,7 +105,6 @@ body {
     text-indent: 100%;
 }
 #inner-text-choose-trainer {
-    font-size: 16px;
     white-space: nowrap;
     font-family: arial;
 }
@@ -140,7 +140,7 @@ body {
     color: #222222;
     font-family: arial;
     font-size: 14px;
-    line-height: 1.2em;
+    line-height: 1.3em;
 }
 #fb-padding {
     padding-top: 25px;
@@ -178,8 +178,9 @@ body {
 }
 .btn-choose-trainer {
     border: 2px solid #4B186C;
-    width: 50%;
-    font-size: 14px;
+    width: 35%;
+    font-size: 22px;
+    line-height: 22px;
     text-align: center;
     background-color: #4B186C;
     outline: 0;
@@ -269,7 +270,6 @@ body {
     font-size: 2.5em;
 }
 #inner-text-train-btn {
-    font-size: 16px;
     font-family: Arial;
 }
 #feedback-text {
@@ -326,7 +326,6 @@ h4 {
         background: url("../img/hero_mobil.jpg");
         background-repeat: no-repeat;
         width: 100%;
-        margin-top: -20px;
         -webkit-background-size: cover !important;
         -moz-background-size: cover;
         -o-background-size: cover;
