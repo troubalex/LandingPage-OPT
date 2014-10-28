@@ -67,7 +67,7 @@
                         </div>
                         <div class="text-center" id="padding">
                             <button class="btn-choose-trainer">
-                                <div id="inner-text-choose-trainer">Velg din personlig trener
+                                <div id="inner-text-choose-trainer">Bestill
                                 </div>
 
                             </button>
@@ -102,28 +102,27 @@
         <div ng-class="imgClass()">
             <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
             <div id="pt-name">{{getActiveSlide().name}}</div>
+             <div class="center">
+                <Button ng-click="login()" class="btn-choose-trainer">
+                    <div id="inner-text-train-btn">Bestill</div>
+                </Button>
+            </div>
             <div class="text second-layer-text" id="pt-text">
                 <div ng-include="getNextActiveSlide().path"></div>
 
-            </div>
-            <div class="center">
-                <Button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
-                    <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
-                </Button>
             </div>
         </div>
 
         <div class="two-slides" ng-show="showTwoSlides">
             <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
             <div id="pt-name">{{getNextActiveSlide().name}}</div>
+                        <div class="center">
+                <Button ng-click="login()" class="btn-choose-trainer">
+                    <div id="inner-text-train-btn">Bestill</div>
+                </Button>
+            </div>
             <div class="text second-layer-text" id="pt-text">
                 <div ng-include="getNextActiveSlide().path"></div>
-            </div>
-            <div class="center">
-
-                <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
-                    <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
-                </Button>
             </div>
         </div>
         <div class="col-xs-12" id="fb-padding">
