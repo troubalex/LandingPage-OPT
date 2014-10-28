@@ -21,7 +21,7 @@ body {
     height: 200px;
 }
 #logo {
-    top: -130px;
+    top: 15px;
     position: relative;
     background: url("../img/SaEx_logo_white_tablet@2x.png") center;
     background-repeat: no-repeat;
@@ -197,7 +197,7 @@ body {
     text-transform: uppercase;
 }
 .contact-margin {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 .price #padding {
     padding-bottom: 10px;
@@ -340,5 +340,8 @@ body {
         background: url("../img/hero_tablet.jpg") center;
         padding-top: 150px;
         background-repeat: no-repeat;
+    }
+    #logo {
+        top: -130px;
     }
 }
