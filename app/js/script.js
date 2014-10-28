@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app', ['ui.bootstrap', 'ngResource']);
+angular.module('app', ['ui.bootstrap', 'ngResource', 'ngSanitize']);
 angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $http) {
 
 
@@ -42,7 +42,7 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
     $scope.addSlide = function() {
         slides.push({
             image:  '/img/erik.jpg',
-            name:   'Erik Fl&aring;gen',
+            name:   'Erik Flågen',
             path: '../text/erik.html',
             text: '',
             number: counter,
