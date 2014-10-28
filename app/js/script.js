@@ -21,8 +21,6 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http) {
     });
 
     var QueryString = function() {
-        // This function is anonymous, is executed immediately and 
-        // the return value is assigned to QueryString!
         var query_string = {};
         var query = window.location.search.substring(1);
         var vars = query.split("&");
@@ -67,6 +65,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http) {
             path: '../text/mikael.html',
             number: counter,
             id: '544a58c93b55751200daafb4',
+            // http://localhost:8000/?id=544a58c93b55751200daafb4
         });
         counter++;
         slides.push({
