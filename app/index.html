@@ -6,7 +6,7 @@
     <title>Ladningpage Online-PT</title>
 </head>
 
-<body ng-controller="CarouselDemoCtrl">
+<body ng-controller="CarouselDemoCtrl" ng-init="init()">
     <div class="layer-container col-lg-12">
         <div id="background">
             <div class="text-center">
@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center">
-                            <h2 class="text" id="padding-text-first">V&aring;re beste  personlige trenere er n&aring; tilgjengelig online. Du kan trene n&aring;r og hvor du vil men med tett oppf&oslash;lging fra din egen trenings ekspert. 
+                            <h2 class="text" id="padding-text-first">V&aring;re beste  personlige trenere er n&aring; tilgjengelig online. Du kan trene n&aring;r og hvor du vil men med tett oppf&oslash;lging fra din egen treningsekspert. 
                             </h2>
 <!--                            <h3 id="padding-text-second">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                             </h3> -->
@@ -62,7 +62,7 @@
             <div class="col-xs-6" id="price-color">
                 <div class="price">
                     <div class="text-center money-box">
-                        <span id="current-price">kr 995</span>
+                        <span id="current-price">kr 795</span>
                         <span id="month">/ m&aring;ned</span>
 
                         <h4 class="text-center">Abonnement er uten bindingstid</h4>
@@ -136,9 +136,9 @@
     <div class="contact col-xs-12 " id="contact-text">
         <div class="col-xs-6">
             <h3 id="contact-us">Kontakt oss</h3>
-            <i class="fa fa-envelope fa-2x contact-info"> online-pt@iterate.no</i>
+            <i class="fa fa-envelope fa-2x contact-info"> <span class="contact-margin">online-pt@iterate.no </span></i>
             <br>
-            <i class="fa fa-mobile fa-2x contact-info"> 99 27 10 36 </i>
+            <i class="fa fa-phone fa-2x contact-info"> <span class="contact-margin" > 99 27 10 36 </span> </i>
         </div>
         <div class="col-xs-6">
             <p id="contact-footer">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>

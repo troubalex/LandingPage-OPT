@@ -4,18 +4,11 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
 
 
 
-    $scope.myInterval = 5000;
     $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
     $scope.showTwoSlides = true;
-
-    $scope.imgClass = function() {
-        if ($scope.showTwoSlides)
-            return "two-slides";
-        else
-            return "one-slide";
-    }
+    $scope.currentPersonText = '';
 
     $scope.$watch(function() {
         if ($window.innerWidth < 560) {
@@ -27,11 +20,31 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         console.log(value);
     });
 
+
+    $scope.imgClass = function() {
+        if ($scope.showTwoSlides)
+            return "two-slides";
+        else
+            return "one-slide";
+    }
+    var getText = function() {
+        slides.forEach(function(person) {
+            $http.get(person.path)
+                .success(function(data) {
+                    person.text = data;
+                })
+                .error(function() {
+                    console.log('could not find someFile.json');
+                });
+        });
+    }
+
     $scope.addSlide = function() {
         slides.push({
             image:  '/img/erik.jpg',
             name:   'Erik Fl&aring;gen',
-            /* include erik.html here */
+            path: '../text/erik.html',
+            text: '',
             number: counter,
             id: 1337
         });
@@ -39,7 +52,8 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         slides.push({
             image: '/img/mikael.jpg',
             name: 'Mikael Johansson',
-            /* include mikael.html here */
+            path: '../text/mikael.html',
+            text: '',
             number: counter,
             id: 1337,
         });
@@ -47,7 +61,8 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         slides.push({
             image: '/img/john-ole.jpg',
             name: 'John Ole B. Elvehaug',
-            /* include john-ole.html here */
+            path: '../text/john-ole.html'
+            text: ''
             number: counter,
             id: 1337,
         });
@@ -55,11 +70,13 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         slides.push({
             image: '/img/sondre.jpg',
             name: 'Sondre Krogh-Bjerke',
-            /* include sondre.html here */
+            path: '../text/sondre.html',
+            text: '',
             number: counter,
             id: 1337,
         });
         counter++;
+        getText();
     };
     $scope.addSlide();
 
@@ -67,6 +84,8 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         return slides.filter(function(s) {
             return s.active;
         })[0];
+
+
     };
 
     $scope.getNextActiveSlide = function() {
