@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app', ['ui.bootstrap', 'ngResource', 'ngSanitize']);
+angular.module('app', ['ui.bootstrap', 'ngResource']);
 angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $http) {
 
 
