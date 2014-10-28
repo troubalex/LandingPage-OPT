@@ -34,7 +34,7 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
             name:   'Erik Flågen',
             path: '../text/erik.html',
             number: counter,
-            id: 1337
+            id: '5433c1cf0779ed12008a1509'
         });
         counter++;
         slides.push({
@@ -42,7 +42,7 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
             name: 'Mikael Johansson',
             path: '../text/mikael.html',
             number: counter,
-            id: 1337,
+            id: '544a58c93b55751200daafb4',
         });
         counter++;
         slides.push({
@@ -58,7 +58,7 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
             name: 'Sondre Krogh-Bjerke',
             path: '../text/sondre.html',
             number: counter,
-            id: 1337,
+            id: '5410c5283877801100ced009',
         });
         counter++;
     };
@@ -82,12 +82,9 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
     }
 
 
-    $scope.login = function() {
+    $scope.login = function(PT) {
+        console.log(PT);
         FB.login(function(response) {
-
-            if (!response.authResponse) {
-                return;
-            }
 
             $scope.userData = response;
 
@@ -99,11 +96,14 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
                     lastName: response.last_name,
                     gender: response.gender,
                     facebookId: response.id,
+                    PtId: PT.id
+
                 };
 
                 $http.post('/opt/api/auth', requestData)
                     .success(function(data) {
-                        $window.location.href = "https://online-pt-mvp.app.iterate.no/#/";
+                        console.log(data);
+                        $window.location.href = "http://online-pt-test.herokuapp.com/#/";
                     })
                     .error(function(e) {
                         console.log("err");

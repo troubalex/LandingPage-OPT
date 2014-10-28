@@ -12,7 +12,7 @@ gulp.task('webserver', function() {
 	gulp.src('app')
 	.pipe(webserver({
 		proxies: [{source:'/opt',
-		target:"https://online-pt-mvp.app.iterate.no/"}]
+		target:"http://online-pt-test.herokuapp.com/"}]
 	}));
 
 });
