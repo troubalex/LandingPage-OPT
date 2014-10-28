@@ -4,18 +4,11 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
 
 
 
-    $scope.myInterval = 5000;
     $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
     $scope.showTwoSlides = true;
-
-    $scope.imgClass = function() {
-        if ($scope.showTwoSlides)
-            return "two-slides";
-        else
-            return "one-slide";
-    }
+    $scope.currentPersonText = '';
 
     $scope.$watch(function() {
         if ($window.innerWidth < 560) {
@@ -27,11 +20,31 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         console.log(value);
     });
 
+
+    $scope.imgClass = function() {
+        if ($scope.showTwoSlides)
+            return "two-slides";
+        else
+            return "one-slide";
+    }
+    var getText = function() {
+        slides.forEach(function(person) {
+            $http.get(person.path)
+                .success(function(data) {
+                    person.text = data;
+                })
+                .error(function() {
+                    console.log('could not find someFile.json');
+                });
+        });
+    }
+
     $scope.addSlide = function() {
         slides.push({
             image: '/img/Brynjar.jpg',
             name: 'Brynjar McSwaggy',
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.',
+            path: '../brynjar.txt',
+            text: '',
             number: counter,
             id: 1337
         });
@@ -39,7 +52,8 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         slides.push({
             image: '/img/Henrik.jpg',
             name: 'Henrik Von Helvete',
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+            path: '../brynjar.txt',
+            text: '',
             number: counter,
             id: 1337,
         });
@@ -47,11 +61,13 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         slides.push({
             image: '/img/magnus.jpg',
             name: 'Makn0Z SR.Swag',
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+            path: '../brynjar.txt',
+            text: '',
             number: counter,
             id: 1337,
         });
         counter++;
+        getText();
     };
     $scope.addSlide();
 
@@ -59,6 +75,8 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         return slides.filter(function(s) {
             return s.active;
         })[0];
+
+
     };
 
     $scope.getNextActiveSlide = function() {
