@@ -29,25 +29,33 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
 
     $scope.addSlide = function() {
         slides.push({
-            image: '/img/Brynjar.jpg',
-            name: 'Brynjar McSwaggy',
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.',
+            image:  '/img/erik.jpg',
+            name:   'Erik Fl&aring;gen',
+            /* include erik.html here */
             number: counter,
             id: 1337
         });
         counter++;
         slides.push({
-            image: '/img/Henrik.jpg',
-            name: 'Henrik Von Helvete',
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+            image: '/img/mikael.jpg',
+            name: 'Mikael Johansson',
+            /* include mikael.html here */
             number: counter,
             id: 1337,
         });
         counter++;
         slides.push({
-            image: '/img/magnus.jpg',
-            name: 'Makn0Z SR.Swag',
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+            image: '/img/john-ole.jpg',
+            name: 'John Ole B. Elvehaug',
+            /* include john-ole.html here */
+            number: counter,
+            id: 1337,
+        });
+        counter++;
+        slides.push({
+            image: '/img/sondre.jpg',
+            name: 'Sondre Krogh-Bjerke',
+            /* include sondre.html here */
             number: counter,
             id: 1337,
         });
