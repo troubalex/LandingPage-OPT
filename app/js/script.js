@@ -27,24 +27,12 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
         else
             return "one-slide";
     }
-    var getText = function() {
-        slides.forEach(function(person) {
-            $http.get(person.path)
-                .success(function(data) {
-                    person.text = data;
-                })
-                .error(function() {
-                    console.log('could not find someFile.json');
-                });
-        });
-    }
 
     $scope.addSlide = function() {
         slides.push({
             image:  '/img/erik.jpg',
             name:   'Erik Flågen',
             path: '../text/erik.html',
-            text: '',
             number: counter,
             id: 1337
         });
@@ -53,7 +41,6 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
             image: '/img/mikael.jpg',
             name: 'Mikael Johansson',
             path: '../text/mikael.html',
-            text: '',
             number: counter,
             id: 1337,
         });
@@ -62,7 +49,6 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
             image: '/img/john-ole.jpg',
             name: 'John Ole B. Elvehaug',
             path: '../text/john-ole.html',
-            text: '',
             number: counter,
             id: 1337,
         });
@@ -71,12 +57,10 @@ angular.module('app').controller('CarouselDemoCtrl', function($scope, $window, $
             image: '/img/sondre.jpg',
             name: 'Sondre Krogh-Bjerke',
             path: '../text/sondre.html',
-            text: '',
             number: counter,
             id: 1337,
         });
         counter++;
-        getText();
     };
     $scope.addSlide();
 
