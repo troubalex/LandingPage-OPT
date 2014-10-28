@@ -1,13 +1,8 @@
 body {
     background-color: #efefef;
 }
-#logo {
-    padding-top: 15px;
-    font-family: proxima-nova, sans-serif;
-    font-size: 16px;
-    color: #FFFFFF;
-    line-height: 15px;
-}
+
+
 #second-logo {
     font-family: proxima-nova, sans-serif;
     font-size: 20px;
@@ -23,8 +18,9 @@ body {
 #logo {
     top: 15px;
     position: relative;
-    background: url("../img/SaEx_logo_white_tablet@2x.png") center;
-    background-repeat: no-repeat;
+/*    background: url("../img/SaEx_logo_white_tablet@2x.png") center;
+*/    background-repeat: no-repeat;
+    padding-top: 15px;
 }
 #slides_control {
     position: absolute;
