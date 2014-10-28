@@ -19,16 +19,9 @@
                             <div class="text-center">
                                 <h2 class="text" id="padding-text-first">V&aring;re beste personlige trenere er n&aring; tilgjengelig online. Du kan trene n&aring;r og hvor du vil men med tett oppf&oslash;lging fra din egen treningsekspert.
                                 </h2>
-                                <!--                            <h3 id="padding-text-second">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </h3> -->
                             </div>
                         </div>
                     </div>
-                </div>
-                <div ng-show="showTwoSlides" class="text-center" id="hero-btn">
-                    <button class="btn-choose-trainer">
-                        <div id="hero-btn-text">Velg din personlig trener</div>
-                    </button>
                 </div>
                 <div class="btn" ng-hide="showTwoSlides">
                     <div id="inner-text">Dette f&aring;r du <i class="fa fa-chevron-down"></i>
@@ -67,7 +60,7 @@
                         </div>
                         <div class="text-center" id="padding">
                             <button class="btn-choose-trainer">
-                                <div id="inner-text-choose-trainer">Velg din personlig trener
+                                <div id="inner-text-choose-trainer">Bestill
                                 </div>
 
                             </button>
@@ -78,8 +71,8 @@
         </div>
     </div>
 
-    <div class="quotes col-xs-12" style="border-bottom: 5px solid #ababab;">
-        <h3>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h3>
+    <div class="quotes col-xs-12">
+        <blockquote>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</blockquote>
         <p id="feedback-text">- Ola Nordmann</p>
     </div>
     <div class="col-xs-12" id="our-coach-background">
@@ -102,28 +95,27 @@
         <div ng-class="imgClass()">
             <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
             <div id="pt-name">{{getActiveSlide().name}}</div>
+             <div class="center">
+                <Button ng-click="login()" class="btn-choose-trainer">
+                    <div id="inner-text-train-btn">Bestill</div>
+                </Button>
+            </div>
             <div class="text second-layer-text" id="pt-text">
                 <div ng-include="getNextActiveSlide().path"></div>
 
-            </div>
-            <div class="center">
-                <Button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
-                    <div id="inner-text-train-btn">Tren med {{getActiveSlide().name.split(" ")[0]}}</div>
-                </Button>
             </div>
         </div>
 
         <div class="two-slides" ng-show="showTwoSlides">
             <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
             <div id="pt-name">{{getNextActiveSlide().name}}</div>
+                        <div class="center">
+                <Button ng-click="login()" class="btn-choose-trainer">
+                    <div id="inner-text-train-btn">Bestill</div>
+                </Button>
+            </div>
             <div class="text second-layer-text" id="pt-text">
                 <div ng-include="getNextActiveSlide().path"></div>
-            </div>
-            <div class="center">
-
-                <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
-                    <div id="inner-text-train-btn">Tren med {{getNextActiveSlide().name.split(" ")[0]}}</div>
-                </Button>
             </div>
         </div>
         <div class="col-xs-12" id="fb-padding">
