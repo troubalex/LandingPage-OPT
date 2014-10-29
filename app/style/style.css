@@ -5,6 +5,11 @@ body {
     font-size: 16px;
     line-height: 1.2em;
 }
+.wrapper {
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
 #second-logo {
     font-family: proxima-nova, sans-serif;
     font-size: 20px;
@@ -19,8 +24,8 @@ body {
 }
 #logo {
     position: relative;
+    background-repeat: no-repeat !important;
     background: url("../img/SaEx_logo_white_mobil.png") center;
-    background-repeat: no-repeat;
 }
 #slides_control {
     position: absolute;
@@ -33,7 +38,7 @@ body {
     padding-bottom: 30px;
 }
 #background {
-    background: url("../img/hero_image.jpg") center;
+    background: url("../img/hero_mobil.jpg") center;
     background-repeat: no-repeat;
     width: 100%;
     -webkit-background-size: cover;
@@ -159,8 +164,10 @@ body {
 #carousel-index {
     text-align: center;
     font-size: 14px;
-    font-family: bold arial;
+    font-family: Arial;
+    font-weight: bold;
     color: #979797;
+    padding: 10px 0 10px 0;
 }
 .section-header {
     font-family: 'proxima-nova';
@@ -229,8 +236,8 @@ body {
 }
 .layer-container {
     background: #FFFFFF;
-    border-bottom: 1px solid #ababab;
     padding: 0px 0px 0px 0px;
+    border-bottom: 1px solid #ababab;
 }
 .center {
     text-align: center;
@@ -286,8 +293,8 @@ blockquote {
     padding-left: 14px;
 }
 #pt-name {
-    font-family: 'proxima-nova';
-    font-weight: 600;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     font-size: 20px;
     text-align: center;
     color: #222;
@@ -325,6 +332,7 @@ blockquote {
 }
 #price-color {
     background-color: rgba(231, 236, 243, 100);
+    margin-top: 20px;
 }
 
 .carousel-indicators {
@@ -337,6 +345,13 @@ blockquote {
     padding-top: 10px;
     background-color: #FFFFFF;
 }
+.left, .right {
+    background-image: none !important;
+}
+
+.glyphicon-chevron-left {
+    margin-left: -30px;
+}
 
 blockquote {
     font-variant: italic;
@@ -347,6 +362,8 @@ h4 {
     font-weight: regular;
     font-size: 18px;
     line-height: 18px;
+    text-align: center;
+    padding-top: 20px;
 }
 
 @media (max-width: 600px) {
@@ -357,6 +374,7 @@ h4 {
     .layer-container {
         width: 100%;
     }
+
     #background {
         background: url("../img/hero_mobil.jpg");
         background-repeat: no-repeat;
@@ -385,24 +403,50 @@ h4 {
     #current-price, #month {
         text-align: center;
     }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        #background {
+            background-image: url('../img/hero_mobil@2x.jpg');
+        }
+  }
 }
 @media (min-width: 600px) {
 
-
     #background {
         background: url("../img/hero_tablet.jpg") center;
-        padding-top: 150px;
         background-repeat: no-repeat;
+        width: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top: 1px;
+        position: relative;
     }
     #logo {
-        top: -120px;
-        background:url(../img/SaEx_logo_white_tablet);
+        background: url("../img/SaEx_logo_white_tablet.png") center;
+        position: relative;
+        background-repeat: no-repeat;
+        padding-top:40px;
     }
     #current-price, #month {
-    text-align: center;
+        text-align: center;
     }
     #price-color {
-    margin-left: 20px;
+        margin-left: 20px;
+    }
+    #second-logo {
+        font-family: proxima-nova, sans-serif;
+        font-size: 24px;
+        line: 130%;
+        top: 10px;
+    }
+    #padding-text-first {
+        padding-top: 52%;
+        padding-bottom: 105px;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        #background {
+            background-image: url('../img/hero_tablet@2x.jpg');
+  }
 }
-
 }
