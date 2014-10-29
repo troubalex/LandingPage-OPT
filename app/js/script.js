@@ -47,6 +47,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             return 'one-slide';
     };
 
+
+
     $scope.addSlide = function() {
         slides.push({
             image: '/img/erik.jpg',
@@ -82,7 +84,20 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         });
         counter++;
     };
+
     $scope.addSlide();
+
+    $scope.random = function() {
+        var tmp = Math.random() * (slides.length - 0) + 0;
+        var random = Math.floor(tmp);
+        console.log(random);
+        console.log(slides[random]);
+        slides[random].active = true;
+
+
+    }
+    $scope.random();
+
 
     $scope.getActiveSlide = function() {
         return slides.filter(function(s) {
@@ -94,7 +109,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     $scope.goToPT = function() {
         $location.hash('our-coach-background');
         $anchorScroll();
-  
+
     }
 
     $scope.getNextActiveSlide = function() {
