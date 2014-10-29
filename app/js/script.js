@@ -1,6 +1,10 @@
 'use strict';
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
+<<<<<<< HEAD
 landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll) {
+=======
+landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore) {
+>>>>>>> Cleaned up trainer carousel. Added different logo sizes.
     $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
@@ -70,7 +74,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'John Ole B. Elvehaug',
             path: '../text/john-ole.html',
             number: counter,
-            id: '54509cacaeed031300c848f6',
+            id: 1337,
         });
         counter++;
         slides.push({
