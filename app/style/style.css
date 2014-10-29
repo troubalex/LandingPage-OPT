@@ -16,11 +16,10 @@ body {
     height: 200px;
 }
 #logo {
-    top: 15px;
+    top: 20px;
     position: relative;
-    background: url("../img/SaEx_logo_white_mobil@2x.png") center;
+    background: url("../img/SaEx_logo_white_mobil.png") center;
     background-repeat: no-repeat;
-    padding-top: 15px;
 }
 #slides_control {
     position: absolute;
@@ -54,11 +53,11 @@ body {
     margin: 0px;
 }
 #padding-text-first {
-    padding-top: 80%;
-    padding-bottom: 35px;
-    font-size: 20px;
+    padding: 85% 0 0 0;
+
+    font-size: 1.5em;
     color: #FFFFFF;
-    line-height: 26px;
+    line-height: 1.3em;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     font-family: "proxima-nova-n6", "proxima-nova", sans-serif;
     font-weight: 600;
@@ -95,14 +94,25 @@ body {
 }
 .btn {
     background-color: rgba(0, 0, 0, 0);
+    height:50px;
     font-family: proxima-nova, sans-serif;
     font-weight: 600;
+    padding:0 0 0 0;
+    margin-top: 10%;
 }
 .text-center {
     text-align: center;
 }
 #inner-text {
     text-indent: 100%;
+    margin-top: 10px;
+}
+#inner-text:after {
+    content: "\f078";
+    font-family: FontAwesome;
+    font-size: 14px;
+    padding-top: 21px ;
+    padding-left: 8px;
 }
 #inner-text-choose-trainer {
     white-space: nowrap;
@@ -209,7 +219,7 @@ body {
 .layer-container {
     background: #FFFFFF;
     border-bottom: 1px solid #ababab;
-    padding: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 .center {
     text-align: center;
@@ -319,6 +329,10 @@ h4 {
 }
 
 @media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
     .layer-container {
         width: 100%;
     }
@@ -349,6 +363,10 @@ h4 {
     }
 }
 @media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
     #background {
         background: url("../img/hero_tablet.jpg") center;
         padding-top: 150px;
