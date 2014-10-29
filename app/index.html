@@ -64,7 +64,7 @@
                                 <h4 id="month">/m&aring;ned uten bindingstid</h4>
                             </div>
                             <div class="text-center" id="padding">
-                                <button class="btn-choose-trainer">
+                                <button ng-click="goToPT()" class="btn-choose-trainer">
                                     <div id="inner-text-choose-trainer">Bestill
                                     </div>
 
@@ -119,7 +119,7 @@
             <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
             <div id="pt-name">{{getNextActiveSlide().name}}</div>
                         <div class="center">
-                <Button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
+                <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
                     <div id="inner-text-train-btn">Bestill</div>
                 </Button>
             </div>

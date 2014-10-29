@@ -1,6 +1,6 @@
 'use strict';
-var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'ipCookie']);
-landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, ipCookie) {
+var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
+landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll) {
     $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
@@ -62,7 +62,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             path: '../text/mikael.html',
             number: counter,
             id: '544a58c93b55751200daafb4',
-            // http://localhost:8000/?id=544a58c93b55751200daafb4
+
         });
         counter++;
         slides.push({
@@ -91,6 +91,11 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
 
     };
+    $scope.goToPT = function() {
+        $location.hash('our-coach-background');
+        $anchorScroll();
+  
+    }
 
     $scope.getNextActiveSlide = function() {
         for (var i = 0; i < slides.length; i++) {
@@ -112,11 +117,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         findPT();
 
 
-    $scope.login = function(PT) {  
-        console.log(PT);
-
-        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId="+PT.id;
-
+    $scope.login = function(PT) {
+        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
     };
 
     window.fbAsyncInit = function() {
