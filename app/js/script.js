@@ -1,9 +1,6 @@
 'use strict';
-var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource']);
-landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http) {
-
-
-
+var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
+landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore) {
     $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
@@ -117,7 +114,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http) {
 
     $scope.login = function(PT) {
         FB.login(function(response) {
-
+            console.log(PT);
             $scope.userData = response;
 
 
@@ -134,6 +131,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http) {
 
                 $http.post('/opt/api/auth', requestData)
                     .success(function(data) {
+                        console.log(data);
+                        $cookieStore.put('currentUser',data.user);
                         $window.location.href = "http://online-pt-test.herokuapp.com/#/";
                     })
                     .error(function(e) {
