@@ -1,6 +1,6 @@
 'use strict';
-var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
-landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore) {
+var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'ipCookie']);
+landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, ipCookie) {
     $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
@@ -70,7 +70,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'John Ole B. Elvehaug',
             path: '../text/john-ole.html',
             number: counter,
-            id: 1337,
+            id: '54509cacaeed031300c848f6',
         });
         counter++;
         slides.push({
@@ -112,34 +112,11 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         findPT();
 
 
-    $scope.login = function(PT) {
-        FB.login(function(response) {
-            console.log(PT);
-            $scope.userData = response;
+    $scope.login = function(PT) {  
+        console.log(PT);
 
+        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId="+PT.id;
 
-            //get user info from FB:
-            FB.api('/me', function(response) {
-                var requestData = {
-                    firstName: response.first_name,
-                    lastName: response.last_name,
-                    gender: response.gender,
-                    facebookId: response.id,
-                    PtId: PT.id
-
-                };
-
-                $http.post('/opt/api/auth', requestData)
-                    .success(function(data) {
-                        console.log(data);
-                        $cookieStore.put('currentUser',data.user);
-                        $window.location.href = "http://online-pt-test.herokuapp.com/#/";
-                    })
-                    .error(function(e) {
-                        console.log("err");
-                    });
-            });
-        });
     };
 
     window.fbAsyncInit = function() {
