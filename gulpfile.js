@@ -10,10 +10,7 @@ gulp.task('default', ['webserver', 'sass','watch']);
 
 gulp.task('webserver', function() {
 	gulp.src('app')
-	.pipe(webserver({
-		proxies: [{source:'/opt',
-		target:"http://online-pt-test.herokuapp.com/"}]
-	}));
+	.pipe(webserver());
 
 });
 
