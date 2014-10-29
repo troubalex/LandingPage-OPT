@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Ladningpage Online-PT</title>
+    <title>Online Personlig Trener &ndash; online-pt.no</title>
 </head>
 
 <body ng-controller="CarouselDemoCtrl" ng-init="init()">
@@ -32,7 +32,8 @@
         </div>
 
         <div class="layer-container col-xs-12" id="second-layer">
-            <div class="row">
+            <p ng-show="showTwoSlides" class="section-header sales-section-header">Dette f&aring;r du</p>
+            <div class="row sales-section">
                 <div class="col-xs-6">
                     <h1 class="header-text second-layer-heading">
                         Personlig</h1>
@@ -45,6 +46,8 @@
                     <h3 class="text second-layer-text" id="pay-one-price">Gjennomf&oslash;ringen av treningen m&aring; du selv st&aring; for, men din personlige trener vil v&aelig;re tilgjengelig og f&oslash;lge deg opp l&oslash;pende med f&aring; dagers mellomrom. Jevnlig dialog med din personlige trener vil sikre at du har progresjon og det rette fokus til enhver tid.
                     </h3>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-xs-6">
                     <h1 class="header-text second-layer-heading">
                         Faglig sterk</h1>
@@ -53,35 +56,41 @@
 
                     </h3>
                 </div>
-                <div class="col-xs-6" id="price-color">
-                    <div class="price">
-                        <div class="text-center money-box">
-                            <span id="current-price">kr 795</span>
-                            <h4 class="text-center">/m&aring;ned uten bindingstid</h4>
-                        </div>
-                        <div class="text-center" id="padding">
-                            <button class="btn-choose-trainer">
-                                <div id="inner-text-choose-trainer">Bestill
-                                </div>
+                <div class="col-xs-6">
+                    <div id="price-color">
+                        <div class="price">
+                            <div class="money-box">
+                                <div id="current-price">kr 795</div>
+                                <h4 id="month">/m&aring;ned uten bindingstid</h4>
+                            </div>
+                            <div class="text-center" id="padding">
+                                <button class="btn-choose-trainer">
+                                    <div id="inner-text-choose-trainer">Bestill
+                                    </div>
 
-                            </button>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="quotes col-xs-12">
-        <blockquote>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</blockquote>
-        <p id="feedback-text">- Ola Nordmann</p>
-    </div>
-    <div class="col-xs-12" id="our-coach-background">
-        <p id="our-coach">V&aring;re trenere</p>
-        <div class="text-center">
-            <div class="col-xs-12" id="carousel-start"></div>
+ 
+        <div class="quote-section col-xs-12">
+            <div class="quote">
+                <blockquote>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</blockquote>
+                <p id="feedback-text">- Ola Nordmann</p>
+            </div>
         </div>
+
+    <div class="col-xs-12" id="our-coach-background">
+        <p class="section-header">V&aring;re trenere</p>
     </div>
+
+<!-- FIXME: jump here from button -->
+    <a id="trainer-section"></a>
+
     <div class="col-xs-12" id="carousel-background">
         <carousel class="slides">
             <slide ng-repeat="slide in slides" active="slide.active">
@@ -91,7 +100,6 @@
                 </div>
             </slide>
         </carousel>
-
 
         <div ng-class="imgClass()">
             <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
