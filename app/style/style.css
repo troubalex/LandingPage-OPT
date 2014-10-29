@@ -2,6 +2,8 @@ body {
     background-color: #efefef;
     color: #222;
     font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
 }
 #second-logo {
     font-family: proxima-nova, sans-serif;
@@ -16,7 +18,6 @@ body {
     height: 200px;
 }
 #logo {
-    top: 20px;
     position: relative;
     background: url("../img/SaEx_logo_white_mobil.png") center;
     background-repeat: no-repeat;
@@ -41,10 +42,10 @@ body {
     background-size: cover;
     padding-top: 1px;
     position: relative;
-    top: -15px;
 }
-.second-layer {
+#second-layer {
     background-color: white;
+    margin-top: 15px;
 }
 .text {
     font-family: proxima-nova, sans-serif;
@@ -149,7 +150,7 @@ body {
 .second-layer-text {
     color: #222222;
     font-family: arial;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.3em;
 }
 #fb-padding {
@@ -161,27 +162,34 @@ body {
     font-family: bold arial;
     color: #979797;
 }
-#our-coach {
+.section-header {
     font-family: 'proxima-nova';
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d8d8d8;
     text-transform: uppercase;
 }
+.sales-section-header{
+    margin:0 15px 0 15px;
+}
+.sales-section {
+    padding-bottom: 15px;
+}
+
 .price {
     color: #222222;
-    line: 100%;
+    line-height: 1.2;
     font-family: 'proxima-nova';
     font-weight: 300;
-    padding-bottom: 10px;
+    padding: 20px 0 10px 0;
 }
 .price h1 {
     padding-left: 48px;
 }
 .price #month {
-    text-align: right;
-    padding-right: 47px;
     font-size: 18px;
     font-family: 'proxima-nova';
     font-weight: 300;
@@ -197,6 +205,8 @@ body {
     color: white;
     height: 47px;
     border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 #hero-btn {
     padding-bottom: 60px;
@@ -212,9 +222,10 @@ body {
     padding-bottom: 10px;
 }
 .price #current-price {
-    font-size: 50px;
-    text-align: center;
-    padding: 0px 0px 0px 25px;
+    font-size: 55px;
+    padding-top: 25px;
+    padding-bottom: -5px;
+    line-height: 0.7;
 }
 .layer-container {
     background: #FFFFFF;
@@ -371,11 +382,12 @@ h4 {
     .col-xs-6 {
         width: 100%;
     }
+    #current-price, #month {
+        text-align: center;
+    }
 }
 @media (min-width: 600px) {
-    body {
-        font-size: 16px;
-    }
+
 
     #background {
         background: url("../img/hero_tablet.jpg") center;
@@ -384,5 +396,13 @@ h4 {
     }
     #logo {
         top: -120px;
+        background:url(../img/SaEx_logo_white_tablet);
     }
+    #current-price, #month {
+    text-align: center;
+    }
+    #price-color {
+    margin-left: 20px;
+}
+
 }
