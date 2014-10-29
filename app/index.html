@@ -53,6 +53,7 @@
 
                     </h3>
                 </div>
+<<<<<<< HEAD
                 <div class="col-xs-6" id="price-color">
                     <div class="price">
                         <div class="text-center money-box">
@@ -65,6 +66,23 @@
                                 </div>
 
                             </button>
+=======
+                <div class="col-xs-6">
+                    <div id="price-color">
+                        <div class="price">
+                            <div class="money-box">
+                                <div id="current-price">kr 795</div>
+                                <h4 id="month">/m&aring;ned uten bindingstid</h4>
+                            </div>
+                            <div class="text-center" id="padding">
+                                <a href="#trainer-section">
+                                    <button class="btn-choose-trainer">
+                                        <div id="inner-text-choose-trainer">Bestill
+                                        </div>
+                                    </button>
+                                </a>
+                            </div>
+>>>>>>> dfb3608... Prepared anchor on CTA button.
                         </div>
                     </div>
                 </div>
@@ -80,11 +98,12 @@
         </div>
 
     <div class="col-xs-12" id="our-coach-background">
-        <p id="our-coach">V&aring;re trenere</p>
-        <div class="text-center">
-            <div class="col-xs-12" id="carousel-start"></div>
-        </div>
+        <p class="section-header">V&aring;re trenere</p>
     </div>
+
+<!-- FIXME: jump here from button -->
+    <a id="trainer-section"></a>
+
     <div class="col-xs-12" id="carousel-background">
         <carousel class="slides">
             <slide ng-repeat="slide in slides" active="slide.active">
@@ -94,7 +113,6 @@
                 </div>
             </slide>
         </carousel>
-
 
         <div ng-class="imgClass()">
             <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>

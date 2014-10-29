@@ -315,9 +315,7 @@ blockquote {
 #price-color {
     background-color: rgba(231, 236, 243, 100);
 }
-#carousel-start {
-    border-bottom: 1px solid #d8d8d8;
-}
+
 .carousel-indicators {
     display: none;
 }
