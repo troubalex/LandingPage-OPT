@@ -2,6 +2,7 @@
 <html ng-app="landingPage">
 
 <head>
+    <script src="//cdn.optimizely.com/js/2122921733.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Online Personlig Trener &ndash; online-pt.no</title>
 </head>
@@ -18,59 +19,59 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="text-center">
-                                <h2 class="text" id="padding-text-first">V&aring;re beste personlige trenere er n&aring; tilgjengelig online. <br>
-                                Du kan trene n&aring;r og hvor du vil men med tett oppf&oslash;lging fra din egen treningsekspert.
+                                <h2 class="text" id="padding-text-first">
+                                    Tett p&aring;.<br>
+                                    Personlig.<br>
+                                    Faglig sterk.
                                 </h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="btn" ng-hide="showTwoSlides">
-                    <div id="inner-text">Les mer
+                <button ng-click="goToSale()"class="btn" ng-hide="showTwoSlides">
+                    <div  id="inner-text">Les mer
                     </div>
-                </div>
+                </bitton>
             </div>
         </div>
-
-        <div class="layer-container col-xs-12" id="second-layer">
-            <p ng-show="showTwoSlides" class="section-header sales-section-header">Dette f&aring;r du</p>
-            <div class="row sales-section">
-                <div class="col-xs-6">
-                    <h1 class="header-text second-layer-heading">
-                        Personlig</h1>
-                    <h3 class="text second-layer-text">Din trener vil lage ditt personlig kosthold- og treningsprogram som er tilpasset deg og dine m&aring;lsettinger. Jevnlige oppdateringer s&oslash;rger for at du til enhver tid har et program som passer ditt behov og din hverdag.
-                    </h3>
-                </div>
-                <div class="col-xs-6">
-                    <h1 class="header-text second-layer-heading">
-                        Tett p&aring;</h1>
-                    <h3 class="text second-layer-text" id="pay-one-price">Gjennomf&oslash;ringen av treningen m&aring; du selv st&aring; for, men din personlige trener vil v&aelig;re tilgjengelig og f&oslash;lge deg opp l&oslash;pende med f&aring; dagers mellomrom. Jevnlig dialog med din personlige trener vil sikre at du har progresjon og det rette fokus til enhver tid.
-                    </h3>
-                </div>
+    </div>
+    <div class="layer-container col-xs-12" id="second-layer">
+        <div class="row sales-section">
+            <div class="col-xs-6">
+                <h1 class="header-text second-layer-heading">
+                    Ett opplegg for deg</h1>
+                <h3 class="text second-layer-text">Din trener vil lage ditt <strong>personlig kosthold- og treningsprogram</strong> som er tilpasset deg og dine m&aring;lsettinger. <strong>Jevnlige oppdateringer</strong> s&oslash;rger for at du til enhver tid har et program som passer ditt behov og din hverdag.
+                </h3>
             </div>
-            <div class="row">
-                <div class="col-xs-6">
-                    <h1 class="header-text second-layer-heading">
-                        Faglig sterk</h1>
+            <div class="col-xs-6">
+                <h1 class="header-text second-layer-heading">
+                    Tett oppf&oslash;lging</h1>
+                <h3 class="text second-layer-text" id="pay-one-price">Gjennomf&oslash;ringen av treningen m&aring; du selv st&aring; for, men din personlige trener vil v&aelig;re tilgjengelig og <strong>f&oslash;lge deg opp l&oslash;pende</strong> med f&aring; dagers mellomrom. <strong>Jevnlig dialog</strong> med din personlige trener vil sikre at du har progresjon og det rette fokus til enhver tid.
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 class="header-text second-layer-heading">
+                    V&aring;r ekspertise</h1>
 
-                    <h3 class="text second-layer-text" id="last-second-layer-text">Din trener vil dele av sin kunnskap og hjelpe deg med &aring; sette gode m&aring;l som passer ditt niv&aring; og dine ambisjoner b&aring;de n&aring;r det gjelder kosthold og trening.
+                <h3 class="text second-layer-text" id="last-second-layer-text">Din trener vil <strong>dele av sin kunnskap</strong> og hjelpe deg med &aring; sette gode m&aring;l som passer ditt niv&aring; og dine ambisjoner b&aring;de n&aring;r det gjelder kosthold og trening.
 
-                    </h3>
-                </div>
-                <div class="col-xs-6">
-                    <div id="price-color">
-                        <div class="price">
-                            <div class="money-box">
-                                <div id="current-price">kr 795</div>
-                                <h4 id="month">/m&aring;ned uten bindingstid</h4>
-                            </div>
-                            <div class="text-center" id="padding">
-                                <button ng-click="goToPT()" class="btn-choose-trainer">
-                                    <div id="inner-text-choose-trainer">Bestill
-                                    </div>
+                </h3>
+            </div>
+            <div class="col-xs-6">
+                <div id="price-color">
+                    <div class="price">
+                        <div class="money-box">
+                            <div id="current-price">kr 795</div>
+                            <h4 id="month">/m&aring;ned uten bindingstid</h4>
+                        </div>
+                        <div class="text-center" id="padding">
+                            <button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
+                                <div id="inner-text-choose-trainer">Bestill
+                                </div>
 
-                                </button>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -78,19 +79,20 @@
         </div>
     </div>
  
-        <div class="quote-section col-xs-12">
-            <div class="quote">
-                <blockquote>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</blockquote>
-                <p id="feedback-text">- Ola Nordmann</p>
+        <div class="layer-container col-xs-12">
+            <p class="section-header sales-section-header">Dette f&aring;r du</p>
+            <div class="benefits">
+                <ul class="bullets">
+                    <li>Personlig treningsplan og kostholdsveiledning</li>
+                    <li>Ubegrensede meldinger med din personlig trener</li>
+                    <li>Tett oppf&oslash;lging av din personlig trener</li>
+                </ul>
             </div>
         </div>
 
     <div class="col-xs-12" id="our-coach-background">
         <p class="section-header">V&aring;re trenere</p>
     </div>
-
-<!-- FIXME: jump here from button -->
-    <a id="trainer-section"></a>
 
     <div class="col-xs-12" id="carousel-background">
         <carousel class="slides">
