@@ -181,7 +181,7 @@ body {
     margin:0 15px 0 15px;
 }
 .sales-section {
-    padding-bottom: 15px;
+    padding-bottom: 0;
 }
 
 .price {
@@ -198,6 +198,7 @@ body {
     font-size: 18px;
     font-family: 'proxima-nova';
     font-weight: 300;
+    margin-top: 0;
 }
 .btn-choose-trainer {
     border: 2px solid #4B186C;
@@ -469,6 +470,9 @@ h4 {
         padding-top: 52%;
         padding-bottom: 105px;
     }
+    .sales-section {
+    padding-bottom: 15px;
+}
     .benefits{
         width:50%;
     }
