@@ -90,8 +90,6 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     $scope.random = function() {
         var tmp = Math.random() * (slides.length - 0) + 0;
         var random = Math.floor(tmp);
-        console.log(random);
-        console.log(slides[random]);
         slides[random].active = true;
 
 
