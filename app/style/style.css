@@ -51,6 +51,7 @@ body {
     padding-top: 1px;
     position: relative;
 }
+
 #second-layer {
     background-color: white;
     padding-top: 10px;
@@ -115,13 +116,7 @@ body {
 #inner-text {
     text-indent: 100%;
     margin-top: 10px;
-}
-#inner-text:after {
-    content: "\f078";
-    font-family: FontAwesome;
-    font-size: 14px;
-    padding-top: 21px ;
-    padding-left: 8px;
+    padding-bottom: 15px;
 }
 #inner-text-choose-trainer {
     white-space: nowrap;
@@ -302,6 +297,7 @@ blockquote {
     line-height: 1.3;
     margin: 0 0 10px 0;
     border: none;
+    text-align: center;
 }
 
 #contact-us {
@@ -381,9 +377,6 @@ blockquote {
     margin-left: -30px;
 }
 
-blockquote {
-    font-variant: italic;
-}
 
 h4 {
     font-family: Arial, sans-serif;

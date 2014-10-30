@@ -27,10 +27,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn" ng-hide="showTwoSlides">
-                    <div id="inner-text">Les mer
+                <button ng-click="goToSale()"class="btn" ng-hide="showTwoSlides">
+                    <div  id="inner-text">Les mer
                     </div>
-                </div>
+                </bitton>
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@
                             <h4 id="month">/m&aring;ned uten bindingstid</h4>
                         </div>
                         <div class="text-center" id="padding">
-                            <button ng-click="goToPT()" class="btn-choose-trainer">
+                            <button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
                                 <div id="inner-text-choose-trainer">Bestill
                                 </div>
 
@@ -92,9 +92,6 @@
     <div class="col-xs-12" id="our-coach-background">
         <p class="section-header">V&aring;re trenere</p>
     </div>
-
-<!-- FIXME: jump here from button -->
-    <a id="trainer-section"></a>
 
     <div class="col-xs-12" id="carousel-background">
         <carousel class="slides">

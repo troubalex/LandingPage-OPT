@@ -106,6 +106,12 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
 
     };
+    $scope.goToSale = function() {
+        $location.hash('second-layer');
+        $anchorScroll();
+
+    }
+
     $scope.goToPT = function() {
         $location.hash('our-coach-background');
         $anchorScroll();
