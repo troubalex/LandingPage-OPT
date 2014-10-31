@@ -227,6 +227,8 @@ body {
 }
 .contact-margin {
     margin-left: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 .price #padding {
     padding-bottom: 10px;
