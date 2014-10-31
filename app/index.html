@@ -117,7 +117,7 @@
                     <div ng-include="getActiveSlide().path"></div>
                     <div class="center">
                         <Button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
-                            <div id="inner-text-train-btn">Velg {{getActiveSlide().name}}</div>
+                            <div id="inner-text-train-btn">Velg {{getActiveSlide().name.split(" ")[0]}}</div>
                         </Button>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="center">
                     <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
-                        <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name}}</div>
+                        <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name.split(" ")[0]}}</div>
                     </Button>
                 </div>
             </div>

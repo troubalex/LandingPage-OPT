@@ -143,8 +143,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
     $scope.login = function(PT) {
         mixpanel.track("User chose PT", {
-            'pt-name:'
-            pt.name
+            'pt-name':pt.name
         });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
     };
