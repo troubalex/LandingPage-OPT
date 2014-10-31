@@ -17,7 +17,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         }
     });
 
-    $scope.init = function () {
+    $scope.init = function() {
         mixpanel.track('User viewed sales page');
     }
 
@@ -102,6 +102,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
 
     $scope.getActiveSlide = function() {
+        mixpanel.track("User scrolled through PT's");
         return slides.filter(function(s) {
             return s.active;
         })[0];
@@ -141,7 +142,10 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
 
     $scope.login = function(PT) {
-        mixpanel.track("User chose PT", {'pt-name:'pt.name});
+        mixpanel.track("User chose PT", {
+            'pt-name:'
+            pt.name
+        });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
     };
 
