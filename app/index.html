@@ -99,7 +99,7 @@
             <slide ng-repeat="slide in slides" active="slide.active">
                 <div>
                     <img ng-src="{{slide.image}}" ng-class="imgClass()">
-                    <img ng-show="showTwoSlides" class="two-slides" ng-src="{{getNextActiveSlide().image}}">
+                    <img ng-show="showTwoSlides" class="two-slides second-slide" ng-src="{{getNextActiveSlide().image}}">
                 </div>
             </slide>
         </carousel>
@@ -111,13 +111,13 @@
                 <div ng-include="getActiveSlide().path"></div>
              <div class="center">
                 <Button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
-                    <div id="inner-text-train-btn">Bestill</div>
+                    <div id="inner-text-train-btn">Velg {{getActiveSlide().name}}</div>
                 </Button>
             </div>
             </div>
         </div>
 
-        <div class="two-slides" ng-show="showTwoSlides">
+        <div class="two-slides second-slide" ng-show="showTwoSlides">
             <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
             <div id="pt-name">{{getNextActiveSlide().name}}</div>
             <div class="text second-layer-text" id="pt-text">
@@ -125,7 +125,7 @@
             </div>
             <div class="center">
                 <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
-                    <div id="inner-text-train-btn">Bestill</div>
+                    <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name}}</div>
                 </Button>
             </div>
         </div>
