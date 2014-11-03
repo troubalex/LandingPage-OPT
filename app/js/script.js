@@ -7,6 +7,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     $scope.showTwoSlides = true;
     $scope.currentPersonText = '';
     var PtId;
+    var random;
 
 
     $scope.$watch(function() {
@@ -73,10 +74,10 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         counter++;
         slides.push({
             image: '/img/john-ole.jpg',
-            name: 'John Ole B. Elvehaug',
+            name: 'John Ole B. Elvhaug',
             path: '../text/john-ole.html',
             number: counter,
-            id: 1337,
+            id: '54509cacaeed031300c848f6',
         });
         counter++;
         slides.push({
@@ -93,7 +94,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
     $scope.random = function() {
         var tmp = Math.random() * (slides.length - 0) + 0;
-        var random = Math.floor(tmp);
+        random = Math.floor(tmp);
         slides[random].active = true;
 
 
@@ -102,7 +103,6 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
 
     $scope.getActiveSlide = function() {
-        mixpanel.track("User scrolled through PT's");
         return slides.filter(function(s) {
             return s.active;
         })[0];
@@ -143,7 +143,10 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
     $scope.login = function(PT) {
         mixpanel.track("User chose PT", {
-            'pt-name':pt.name
+            'ptIndex':PT.number,
+            'Random index': random,     
+            'screen width': $window.innerWidth,   
+            'pt-name':PT.name     
         });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
     };

@@ -36,6 +36,7 @@
                 </div>
             </div>
         </div>
+
         <div class="layer-container col-xs-12" id="second-layer">
             <div class="row sales-section">
                 <div class="col-xs-6">
@@ -90,8 +91,8 @@
             <div class="benefits">
                 <ul class="bullets">
                     <li>Personlig treningsplan og kostholdsveiledning</li>
-                    <li>Ubegrensede meldinger med din personlig trener</li>
-                    <li>Tett oppf&oslash;lging av din personlig trener</li>
+                    <li>Ubegrensede meldinger med din personlige trener</li>
+                    <li>Tett oppf&oslash;lging av din personlige trener</li>
                 </ul>
             </div>
         </div>
@@ -145,14 +146,16 @@
         </div>
         <div class="contact col-xs-12 " id="contact-text">
             <h3 id="contact-us">Kontakt oss</h3>
-            <i class="fa fa-envelope fa-2x contact-info"></i> <span class="contact-margin">online-pt@iterate.no </span>
+            <i class="fa fa-envelope fa-2x contact-info"></i> 
+            <span class="contact-margin">online-pt@iterate.no</span>
             <br>
-            <i class="fa fa-phone fa-2x contact-info"> </i> <span class="contact-margin" > 995 69 938  </span>
+            <i class="fa fa-phone fa-2x contact-info"> </i> 
+            <span class="contact-margin">995 69 938</span>
             <p id="contact-footer" class="contact-info">L&oslash;sningen Online Personlig Trener er under kontinuerlig forbedring og videreutvikling.</p>
             <p id="contact-footer" class="contact-info bottom">Kontakt oss gjerne med kommentarer, informasjon om tekniske/praktiske komplikasjoner, &oslash;nsker om endringer eller nye funksjoner, eller andre sp&oslash;rsm&aring;l.
             </p>
         </div>
-    </div>    
+    </div>
 </body>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -170,10 +173,47 @@ try {
 } catch (e) {}
 </script>
 
-<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-        mixpanel.init("d325adcd90c5f742de498c77f127a9c0");
-    </script>
+<script type="text/javascript">
+(function(f, b) {
+    if (!b.__SV) {
+        var a, e, i, g;
+        window.mixpanel = b;
+        b._i = [];
+        b.init = function(a, e, d) {
+            function f(b, h) {
+                var a = h.split(".");
+                2 == a.length && (b = b[a[0]], h = a[1]);
+                b[h] = function() {
+                    b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            }
+            var c = b;
+            "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+            c.people = c.people || [];
+            c.toString = function(b) {
+                var a = "mixpanel";
+                "mixpanel" !== d && (a += "." + d);
+                b || (a += " (stub)");
+                return a
+            };
+            c.people.toString = function() {
+                return c.toString(1) + ".people (stub)"
+            };
+            i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+            for (g = 0; g < i.length; g++) f(c, i[g]);
+            b._i.push([a, e, d])
+        };
+        b.__SV = 1.2;
+        a = f.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";
+        e = f.getElementsByTagName("script")[0];
+        e.parentNode.insertBefore(a, e)
+    }
+})(document, window.mixpanel || []);
+mixpanel.init("d325adcd90c5f742de498c77f127a9c0");
+</script>
 
 
 </html>
