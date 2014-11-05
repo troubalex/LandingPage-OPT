@@ -166,6 +166,16 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
     };
 
+    $scope.loginWithRandomPT = function(PT) {
+        mixpanel.track("User chose random PT", {
+            'ptIndex':PT.number,
+            'Random index': random,
+            'screen width': $window.innerWidth,
+            'pt-name':PT.name
+        });
+        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
+    };
+
     window.fbAsyncInit = function() {
         FB.init({
             appId: '824591080914567',
