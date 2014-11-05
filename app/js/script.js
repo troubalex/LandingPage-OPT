@@ -84,7 +84,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Sandra Gavrilov',
             path: '../text/sandra.html',
             number: counter,
-            id: '',
+            id: '545a04a65d52590a0053ff00',
         });
         counter++;
         slides.push({
@@ -92,7 +92,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Maren Hovdenakk',
             path: '../text/maren.html',
             number: counter,
-            id: '',
+            id: '544a34b586d6511200fc8010',
         });
         counter++;
         slides.push({
@@ -100,7 +100,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Per Arnér',
             path: '../text/per.html',
             number: counter,
-            id: '',
+            id: '54565302c6adf10a00858218',
         });
         counter++;
     };

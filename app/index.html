@@ -130,11 +130,11 @@
                 <div id="pt-name">{{getNextActiveSlide().name}}</div>
                 <div class="text second-layer-text" id="pt-text">
                     <div ng-include="getNextActiveSlide().path"></div>
-                </div>
-                <div class="center">
-                    <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
-                        <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name.split(" ")[0]}}</div>
-                    </Button>
+                    <div class="center">
+                        <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
+                            <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name.split(" ")[0]}}</div>
+                        </Button>
+                    </div>
                 </div>
             </div>
             <div class="col-xs-12" id="fb-padding">
