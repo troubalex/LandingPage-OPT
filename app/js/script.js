@@ -60,7 +60,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Erik Flågen',
             path: '../text/erik.html',
             number: counter,
-            id: '5433c1cf0779ed12008a1509'
+            id: 'Erik'
         });
         counter++;
         slides.push({
@@ -68,7 +68,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Mikael Johansson',
             path: '../text/mikael.html',
             number: counter,
-            id: '544a58c93b55751200daafb4',
+            id: 'Mikael',
         });
         counter++;
         slides.push({
@@ -76,7 +76,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Sondre Krogh-Bjerke',
             path: '../text/sondre.html',
             number: counter,
-            id: '5410c5283877801100ced009',
+            id: 'Sondre',
         });
         counter++;
         slides.push({
@@ -84,7 +84,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Sandra Gavrilov',
             path: '../text/sandra.html',
             number: counter,
-            id: '545a04a65d52590a0053ff00',
+            id: 'Sandra',
         });
         counter++;
         slides.push({
@@ -92,7 +92,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Maren Hovdenakk',
             path: '../text/maren.html',
             number: counter,
-            id: '544a34b586d6511200fc8010',
+            id: 'Maren',
         });
         counter++;
         slides.push({
@@ -100,7 +100,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Per Arnér',
             path: '../text/per.html',
             number: counter,
-            id: '54565302c6adf10a00858218',
+            id: 'Per',
         });
         counter++;
     };
@@ -108,13 +108,13 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     $scope.addSlide();
 
     $scope.random = function() {
+
         var tmp = Math.random() * (slides.length - 0) + 0;
         random = Math.floor(tmp);
         slides[random].active = true;
 
 
     }
-    $scope.random();
 
 
     $scope.getActiveSlide = function() {
@@ -154,6 +154,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     PtId = QueryString().id;
     if (PtId)
         findPT();
+    else
+        $scope.random();
 
 
     $scope.login = function(PT) {
