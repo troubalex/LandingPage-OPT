@@ -69,15 +69,6 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             path: '../text/mikael.html',
             number: counter,
             id: '544a58c93b55751200daafb4',
-
-        });
-        counter++;
-        slides.push({
-            image: '/img/john-ole.jpg',
-            name: 'John Ole B. Elvhaug',
-            path: '../text/john-ole.html',
-            number: counter,
-            id: '54509cacaeed031300c848f6',
         });
         counter++;
         slides.push({
@@ -86,6 +77,30 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             path: '../text/sondre.html',
             number: counter,
             id: '5410c5283877801100ced009',
+        });
+        counter++;
+        slides.push({
+            image: '/img/sandra.jpg',
+            name: 'Sandra Gavrilov',
+            path: '../text/sandra.html',
+            number: counter,
+            id: '545a04a65d52590a0053ff00',
+        });
+        counter++;
+        slides.push({
+            image: '/img/maren.jpg',
+            name: 'Maren Hovdenakk',
+            path: '../text/maren.html',
+            number: counter,
+            id: '544a34b586d6511200fc8010',
+        });
+        counter++;
+        slides.push({
+            image: '/img/per.jpg',
+            name: 'Per Arnér',
+            path: '../text/per.html',
+            number: counter,
+            id: '54565302c6adf10a00858218',
         });
         counter++;
     };
@@ -147,6 +162,16 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             'Random index': random,     
             'screen width': $window.innerWidth,   
             'pt-name':PT.name     
+        });
+        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
+    };
+
+    $scope.loginWithRandomPT = function(PT) {
+        mixpanel.track("User chose random PT", {
+            'ptIndex':PT.number,
+            'Random index': random,
+            'screen width': $window.innerWidth,
+            'pt-name':PT.name
         });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
     };

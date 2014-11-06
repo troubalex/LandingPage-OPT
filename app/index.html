@@ -75,7 +75,7 @@
                                 <h4 id="month">/m&aring;ned uten bindingstid</h4>
                             </div>
                             <div class="text-center" id="padding">
-                                <button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
+                                <button ng-click="loginWithRandomPT(getActiveSlide())" class="btn-choose-trainer">
                                     <div id="inner-text-choose-trainer">Bestill
                                     </div>
 
@@ -130,18 +130,11 @@
                 <div id="pt-name">{{getNextActiveSlide().name}}</div>
                 <div class="text second-layer-text" id="pt-text">
                     <div ng-include="getNextActiveSlide().path"></div>
-                </div>
-                <div class="center">
-                    <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
-                        <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name.split(" ")[0]}}</div>
-                    </Button>
-                </div>
-            </div>
-            <div class="col-xs-12" id="fb-padding">
-                <h3 class="text second-layer-text">
-                </h3>
-                <div class="center">
-                    <p id="fb-info">Online Personlig Trener krever en facebook konto i betafasen. Vi kommer aldri til &aring; poste p&aring; din profile eller lese din data.</p>
+                    <div class="center">
+                        <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
+                            <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name.split(" ")[0]}}</div>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,6 +145,7 @@
             <br>
             <i class="fa fa-phone fa-2x contact-info"> </i> 
             <span class="contact-margin">995 69 938</span>
+            <p id="contact-footer">Online Personlig Trener krever en facebook konto i betafasen. Vi kommer aldri til &aring; poste p&aring; din profile eller lese din data.</p>
             <p id="contact-footer" class="contact-info">L&oslash;sningen Online Personlig Trener er under kontinuerlig forbedring og videreutvikling.</p>
             <p id="contact-footer" class="contact-info bottom">Kontakt oss gjerne med kommentarer, informasjon om tekniske/praktiske komplikasjoner, &oslash;nsker om endringer eller nye funksjoner, eller andre sp&oslash;rsm&aring;l.
             </p>

@@ -54,7 +54,6 @@ body {
 
 #second-layer {
     background-color: white;
-    padding-top: 10px;
 }
 .text {
     font-family: proxima-nova, sans-serif;
@@ -135,6 +134,7 @@ body {
 }
 #our-coach-background {
     background-color: #FFFFFF;
+    border-right: 1px solid #ddd;
 }
 .contact .fa {
     color: #FFFFFF;
@@ -146,8 +146,9 @@ body {
 .second-layer-heading {
     padding-bottom: 7px;
     font-size: 18px;
-    font-family: Arial, sans-serif;
-    font-weight: 700;
+    font-family: ProximaNova, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 .second-layer-text {
     color: #222222;
@@ -168,11 +169,11 @@ body {
 }
 .section-header {
     font-family: 'proxima-nova';
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 24px;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #d8d8d8;
     text-transform: uppercase;
 }
@@ -206,7 +207,7 @@ body {
 
 .btn-choose-trainer {
     border: 2px solid #4B186C;
-    width: auto;
+    width: 75%;
     font-size: 22px;
     text-align: center;
     background-color: #4B186C;
@@ -242,6 +243,7 @@ body {
     background: #FFFFFF;
     padding: 0px 0px 0px 0px;
     border-bottom: 1px solid #ababab;
+    border-right: 1px solid #ddd;
     margin-bottom: 15px;
 }
 .center {
@@ -379,7 +381,9 @@ blockquote {
 }
 #carousel-background {
     padding-top: 10px;
+    padding-bottom: 30px;
     background-color: #FFFFFF;
+    border-right: 1px solid #ddd;
 }
 .left, .right {
     background-image: none !important;
@@ -469,6 +473,8 @@ h4 {
     }
     #price-color {
         margin-left: 20px;
+        border-right: 15px solid #FFFFFF;
+        border-bottom: 15px solid #FFFFFF;
     }
     #second-logo {
         font-family: proxima-nova, sans-serif;
