@@ -146,34 +146,42 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     };
     var findPT = function() {
         slides.forEach(function(PT) {
-            if (PT.id === PtId) {
+            if (PT.id.toLowerCase() === PtId.toLowerCase()) {
                 PT.active = true;
             }
         });
     };
-    PtId = QueryString().id;
+    PtId = QueryString().pt;
+
     if (PtId)
         findPT();
-    else
-        $scope.random();
+    else {
+        PtId = QueryString().PT;
+        if (PtId)
+            findPT();
+        else
+            $scope.random();
+    }
+
+
 
 
     $scope.login = function(PT) {
         mixpanel.track("User chose PT", {
-            'ptIndex':PT.number,
-            'Random index': random,     
-            'screen width': $window.innerWidth,   
-            'pt-name':PT.name     
+            'ptIndex': PT.number,
+            'Random index': random,
+            'screen width': $window.innerWidth,
+            'pt-name': PT.name
         });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
     };
 
     $scope.loginWithRandomPT = function(PT) {
         mixpanel.track("User chose random PT", {
-            'ptIndex':PT.number,
+            'ptIndex': PT.number,
             'Random index': random,
             'screen width': $window.innerWidth,
-            'pt-name':PT.name
+            'pt-name': PT.name
         });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
     };
