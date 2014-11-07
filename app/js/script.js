@@ -60,7 +60,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             name: 'Erik Flågen',
             path: '../text/erik.html',
             number: counter,
-            id: 'Erik'
+            id: 'Erik',
+            PTid: '5433c1cf0779ed12008a1509'
+
         });
         counter++;
         slides.push({
@@ -69,6 +71,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             path: '../text/mikael.html',
             number: counter,
             id: 'Mikael',
+            PTid: '544a58c93b55751200daafb4',
+
         });
         counter++;
         slides.push({
@@ -77,6 +81,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             path: '../text/sondre.html',
             number: counter,
             id: 'Sondre',
+            PTid: '5410c5283877801100ced009',
+
         });
         counter++;
         slides.push({
@@ -85,6 +91,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             path: '../text/sandra.html',
             number: counter,
             id: 'Sandra',
+            PTid: '545a04a65d52590a0053ff00',
+
         });
         counter++;
         slides.push({
@@ -93,6 +101,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             path: '../text/maren.html',
             number: counter,
             id: 'Maren',
+            PTid: '544a34b586d6511200fc8010',
+
         });
         counter++;
         slides.push({
@@ -101,6 +111,18 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             path: '../text/per.html',
             number: counter,
             id: 'Per',
+            PTid: '54565302c6adf10a00858218',
+
+        });
+        counter++;
+        slides.push({
+            image: '/img/shamal.jpg',
+            name: 'Shamal Kamal',
+            path: '../text/shamal.html',
+            number: counter,
+            id: 'Shamal',
+            PTid: '545385172e34da0a008d0041',
+
         });
         counter++;
     };
@@ -173,7 +195,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             'screen width': $window.innerWidth,
             'pt-name': PT.name
         });
-        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
+        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.PTid;
     };
 
     $scope.loginWithRandomPT = function(PT) {
@@ -183,7 +205,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             'screen width': $window.innerWidth,
             'pt-name': PT.name
         });
-        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.id;
+        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.PTid;
     };
 
     window.fbAsyncInit = function() {
