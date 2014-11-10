@@ -1,4 +1,5 @@
 'use strict';
+
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
 landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll) {
     $scope.currentText = '';
@@ -166,6 +167,8 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         }
 
     };
+
+
     var findPT = function() {
         slides.forEach(function(PT) {
             if (PT.id.toLowerCase() === PtId.toLowerCase()) {
