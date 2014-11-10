@@ -13,18 +13,18 @@
         <div class="layer-container col-lg-12">
             <div id="background">
                 <div class="text-center">
-                    <div id="logo">
-                        <h2 id="second-logo">Online Personlig Trener</h2>
+                    <div id="logo" alt="SATS ELIXIA">
+                        <h1 id="second-logo">Online Personlig Trener</h1>
                     </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="text-center">
-                                    <h2 class="text" id="padding-text-first">
+                                    <div class="text" id="padding-text-first">
                                         Tett p&aring;.
                                         <br>Personlig.
                                         <br>Faglig sterk.
-                                    </h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -38,34 +38,34 @@
         </div>
 
         <div class="layer-container col-xs-12" id="second-layer">
-            <p class="section-header sales-section-header">Om tjenesten</p>
+            <h2 class="section-header sales-section-header">Om tjenesten</h2>
             <div class="row sales-section">
                 <div class="col-xs-6">
-                    <h1 class="header-text second-layer-heading">
-                        Ett opplegg for deg</h1>
-                    <h3 class="text second-layer-text">Din trener vil lage ditt
+                    <h3 class="header-text second-layer-heading">
+                        Ett opplegg for deg</h3>
+                    <div class="text second-layer-text padding-left">Din trener vil lage ditt
                         <strong>personlig kosthold- og treningsprogram</strong>&nbsp;som er tilpasset deg og dine m&aring;lsettinger.
                         <strong>Jevnlige oppdateringer</strong>&nbsp;s&oslash;rger for at du til enhver tid har et program som passer ditt behov og din hverdag.
-                    </h3>
+                    </div>
                 </div>
                 <div class="col-xs-6">
-                    <h1 class="header-text second-layer-heading">
-                        Tett oppf&oslash;lging</h1>
-                    <h3 class="text second-layer-text" id="pay-one-price">Gjennomf&oslash;ringen av treningen m&aring; du selv st&aring; for, men din personlige trener vil v&aelig;re tilgjengelig og
+                    <h3 class="header-text second-layer-heading">
+                        Tett oppf&oslash;lging</h3>
+                    <div class="text second-layer-text" id="pay-one-price">Gjennomf&oslash;ringen av treningen m&aring; du selv st&aring; for, men din personlige trener vil v&aelig;re tilgjengelig og
                         <strong>f&oslash;lge deg opp l&oslash;pende</strong>&nbsp;med f&aring; dagers mellomrom.
                         <strong>Jevnlig dialog</strong>&nbsp;med din personlige trener vil sikre at du har progresjon og det rette fokus til enhver tid.
-                    </h3>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-6">
-                    <h1 class="header-text second-layer-heading">
-                        V&aring;r ekspertise</h1>
+                    <h3 class="header-text second-layer-heading">
+                        V&aring;r ekspertise</h3>
 
-                    <h3 class="text second-layer-text" id="last-second-layer-text">Din trener vil
+                    <div class="text second-layer-text padding-left" id="last-second-layer-text">Din trener vil
                         <strong>dele av sin kunnskap</strong>&nbsp;og hjelpe deg med &aring; sette gode m&aring;l som passer ditt niv&aring; og dine ambisjoner b&aring;de n&aring;r det gjelder kosthold og trening.
 
-                    </h3>
+                    </div>
                 </div>
                 <div class="col-xs-6">
                     <div id="price-color">
@@ -88,18 +88,18 @@
         </div>
 
         <div class="layer-container col-xs-12">
-            <p class="section-header sales-section-header">Dette f&aring;r du</p>
+            <h2 class="section-header sales-section-header">Dette f&aring;r du</h2>
             <div class="benefits">
-                <div class="bullets">
+                <ul class="bullets">
                     <li>Personlig treningsplan og kostholdsveiledning</li>
                     <li>Ubegrensede meldinger med din personlige trener</li>
                     <li>Tett oppf&oslash;lging av din personlige trener</li>
-                </div>
+                </ul>
             </div>
         </div>
 
         <div class="col-xs-12" id="our-coach-background">
-            <p class="section-header">V&aring;re trenere</p>
+            <h2 class="section-header">V&aring;re trenere</h2>
         </div>
 
         <div class="col-xs-12" id="carousel-background">
@@ -114,7 +114,7 @@
 
             <div ng-class="imgClass()">
                 <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
-                <div id="pt-name">{{getActiveSlide().name}}</div>
+                <h3 id="pt-name">{{getActiveSlide().name}}</h3>
                 <div class="text second-layer-text" id="pt-text">
                     <div ng-include="getActiveSlide().path"></div>
                     <div class="center">
@@ -127,7 +127,7 @@
 
             <div class="two-slides second-slide" ng-show="showTwoSlides">
                 <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
-                <div id="pt-name">{{getNextActiveSlide().name}}</div>
+                <h3 id="pt-name">{{getNextActiveSlide().name}}</h3>
                 <div class="text second-layer-text" id="pt-text">
                     <div ng-include="getNextActiveSlide().path"></div>
                     <div class="center">
@@ -141,7 +141,8 @@
         <div class="contact col-xs-12 " id="contact-text">
             <h3 id="contact-us">Kontakt oss</h3>
             <i class="fa fa-envelope fa-2x contact-info"></i> 
-            <span class="contact-margin">online-pt@iterate.no</span>
+            <span class="contact-margin"> <u><a href="mailto:online-pt@iterate.no"> online-pt@iterate.no </a></u></span>
+            
             <br>
             <i class="fa fa-phone fa-2x contact-info"> </i> 
             <span class="contact-margin">995 69 938</span>

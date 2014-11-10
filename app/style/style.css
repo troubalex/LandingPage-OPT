@@ -5,6 +5,13 @@ body {
     font-size: 16px;
     line-height: 1.2em;
 }
+a {
+    color: white;
+}
+
+.padding-left {
+    padding-left: 30px;
+}
 .wrapper {
     max-width: 980px !important;
     margin-right: auto;
