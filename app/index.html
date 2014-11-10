@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html ng-app="landingPage">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="//cdn.optimizely.com/js/2122921733.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Online Personlig Trener &ndash; online-pt.no</title>
+</head>
+
+<body ng-controller="CarouselDemoCtrl" ng-init="init()">
+    <div class="wrapper">
+        <div class="layer-container col-lg-12">
+            <div id="background">
+                <div class="text-center">
+                    <div id="logo">
+                        <h2 id="second-logo">Online Personlig Trener</h2>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center">
+                                    <h2 class="text" id="padding-text-first">
+                                        Tett p&aring;.
+                                        <br>Personlig.
+                                        <br>Faglig sterk.
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button ng-click="goToSale()" class="btn" ng-hide="showTwoSlides">
+                        <div id="inner-text">Les mer
+                        </div>
+                        </bitton>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer-container col-xs-12" id="second-layer">
+            <p class="section-header sales-section-header">Om tjenesten</p>
+            <div class="row sales-section">
+                <div class="col-xs-6">
+                    <h1 class="header-text second-layer-heading">
+                        Ett opplegg for deg</h1>
+                    <h3 class="text second-layer-text">Din trener vil lage ditt
+                        <strong>personlig kosthold- og treningsprogram</strong>&nbsp;som er tilpasset deg og dine m&aring;lsettinger.
+                        <strong>Jevnlige oppdateringer</strong>&nbsp;s&oslash;rger for at du til enhver tid har et program som passer ditt behov og din hverdag.
+                    </h3>
+                </div>
+                <div class="col-xs-6">
+                    <h1 class="header-text second-layer-heading">
+                        Tett oppf&oslash;lging</h1>
+                    <h3 class="text second-layer-text" id="pay-one-price">Gjennomf&oslash;ringen av treningen m&aring; du selv st&aring; for, men din personlige trener vil v&aelig;re tilgjengelig og
+                        <strong>f&oslash;lge deg opp l&oslash;pende</strong>&nbsp;med f&aring; dagers mellomrom.
+                        <strong>Jevnlig dialog</strong>&nbsp;med din personlige trener vil sikre at du har progresjon og det rette fokus til enhver tid.
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <h1 class="header-text second-layer-heading">
+                        V&aring;r ekspertise</h1>
+
+                    <h3 class="text second-layer-text" id="last-second-layer-text">Din trener vil
+                        <strong>dele av sin kunnskap</strong>&nbsp;og hjelpe deg med &aring; sette gode m&aring;l som passer ditt niv&aring; og dine ambisjoner b&aring;de n&aring;r det gjelder kosthold og trening.
+
+                    </h3>
+                </div>
+                <div class="col-xs-6">
+                    <div id="price-color">
+                        <div class="price">
+                            <div class="money-box">
+                                <div id="current-price">kr 795</div>
+                                <h4 id="month">/m&aring;ned uten bindingstid</h4>
+                            </div>
+                            <div class="text-center" id="padding">
+                                <button ng-click="loginWithRandomPT(getActiveSlide())" class="btn-choose-trainer">
+                                    <div id="inner-text-choose-trainer">Bestill
+                                    </div>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer-container col-xs-12">
+            <p class="section-header sales-section-header">Dette f&aring;r du</p>
+            <div class="benefits">
+                <div class="bullets">
+                    <li>Personlig treningsplan og kostholdsveiledning</li>
+                    <li>Ubegrensede meldinger med din personlige trener</li>
+                    <li>Tett oppf&oslash;lging av din personlige trener</li>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12" id="our-coach-background">
+            <p class="section-header">V&aring;re trenere</p>
+        </div>
+
+        <div class="col-xs-12" id="carousel-background">
+            <carousel class="slides">
+                <slide ng-repeat="slide in slides" active="slide.active">
+                    <div>
+                        <img ng-src="{{slide.image}}" ng-class="imgClass()">
+                        <img ng-show="showTwoSlides" class="two-slides second-slide" ng-src="{{getNextActiveSlide().image}}">
+                    </div>
+                </slide>
+            </carousel>
+
+            <div ng-class="imgClass()">
+                <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
+                <div id="pt-name">{{getActiveSlide().name}}</div>
+                <div class="text second-layer-text" id="pt-text">
+                    <div ng-include="getActiveSlide().path"></div>
+                    <div class="center">
+                        <Button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
+                            <div id="inner-text-train-btn">Velg {{getActiveSlide().name.split(" ")[0]}}</div>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-slides second-slide" ng-show="showTwoSlides">
+                <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
+                <div id="pt-name">{{getNextActiveSlide().name}}</div>
+                <div class="text second-layer-text" id="pt-text">
+                    <div ng-include="getNextActiveSlide().path"></div>
+                    <div class="center">
+                        <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
+                            <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name.split(" ")[0]}}</div>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact col-xs-12 " id="contact-text">
+            <h3 id="contact-us">Kontakt oss</h3>
+            <i class="fa fa-envelope fa-2x contact-info"></i> 
+            <span class="contact-margin">online-pt@iterate.no</span>
+            <br>
+            <i class="fa fa-phone fa-2x contact-info"> </i> 
+            <span class="contact-margin">995 69 938</span>
+            <p id="contact-footer">Online Personlig Trener krever en facebook konto i betafasen. Vi kommer aldri til &aring; poste p&aring; din profile eller lese din data.</p>
+            <p id="contact-footer" class="contact-info">L&oslash;sningen Online Personlig Trener er under kontinuerlig forbedring og videreutvikling.</p>
+            <p id="contact-footer" class="contact-info bottom">Kontakt oss gjerne med kommentarer, informasjon om tekniske/praktiske komplikasjoner, &oslash;nsker om endringer eller nye funksjoner, eller andre sp&oslash;rsm&aring;l.
+            </p>
+        </div>
+    </div>
+</body>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style/style.css" media="screen" />
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/ui-bootstrap.js"></script>
+<script type="text/javascript" src="js/angular-resource.js"></script>
+<script type="text/javascript" src="js/angular-cookies.min.js"></script>
+<script src="//use.typekit.net/whc6xho.js"></script>
+
+<script>
+try {
+    Typekit.load();
+} catch (e) {}
+</script>
+
+<script type="text/javascript">
+(function(f, b) {
+    if (!b.__SV) {
+        var a, e, i, g;
+        window.mixpanel = b;
+        b._i = [];
+        b.init = function(a, e, d) {
+            function f(b, h) {
+                var a = h.split(".");
+                2 == a.length && (b = b[a[0]], h = a[1]);
+                b[h] = function() {
+                    b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            }
+            var c = b;
+            "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+            c.people = c.people || [];
+            c.toString = function(b) {
+                var a = "mixpanel";
+                "mixpanel" !== d && (a += "." + d);
+                b || (a += " (stub)");
+                return a
+            };
+            c.people.toString = function() {
+                return c.toString(1) + ".people (stub)"
+            };
+            i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+            for (g = 0; g < i.length; g++) f(c, i[g]);
+            b._i.push([a, e, d])
+        };
+        b.__SV = 1.2;
+        a = f.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";
+        e = f.getElementsByTagName("script")[0];
+        e.parentNode.insertBefore(a, e)
+    }
+})(document, window.mixpanel || []);
+mixpanel.init("d325adcd90c5f742de498c77f127a9c0");
+</script>
+
+
+</html>
