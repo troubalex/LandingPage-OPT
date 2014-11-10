@@ -9,7 +9,7 @@ var paths = {
 gulp.task('default', ['webserver', 'sass','watch']);
 
 gulp.task('webserver', function() {
-	gulp.src('app')
+	gulp.src('./')
 	.pipe(webserver());
 
 });

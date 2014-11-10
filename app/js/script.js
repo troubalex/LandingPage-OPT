@@ -57,9 +57,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
     $scope.addSlide = function() {
         slides.push({
-            image: '/img/erik.jpg',
+            image: 'app/img/erik.jpg',
             name: 'Erik Flågen',
-            path: '../text/erik.html',
+            path: 'app/text/erik.html',
             number: counter,
             id: 'Erik',
             PTid: '5433c1cf0779ed12008a1509'
@@ -67,9 +67,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         });
         counter++;
         slides.push({
-            image: '/img/mikael.jpg',
+            image: 'app/img/mikael.jpg',
             name: 'Mikael Johansson',
-            path: '../text/mikael.html',
+            path: 'app/text/mikael.html',
             number: counter,
             id: 'Mikael',
             PTid: '544a58c93b55751200daafb4',
@@ -77,9 +77,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         });
         counter++;
         slides.push({
-            image: '/img/sondre.jpg',
+            image: 'app/img/sondre.jpg',
             name: 'Sondre Krogh-Bjerke',
-            path: '../text/sondre.html',
+            path: 'app/text/sondre.html',
             number: counter,
             id: 'Sondre',
             PTid: '5410c5283877801100ced009',
@@ -87,9 +87,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         });
         counter++;
         slides.push({
-            image: '/img/sandra.jpg',
+            image: 'app/img/sandra.jpg',
             name: 'Sandra Gavrilov',
-            path: '../text/sandra.html',
+            path: 'app/text/sandra.html',
             number: counter,
             id: 'Sandra',
             PTid: '545a04a65d52590a0053ff00',
@@ -97,9 +97,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         });
         counter++;
         slides.push({
-            image: '/img/maren.jpg',
+            image: 'app/img/maren.jpg',
             name: 'Maren Hovdenakk',
-            path: '../text/maren.html',
+            path: 'app/text/maren.html',
             number: counter,
             id: 'Maren',
             PTid: '544a34b586d6511200fc8010',
@@ -107,9 +107,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         });
         counter++;
         slides.push({
-            image: '/img/per.jpg',
+            image: 'app/img/per.jpg',
             name: 'Per Arnér',
-            path: '../text/per.html',
+            path: 'app/text/per.html',
             number: counter,
             id: 'Per',
             PTid: '54565302c6adf10a00858218',
@@ -117,9 +117,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         });
         counter++;
         slides.push({
-            image: '/img/shamal.jpg',
+            image: 'app/img/shamal.jpg',
             name: 'Shamal Kamal',
-            path: '../text/shamal.html',
+            path: 'app/text/shamal.html',
             number: counter,
             id: 'Shamal',
             PTid: '545385172e34da0a008d0041',
