@@ -107,16 +107,6 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         });
         counter++;
         slides.push({
-            image: 'app/img/per.jpg',
-            name: 'Per Arnér',
-            path: 'app/text/per.html',
-            number: counter,
-            id: 'Per',
-            PTid: '54565302c6adf10a00858218',
-
-        });
-        counter++;
-        slides.push({
             image: 'app/img/shamal.jpg',
             name: 'Shamal Kamal',
             path: 'app/text/shamal.html',

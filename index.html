@@ -104,7 +104,7 @@
 
         <div class="col-xs-12" id="carousel-background">
             <carousel class="slides">
-                <slide ng-repeat="slide in slides" active="slide.active">
+                <slide ng-repeat="slide in slides" active="slide.active" id="{{slide.name}}">
                     <div>
                         <img ng-src="{{slide.image}}" ng-class="imgClass()">
                         <img ng-show="showTwoSlides" class="two-slides second-slide" ng-src="{{getNextActiveSlide().image}}">
