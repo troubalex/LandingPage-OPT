@@ -411,7 +411,7 @@ angular.module('ui.bootstrap.buttons', [])
 *
 */
 angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
-.controller('CarouselController', ['$scope', '$timeout', '$transition', function ($scope, $timeout, $transition) {
+.controller('CarouselController', ['$scope', '$timeout', '$transition', '$window', function ($scope, $timeout, $transition, $window) {
   var self = this,
     slides = self.slides = $scope.slides = [],
     currentIndex = -1,
@@ -482,8 +482,21 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
     return slides.indexOf(slide);
   };
 
+  $scope.$watch(function() {
+        if ($window.innerWidth < 560) {
+            $scope.showTwoSlides = false;
+        } else {
+            $scope.showTwoSlides = true;
+        }
+  });
+
   $scope.next = function() {
-    var newIndex = (currentIndex + 2) % slides.length;
+      var newIndex = null;
+    if($scope.showTwoSlides)
+      newIndex = (currentIndex + 2) % slides.length;
+    else
+      newIndex = (currentIndex+1) % slides.length;
+
     //Prevent this user-triggered transition from occurring if there is already one in progress
     if (!$scope.$currentTransition) {
       return self.select(slides[newIndex], 'next');
@@ -491,16 +504,21 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
   };
 
   $scope.prev = function() {
-    var newIndex = currentIndex - 2;
+    var newIndex = null;
+    if($scope.showTwoSlides) {
+    newIndex = currentIndex - 2;
       if(newIndex === -1)
         newIndex = slides.length-1;
       else if(newIndex === -2)
         newIndex = slides.length-2;
+    }else {
+      if((currentIndex-1)<0){
+        newIndex = slides.length-1;
+      }else newIndex = (currentIndex-1)
+    }
 
     //Prevent this user-triggered transition from occurring if there is already one in progress
     if (!$scope.$currentTransition) {
-      // console.log(newIndex + " "+ currentIndex);
-      console.log(slides[newIndex]);
       return self.select(slides[newIndex], 'prev');
     }
   };

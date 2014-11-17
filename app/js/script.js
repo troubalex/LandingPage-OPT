@@ -10,7 +10,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     var PtId;
     var random;
 
-
+    function showToSlides() {
+        return $scope.showTwoSlides;
+    }
     $scope.$watch(function() {
         if ($window.innerWidth < 560) {
             $scope.showTwoSlides = false;
