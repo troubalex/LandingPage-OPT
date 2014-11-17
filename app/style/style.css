@@ -1,540 +1,58 @@
-body {
-    background-color: #efefef;
-    color: #222;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.2em;
-}
-a {
-    color: white;
+.pink {
+    background-color:pink;
+    color:white;
 }
 
+#logo {
+    background-repeat: no-repeat !important;
+    background: url("../img/SaEx_logo_white_mobil.png") center;
+    padding-top: 35px;
+}
 
-.glyphicon {
-    color: #4B186C;
-    font-size: 50px !important;
-    right: 10% !important;
-}
-.padding-left {
-    padding-left: 30px;
-}
-.wrapper {
-    max-width: 980px !important;
-    margin-right: auto;
-    margin-left: auto;
-}
-.container {
-    max-width: 980px !important;
-}
 #second-logo {
     font-family: proxima-nova, sans-serif;
-    font-size: 20px;
     line: 130%;
     color: white;
     box-shadow: 1px 1px 4px #000000 0, 0, 0;
-    position: relative;
     top: 30px;
 }
-#slides_control > div {
-    height: 200px;
-}
-#logo {
-    position: relative;
-    background-repeat: no-repeat !important;
-    background: url("../img/SaEx_logo_white_mobil.png") center;
-}
-#slides_control {
-    position: absolute;
-    width: 400px;
-    left: 50%;
-    top: 20px;
-    margin-left: -200px;
-}
-#last-second-layer-text {
-    padding-bottom: 30px;
-}
-#background {
-    background: url("../img/hero_mobil.jpg") center;
-    background-repeat: no-repeat;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding-top: 1px;
-    position: relative;
-}
-#second-layer {
-    background-color: white;
-}
-.text {
-    font-family: proxima-nova, sans-serif;
-    color: white;
-    padding: 0px 20px 0px 20px;
-    margin: 0px;
-}
-#padding-text-first {
-    padding: 85% 0 0 0;
-    max-width: 980px;
-    font-size: 3.5em;
-    color: #FFFFFF;
-    line-height: 1.3em;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    font-family: "proxima-nova-n6", "proxima-nova", sans-serif;
-    font-weight: 600;
-}
-#padding-text-second {
-    padding-bottom: 23px;
-    font-size: 16px;
-    color: #FFFFFF;
-    line-height: 20px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    padding: 0px 20px 25px 20px;
-    font-family: 'ProximaNova-Light';
-}
-#fb-info {
-    padding: 0px 20px 20px 20px;
-    font-style: italic;
-    font-family: Arial;
-    font-size: 10px;
-}
-.train-btn {
-    color: white;
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 10px;
-    height: 52px;
-    background: #4B186C;
-    padding: 0px;
-}
-.train-btn #inner-text-btn {
-    font-size: 20px;
-}
-#CTA-btn {
-    padding-bottom: 480px;
-}
-.btn {
-    background-color: rgba(0, 0, 0, 0);
-    height: 50px;
-    font-family: proxima-nova, sans-serif;
-    font-weight: 600;
-    padding: 0 0 0 0;
-    margin-top: 10%;
-}
-.text-center {
+
+#angle-down-white {
     text-align: center;
-}
-#inner-text {
-    text-indent: 100%;
-    margin-top: 10px;
-    padding-bottom: 15px;
-}
-#inner-text-choose-trainer {
-    white-space: nowrap;
-    font-family: arial;
-}
-.header-text {
-    text-align: center;
-    color: #222222;
-}
-.header-text i {
-    margin-right: 3px;
-}
-.money-box {
-    font-family: 'proxima-nova';
-    font-weight: 300;
-}
-#our-coach-background {
-    background-color: #FFFFFF;
-    border-right: 1px solid #ddd;
-}
-.contact .fa {
-    color: #FFFFFF;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    font-size: 14px;
-    padding-bottom: 10px;
-    padding-left: 14px;
-}
-.second-layer-heading {
-    padding-bottom: 7px;
-    font-size: 18px;
-    font-family: ProximaNova, sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-.second-layer-text {
-    color: #222222;
-    font-family: arial;
-    font-size: 16px;
-    line-height: 1.3em;
-}
-#fb-padding {
-    padding-top: 25px;
-}
-#carousel-index {
-    text-align: center;
-    font-size: 14px;
-    font-family: Arial;
-    font-weight: bold;
-    color: #979797;
-    padding: 10px 0 10px 0;
-}
-.section-header {
-    font-family: 'proxima-nova';
-    font-weight: 300;
-    font-size: 24px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #d8d8d8;
-    text-transform: uppercase;
-}
-.sales-section-header {
-    margin: 0 15px 0 15px;
-}
-.sales-section {
-    padding-bottom: 0;
-}
-.price {
-    color: #222222;
-    line-height: 1.2;
-    font-family: 'proxima-nova';
-    font-weight: 300;
-    padding: 20px 0 10px 0;
-}
-.price h1 {
-    padding-left: 48px;
-}
-.price #month {
-    font-size: 18px;
-    font-family: 'proxima-nova';
-    font-weight: 300;
-    margin-top: 0;
-}
-.price button {
-    width: 40%;
-}
-.btn-choose-trainer {
-    border: 2px solid #4B186C;
-    width: 75%;
-    font-size: 22px;
-    text-align: center;
-    background-color: #4B186C;
-    outline: 0;
-    color: white;
-    border-radius: 4px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    padding: 15px 20px;
-}
-#hero-btn {
-    padding-bottom: 60px;
-}
-#hero-btn-text {
-    font-family: arial;
-    text-transform: uppercase;
-}
-.contact-margin {
-    margin-left: 10px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-}
-.price #padding {
-    padding-bottom: 10px;
-}
-.price #current-price {
-    font-size: 55px;
-    padding-top: 25px;
-    padding-bottom: -5px;
-    line-height: 0.7;
-}
-.layer-container {
-    background: #FFFFFF;
-    padding: 0px 0px 0px 0px;
-    border-bottom: 1px solid #ababab;
-    border-right: 1px solid #ddd;
-    margin-bottom: 15px;
-}
-.center {
-    text-align: center;
-}
-.slides {
-    margin: 0px;
-    padding: 0px;
-}
-.slides img {
-    width: 100%;
-}
-.slides .item {
-    padding: 0px;
-}
-.two-slides {
-    float: left;
-    width: 48.5% !important;
-}
-.second-slide {
-    margin-left: 1.5%;
-}
-.one-slide {
-    width: 100%;
-}
-.quote-section {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.quote {
-    padding: 8% 0 8% 0;
-}
-.benefits {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-}
-.bullets {
-    padding: 20px 10% 20px 10%;
-    font-size: 18px;
-    line-height: 1.3;
-}
-.bullets li {
-    padding-bottom: 10px;
-    list-style-type: none;
-    list-style-position: outside;
-    margin-left: 0;
-    padding-left: 0;
-}
-.bullets li:before {
-    content: "\f00c";
-    font-family: FontAwesome;
-    font-size: 20px;
-    margin: 0 15px 0 -35px;
-    color: #222;
-}
-blockquote {
-    font-size: 16px;
-    font-family: Georgia, serif;
-    font-style: italic;
-    line-height: 1.3;
-    margin: 0 0 10px 0;
-    border: none;
-    text-align: center;
-}
-#contact-us {
-    padding-left: 14px;
-    padding-top: 12px;
-    font-family: 'proxima-nova';
-    font-weight: 600;
-}
-#contact-text {
-    color: white;
-    font-family: proxima-nova, sans-serif;
-    font-size: 18px;
-}
-.contact {
-    text-align: left;
-    background-color: #222222;
-    padding-left: 14px;
-}
-#pt-name {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    color: #222;
-}
-#pt-text {
-    font-family: Arial;
-    font-size: 14px;
-    min-height: 200px;
+    color:white;
 }
 
-#inner-text-train-btn {
-    font-family: Arial;
-}
-#feedback-text {
-    text-align: right;
-    padding-right: 20px;
-    font-size: 14px;
-    line-height: 1;
-}
-.contact-info {
-    font-size: 16px;
-}
-.bottom {
-    padding-bottom: 50px;
-}
-#contact-footer {
-    font-family: Arial;
-    font-style: italic;
-    font-size: 14px;
-    padding-top: 10px;
-    padding-left: 15px;
-}
-#price-color {
-    background-color: rgba(231, 236, 243, 100);
-    margin-top: 20px;
-}
-.carousel-indicators {
-    display: none;
-}
-#pay-one-price {
-    padding-bottom: 20px;
-}
-#carousel-background {
-    padding-top: 10px;
-    padding-bottom: 30px;
-    background-color: #FFFFFF;
-    border-right: 1px solid #ddd;
-}
-.left, .right {
-    background-image: none !important;
-}
-.glyphicon-chevron-left {
-    margin-left: -30px;
-}
-.glyphicon-chevron-right {
-    
-    right: 10%;
-}
-h4 {
-    font-family: Arial, sans-serif;
-    font-weight: regular;
-    font-size: 18px;
-    line-height: 18px;
+#angle-down-blue {
     text-align: center;
-    padding-top: 20px;
+    color:blue;
 }
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-    .layer-container {
-        width: 100%;
-    }
-    #background {
-        background: url("../img/hero_mobil.jpg");
-        background-repeat: no-repeat;
-        width: 100%;
-        -webkit-background-size: cover !important;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    .btn {
-        background-color: rgba(75, 24, 108, 0.6);
-        color: white;
-        width: 100%;
-    }
-    .btn #inner-text {
-        font-family: proxima-nova, sans-serif;
-        font-size: 20px;
-        color: #FFFFFF;
-        line-height: 26px;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-        text-indent: 0%;
-    }
-    .col-xs-6 {
-        width: 100%;
-    }
-    #current-price, #month {
-        text-align: center;
-    }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        #background {
-            background-image: url('../img/hero_mobil@2x.jpg');
-        }
-        /* FIXME weird stuff going on with size
-        #logo {
-            background: url('../img/SaEx_logo_white_mobil@2x.png');
-        }*/
-    }
+
+.blue {
+    background-color: blue;
+    color:white;
 }
-@media (min-width: 600px) {
-    #background {
-        background: url("../img/hero_tablet.jpg") center;
-        background-repeat: no-repeat;
-        width: 100%;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        padding-top: 1px;
-        position: relative;
-    }
-    #logo {
-        background: url("../img/SaEx_logo_white_tablet.png") center;
-        position: relative;
-        background-repeat: no-repeat;
-        padding-top: 25px;
-    }
-    #current-price, #month {
-        text-align: center;
-    }
-    #price-color {
-        margin-left: 20px;
-        border-right: 15px solid #FFFFFF;
-        border-bottom: 15px solid #FFFFFF;
-    }
-    #second-logo {
-        font-family: proxima-nova, sans-serif;
-        font-size: 24px;
-        line: 130%;
-        top: 10px;
-    }
-    #padding-text-first {
-        padding-top: 52%;
-        padding-bottom: 105px;
-    }
-    .sales-section {
-        padding-bottom: 15px;
-    }
-    .benefits {
-        width: 50%;
-    }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        #background {
-            background-image: url('../img/hero_tablet@2x.jpg');
-        }
-        /*  FIXME weird stuff going on with size
-        #logo {
-            background: url('../img/SaEx_logo_white_tablet@2x.png');
-        }*/
-    }
+
+#btn-pink {
+    border-color:white;
+    background-color: pink;
+    border: 3px solid white;
+    color:white;
 }
-@media (min-width: 980px) {
-    #background {
-        background: url("../img/hero_desktop.jpg") center;
-        background-repeat: no-repeat;
-        width: 100%;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        padding-top: 1px;
-        position: relative;
-    }
-    #padding-text-first {
-        padding-top: 28%;
-        padding-bottom: 105px;
-    }
-    #logo {
-        background: url("../img/SaEx_logo_white_desktop.png") center;
-        position: relative;
-        background-repeat: no-repeat;
-        padding-top: 40px;
-    }
-    #second-logo {
-        font-family: proxima-nova, sans-serif;
-        font-size: 36px;
-        line: 130%;
-        top: 35px;
-    }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        #background {
-            background-image: url('../img/hero_desktop@2x.jpg');
-        }
-        /*  FIXME weird stuff going on with size
-        #logo {
-            background: url('../img/SaEx_logo_white_desktop@2x.png');
-        } */
-    }
+
+#btn-white {
+    border-color:white;
+    background-color: white;
+    border: 3px solid black;
+    color:black;
+}
+
+#btn-blue {
+    border-color:white;
+    background-color: blue;
+    border: 3px solid white;
+    color:white;
+}
+
+.row- {
+    padding-top:80px;
 }

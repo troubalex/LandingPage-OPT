@@ -9,155 +9,101 @@
 </head>
 
 <body ng-controller="CarouselDemoCtrl" ng-init="init()">
-    <div class="wrapper">
-        <div class="layer-container col-lg-12">
-            <div id="background">
-                <div class="text-center">
-                    <div id="logo" alt="SATS ELIXIA">
-                        <h1 id="second-logo">Online Personlig Trener</h1>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="text-center">
-                                    <div class="text" id="padding-text-first">
-                                        Tett p&aring;.
-                                        <br>Personlig.
-                                        <br>Faglig sterk.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button ng-click="goToSale()" class="btn" ng-hide="showTwoSlides">
-                        <div id="inner-text">Les mer
-                        </div>
-                        </bitton>
-                </div>
-            </div>
+    <div class="container-fluid pink">
+
+        <div class="col-xs-12">
+            <img class="col-xs-4" src="app/img/SaEx_logo_white_desktop.png" alt="Logo">
+
         </div>
-
-        <div class="layer-container col-xs-12" id="second-layer">
-            <h2 class="section-header sales-section-header">Om tjenesten</h2>
-            <div class="row sales-section">
-                <div class="col-xs-6">
-                    <h3 class="header-text second-layer-heading">
-                        Ett opplegg for deg</h3>
-                    <div class="text second-layer-text padding-left">Din trener vil lage ditt
-                        <strong>personlig kosthold- og treningsprogram</strong>&nbsp;som er tilpasset deg og dine m&aring;lsettinger.
-                        <strong>Jevnlige oppdateringer</strong>&nbsp;s&oslash;rger for at du til enhver tid har et program som passer ditt behov og din hverdag.
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <h3 class="header-text second-layer-heading">
-                        Tett oppf&oslash;lging</h3>
-                    <div class="text second-layer-text" id="pay-one-price">Gjennomf&oslash;ringen av treningen m&aring; du selv st&aring; for, men din personlige trener vil v&aelig;re tilgjengelig og
-                        <strong>f&oslash;lge deg opp l&oslash;pende</strong>&nbsp;med f&aring; dagers mellomrom.
-                        <strong>Jevnlig dialog</strong>&nbsp;med din personlige trener vil sikre at du har progresjon og det rette fokus til enhver tid.
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6">
-                    <h3 class="header-text second-layer-heading">
-                        V&aring;r ekspertise</h3>
-
-                    <div class="text second-layer-text padding-left" id="last-second-layer-text">Din trener vil
-                        <strong>dele av sin kunnskap</strong>&nbsp;og hjelpe deg med &aring; sette gode m&aring;l som passer ditt niv&aring; og dine ambisjoner b&aring;de n&aring;r det gjelder kosthold og trening.
-
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div id="price-color">
-                        <div class="price">
-                            <div class="money-box">
-                                <div id="current-price">kr 795</div>
-                                <h4 id="month">/m&aring;ned uten bindingstid</h4>
-                            </div>
-                            <div class="text-center" id="padding">
-                                <button ng-click="loginWithRandomPT(getActiveSlide())" class="btn-choose-trainer">
-                                    <div id="inner-text-choose-trainer">Bestill
-                                    </div>
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-xs-12">
+            <h1 id="second-logo">Online Personlig Trener</h1>
         </div>
-
-        <div class="layer-container col-xs-12">
-            <h2 class="section-header sales-section-header">Dette f&aring;r du</h2>
-            <div class="benefits">
-                <ul class="bullets">
-                    <li>Personlig treningsplan og kostholdsveiledning</li>
-                    <li>Ubegrensede meldinger med din personlige trener</li>
-                    <li>Tett oppf&oslash;lging av din personlige trener</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-xs-12" id="our-coach-background">
-            <h2 class="section-header">V&aring;re trenere</h2>
-        </div>
-
-        <div class="col-xs-12" id="carousel-background">
-            <carousel class="slides">
-                <slide ng-repeat="slide in slides" active="slide.active" id="{{slide.name}}">
-                    <div>
-                        <img ng-src="{{slide.image}}" ng-class="imgClass()">
-                        <img ng-show="showTwoSlides" class="two-slides second-slide" ng-src="{{getNextActiveSlide().image}}">
-                    </div>
-                </slide>
-            </carousel>
-
-            <div ng-class="imgClass()">
-                <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
-                <h3 id="pt-name">{{getActiveSlide().name}}</h3>
-                <div class="text-center">
-                    <Button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
-                        <div id="inner-text-train-btn">Velg {{getActiveSlide().name.split(" ")[0]}}</div>
-                    </Button>
+        <div class="row">
+            <div class="col-xs-12">
+                <img class="col-xs-6" src="app/img/screenie-chat.svg" alt="Screen chat">
+                <div class="row">
+                    <h2 class="col-xs-6">Tett på</h2>
+                    <h2 class="col-xs-6">
+                        Send og motta meldinger.
+                        <br>Få tilbakemelding på din trening
+                        <br>Bli mer motivert
+                    </h2>
+                    <button id="btn-pink" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
                 </div>
-                <div class="text second-layer-text" id="pt-text">
-                    <div ng-include="getActiveSlide().path"></div>
-                    <div class="center">
-                    </div>
-                </div>
+
             </div>
 
-            <div class="two-slides second-slide" ng-show="showTwoSlides">
-                <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
-                <h3 id="pt-name">{{getNextActiveSlide().name}}</h3>
-                <div class="text-center">
-                    <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
-                        <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name.split(" ")[0]}}</div>
-                    </Button>
-                </div>
-                <div class="text second-layer-text" id="pt-text">
-                    <div ng-include="getNextActiveSlide().path"></div>
-                    <div class="center">
-
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="contact col-xs-12 " id="contact-text">
-            <h3 id="contact-us">Kontakt oss</h3>
-            <i class="fa fa-envelope fa-2x contact-info"></i> 
-            <span class="contact-margin"> <u><a href="mailto:online-pt@iterate.no"> online-pt@iterate.no </a></u>
-            </span>
-
-            <br>
-            <i class="fa fa-phone fa-2x contact-info"> </i> 
-            <span class="contact-margin">995 69 938</span>
-            <p id="contact-footer">Online Personlig Trener krever en facebook konto i betafasen. Vi kommer aldri til &aring; poste p&aring; din profile eller lese din data.</p>
-            <p id="contact-footer" class="contact-info">L&oslash;sningen Online Personlig Trener er under kontinuerlig forbedring og videreutvikling.</p>
-            <p id="contact-footer" class="contact-info bottom">Kontakt oss gjerne med kommentarer, informasjon om tekniske/praktiske komplikasjoner, &oslash;nsker om endringer eller nye funksjoner, eller andre sp&oslash;rsm&aring;l.
-            </p>
+        <div class="col-xs-12">
+            <div id="angle-down-white">
+                <i class="fa fa-angle-down fa-3x"></i>
+            </div>
         </div>
     </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row row-padding">
+            <div class="col-xs-12">
+                <div class="col-xs-6">
+                    <h2>Tett på
+                        <br>Send og motta meldinger.
+                        <br>Få tilbakemelding på din trening
+                        <br>Bli mer motivert
+                    </h2>
+                    <button id="btn-white" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
+
+                </div>
+                <img class="col-xs-6" src="app/img/screenie-plan.svg" alt="Screen plan">
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div id="angle-down-blue">
+                <i class="fa fa-angle-down fa-3x"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid blue">
+        <div class="row-padding">
+            <div class="row">
+                <div class="col-xs-2">
+                    <a href="#" class="thumbnail">
+                        <img src="app/img/erik.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#" class="thumbnail">
+                        <img src="app/img/maren.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#" class="thumbnail">
+                        <img src="app/img/sandra.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <h2>Tett på
+                        <br>Send og motta meldinger.
+                        <br>Få tilbakemelding på din trening
+                        <br>Bli mer motivert
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="col-xs-2">
+                <a href="#" class="thumbnail">
+                    <img src="app/img/per.jpg" alt="...">
+                </a>
+            </div>
+        </div>
+
+
 </body>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
