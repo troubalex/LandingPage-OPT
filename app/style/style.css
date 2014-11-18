@@ -1,18 +1,33 @@
-.pink {
-    background-color:pink;
-    color:white;
+.page-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.align-text{
+.img-container {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+#background-image {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+}
+.orange-area {
+    background-color: orange;
+    color: white;
+}
+.call-to-action {
+    color: orange;
+}
+.align-text {
     text-align: center;
 }
-
-#logo {
-    background-repeat: no-repeat !important;
-    background: url("../img/SaEx_logo_white_mobil.png") center;
-    padding-top: 35px;
-}
-
 #second-logo {
     font-family: proxima-nova, sans-serif;
     line: 130%;
@@ -20,48 +35,45 @@
     box-shadow: 1px 1px 4px #000000 0, 0, 0;
     top: 30px;
 }
-
 #angle-down-white {
     text-align: center;
-    color:white;
+    color: white;
 }
-
-#angle-down-blue {
+#angle-down-black {
     text-align: center;
-    color:blue;
+    color: black;
 }
-
-.blue {
-    background-color: blue;
-    color:white;
+.yellow {
+    background-color: yellow;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    text-align: center;
 }
-
-#btn-pink {
-    border-color:white;
-    background-color: pink;
+.black {
+    background-color: black;
+    color: white;
+}
+#btn-orange {
+    border-color: white;
+    background-color: orange;
     border: 3px solid white;
-    color:white;
+    color: white;
 }
-
 #btn-white {
-    border-color:white;
+    border-color: white;
     background-color: white;
     border: 3px solid black;
-    color:black;
+    color: black;
 }
-
-#btn-blue {
-    border-color:white;
-    background-color: blue;
+#btn-black {
+    border-color: white;
+    background-color: black;
     border: 3px solid white;
-    color:white;
+    color: white;
 }
-
-
 .padding-area {
     padding-top: 50px;
 }
-
-
-fa.bounce {display:block; padding-top: 5px; padding-bottom: 0px; float: left;}
-fa:hover.bounce {display:block; padding-top: 0px; padding-bottom: 5px; float: left;}
+.thumbnail {
+    box-shadow: -13px 4px 5px #888888;
+}
