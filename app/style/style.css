@@ -1,3 +1,6 @@
+#grey-transparent {
+    background-color: grey;
+}
 .page-container {
     max-width: 1280px;
     margin-left: auto;
@@ -33,7 +36,9 @@
     line: 130%;
     color: white;
     box-shadow: 1px 1px 4px #000000 0, 0, 0;
-    top: 30px;
+    position: absolute;
+    top: 75%;
+    left: 70px;
 }
 #angle-down-white {
     text-align: center;
@@ -42,6 +47,16 @@
 #angle-down-black {
     text-align: center;
     color: black;
+}
+#angle-down-grey {
+    text-align: center;
+    color: grey;
+    position: absolute;
+    top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 .yellow {
     background-color: yellow;
@@ -58,22 +73,28 @@
     background-color: orange;
     border: 3px solid white;
     color: white;
+    margin-top: 120px;
 }
 #btn-white {
     border-color: white;
     background-color: white;
     border: 3px solid black;
     color: black;
+    margin-top: 120px;
 }
 #btn-black {
     border-color: white;
     background-color: black;
     border: 3px solid white;
     color: white;
+    margin-top: 120px;
 }
 .padding-area {
     padding-top: 50px;
 }
 .thumbnail {
     box-shadow: -13px 4px 5px #888888;
+}
+.padding-btn {
+    padding-top: 100px;
 }

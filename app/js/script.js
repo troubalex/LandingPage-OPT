@@ -189,7 +189,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
         $scope.modalInstance.result.then(function(selectedItem) {
             $scope.selected = selectedItem;
         }, function() {
-            $log.info('Modal dismissed at: ' + new Date());
         });
 
     };
