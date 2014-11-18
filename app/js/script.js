@@ -1,7 +1,7 @@
 'use strict';
 
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
-landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
+landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
     $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
@@ -10,6 +10,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     var PtId;
     var random;
     $scope.showModal = false;
+    $scope.items = ['item1', 'item2', 'item3'];
+    $scope.modalInstance = null;
+    var currentPT = null;
 
     function showToSlides() {
         return $scope.showTwoSlides;
@@ -123,23 +126,9 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
     $scope.addSlide();
 
-    $scope.random = function() {
-
-        var tmp = Math.random() * (slides.length - 0) + 0;
-        random = Math.floor(tmp);
-        slides[random].active = true;
 
 
-    }
 
-
-    $scope.getActiveSlide = function() {
-        return slides.filter(function(s) {
-            return s.active;
-        })[0];
-
-
-    };
     $scope.goToSale = function() {
         $location.hash('second-layer');
         $anchorScroll();
@@ -152,14 +141,6 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
 
     }
 
-    $scope.getNextActiveSlide = function() {
-        for (var i = 0; i < slides.length; i++) {
-            if (slides[i].active) {
-                return slides[(i + 1) % slides.length];
-            }
-        }
-
-    };
 
 
     var findPT = function() {
@@ -177,12 +158,12 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
         PtId = QueryString().PT;
         if (PtId)
             findPT();
-        else
-            $scope.random();
+
     }
 
 
-    $scope.sap = function() {
+    $scope.showModals = function(pt) {
+        currentPT = pt;
         open()
         $scope.showModal = true;
     }
@@ -227,36 +208,39 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     }(document, 'script', 'facebook-jssdk'));
 
 
-    $scope.items = ['item1', 'item2', 'item3'];
-
+ 
 
     var open = function(size) {
-        var modalInstance = $modal.open({
+        $scope.modalInstance = $modal.open({
             templateUrl: 'myModalContent.html',
             controller: 'ModalInstanceCtrl',
             size: size,
             resolve: {
                 items: function() {
                     return $scope.items;
+                },
+                currentPT:function() {
+                    return currentPT;
                 }
             }
         });
 
-        modalInstance.result.then(function(selectedItem) {
+        $scope.modalInstance.result.then(function(selectedItem) {
             $scope.selected = selectedItem;
         }, function() {
             $log.info('Modal dismissed at: ' + new Date());
         });
+
     };
-
-
-
 
 });
 
-
-angular.module('landingPage').controller('ModalInstanceCtrl', function($scope, $modalInstance, items) {
+angular.module('landingPage').controller('ModalInstanceCtrl', function($scope, $modalInstance, items, currentPT) {
+    $scope.currentPT = currentPT;
     $scope.cancel = function() {
-        $modalInstance.dismiss('cancel');
+       $modalInstance.dismiss('cancel');
     };
+
+
+
 });

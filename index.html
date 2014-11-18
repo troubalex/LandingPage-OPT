@@ -8,7 +8,7 @@
     <title>Online Personlig Trener &ndash; online-pt.no</title>
 </head>
 
-<body ng-controller="CarouselDemoCtrl" ng-init="init()">
+<body ng-controller="landingPageCtrl" ng-init="init()">
     <div class="container-fluid pink">
         <div class="padding-area">
             <div class="col-xs-12">
@@ -70,88 +70,37 @@
     </div>
 
 
-
     <div class="container-fluid blue">
         <div class="padding-area">
-            <div class="row-padding">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <div class="thumbnail">
-                            <img src="app/img/erik.jpg" alt="...">
-                            <div class="caption">
-                                Erik
+            <div class="row">
+                <div class="col-xs-6">
+                    <div ng-repeat="pt in slides">
+                        <div class="col-xs-4" ng-click="showModals(pt)">
+                            <pt-modal ng-show="showModal" pt="pt"></pt-modal>
+                            <div class="thumbnail">
+                                <img src="{{pt.image}}" alt="...">
+                                <div class="caption">
+                                    {{pt.name}}
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-2">
-                        <div class="thumbnail">
-                            <img src="app/img/maren.jpg" alt="...">
-                            <div class="caption">
-                                Maren
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-2">
-                        <div class="thumbnail">
-                            <img src="app/img/sandra.jpg" alt="...">
-                            <div class="caption">
-                                Sandra
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6">
-                        <h2>Tett på
-                            <br>Send og motta meldinger.
-                            <br>Få tilbakemelding på din trening
-                            <br>Bli mer motivert
-                        </h2>
-                        <button id="btn-blue" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
-                    </div>
-
+                </div>
+                <div class="col-xs-6">
+                    <h2>Tett på
+                        <br>Send og motta meldinger.
+                        <br>Få tilbakemelding på din trening
+                        <br>Bli mer motivert
+                    </h2>
+                    <button id="btn-blue" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-2">
-                        <div class="thumbnail">
-                            <img src="app/img/per.jpg" alt="...">
-                            <div class="caption">
-                                Per
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-2">
-                        <div class="thumbnail">
-                            <img src="app/img/shamal.jpg" alt="...">
-                            <div class="caption">
-                                Shamal
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-2">
-                        <div class="thumbnail">
-                            <img src="app/img/sondre.jpg" alt="...">
-                            <div class="caption">
-                                Sondre
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-2" ng-click="sap()">
-                        <div class="thumbnail">
-                            <img src="app/img/mikael.jpg" alt="...">
-                            <div class="caption">
-                                Mikael
-                            </div>
-                            <pt-modal ng-show="showModal" PT="'Mikael'"> </pt-modal>
-                        </div>
-                    </div>
-                </div>
             </div>
+
         </div>
-
-    
-
+    </div>
+    </div>
+    </div>
 
 </body>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">

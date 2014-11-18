@@ -3,6 +3,10 @@
     color:white;
 }
 
+.align-text{
+    text-align: center;
+}
+
 #logo {
     background-repeat: no-repeat !important;
     background: url("../img/SaEx_logo_white_mobil.png") center;

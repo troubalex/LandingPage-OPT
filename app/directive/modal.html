@@ -1,9 +1,9 @@
 <script type="text/ng-template" id="myModalContent.html">
     <div class="modal-header">
-        <h3 class="modal-title">Navn Navnesen</h3>
+        <h2 class="modal-title align-text">{{currentPT.name}}</h2>
     </div>
     <div class="modal-body">
-        <div ng-include src="'app/text/erik.html'"></div>
+        <div ng-include src="currentPT.path"></div>
     </div>
     <div class="modal-footer">
         <button class="btn btn-warning" ng-click="cancel()">Lukk</button>

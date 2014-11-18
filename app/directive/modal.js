@@ -3,13 +3,11 @@ angular.module('PTmodal', [])
         return {
             restrict: 'E',
             scope: {
-                PT: '='
+                pt: '='
             },
             templateUrl: "app/directive/modal.html",
             controller: function($scope) {
-
+                console.log($scope.pt);
             }
         }
     });
-
-
