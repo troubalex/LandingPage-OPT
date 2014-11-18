@@ -1,7 +1,7 @@
 'use strict';
 
-var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
-landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll) {
+var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
+landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
     $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
@@ -9,6 +9,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     $scope.currentPersonText = '';
     var PtId;
     var random;
+    $scope.showModal = false;
 
     function showToSlides() {
         return $scope.showTwoSlides;
@@ -181,7 +182,10 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     }
 
 
-
+    $scope.sap = function() {
+        open()
+        $scope.showModal = true;
+    }
 
     $scope.login = function(PT) {
         mixpanel.track("User chose PT", {
@@ -223,4 +227,36 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     }(document, 'script', 'facebook-jssdk'));
 
 
+    $scope.items = ['item1', 'item2', 'item3'];
+
+
+    var open = function(size) {
+        var modalInstance = $modal.open({
+            templateUrl: 'myModalContent.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+                items: function() {
+                    return $scope.items;
+                }
+            }
+        });
+
+        modalInstance.result.then(function(selectedItem) {
+            $scope.selected = selectedItem;
+        }, function() {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
+
+
+
+
+});
+
+
+angular.module('landingPage').controller('ModalInstanceCtrl', function($scope, $modalInstance, items) {
+    $scope.cancel = function() {
+        $modalInstance.dismiss('cancel');
+    };
 });

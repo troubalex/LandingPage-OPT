@@ -1,0 +1,16 @@
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Navn Navnesen</h3>
+    </div>
+    <div class="modal-body">
+        <div ng-include src="'app/text/erik.html'"></div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Lukk</button>
+    </div>
+</script>
+
+<!-- <button class="btn btn-default" ng-click="open()">Open me!</button>
+<button class="btn btn-default" ng-click="open('lg')">Large modal</button>
+<button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+<div ng-show="selected">Selection from a modal: {{ selected }}</div> -->
