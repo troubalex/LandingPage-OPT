@@ -2,28 +2,15 @@
 
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
 landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
-    $scope.currentText = '';
     var counter = 1;
     var slides = $scope.slides = [];
-    $scope.showTwoSlides = true;
-    $scope.currentPersonText = '';
-    var PtId;
-    var random;
     $scope.showModal = false;
     $scope.items = ['item1', 'item2', 'item3'];
     $scope.modalInstance = null;
     var currentPT = null;
 
-    function showToSlides() {
-        return $scope.showTwoSlides;
-    }
-    $scope.$watch(function() {
-        if ($window.innerWidth < 560) {
-            $scope.showTwoSlides = false;
-        } else {
-            $scope.showTwoSlides = true;
-        }
-    });
+
+
 
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
@@ -51,13 +38,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
     }
 
 
-
-    $scope.imgClass = function() {
-        if ($scope.showTwoSlides)
-            return 'two-slides';
-        else
-            return 'one-slide';
-    };
 
 
 
@@ -129,37 +109,18 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
 
 
 
-    $scope.goToSale = function() {
+    $scope.goToSecond = function() {
         $location.hash('second-layer');
         $anchorScroll();
 
     }
 
-    $scope.goToPT = function() {
-        $location.hash('our-coach-background');
+    $scope.goToThird = function() {
+        $location.hash('third-layer');
         $anchorScroll();
 
     }
 
-
-
-    var findPT = function() {
-        slides.forEach(function(PT) {
-            if (PT.id.toLowerCase() === PtId.toLowerCase()) {
-                PT.active = true;
-            }
-        });
-    };
-    PtId = QueryString().pt;
-
-    if (PtId)
-        findPT();
-    else {
-        PtId = QueryString().PT;
-        if (PtId)
-            findPT();
-
-    }
 
 
     $scope.showModals = function(pt) {

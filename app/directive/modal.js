@@ -5,9 +5,6 @@ angular.module('PTmodal', [])
             scope: {
                 pt: '='
             },
-            templateUrl: "app/directive/modal.html",
-            controller: function($scope) {
-                console.log($scope.pt);
-            }
+            templateUrl: "app/directive/modal.html"
         }
     });

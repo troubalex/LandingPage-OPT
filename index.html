@@ -35,8 +35,8 @@
 
             </div>
             <div class="col-xs-12">
-                <div id="angle-down-white">
-                    <i class="fa fa-angle-down fa-3x"></i>
+                <div id="angle-down-white" ng-click="goToSecond()">
+                    <i class="fa fa-angle-down fa-3x  faa-bounce animated"></i>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
 
 
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="second-layer">
         <div class="padding-area">
             <div class="row row-padding">
                 <div class="col-xs-12">
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-xs-12">
-                <div id="angle-down-blue">
+                <div class="faa-bounce animated" id="angle-down-blue" ng-click="goToThird()">
                     <i class="fa fa-angle-down fa-3x"></i>
                 </div>
             </div>
@@ -70,7 +70,7 @@
     </div>
 
 
-    <div class="container-fluid blue">
+    <div class="container-fluid blue" id="third-layer">
         <div class="padding-area">
             <div class="row">
                 <div class="col-xs-6">
@@ -106,6 +106,7 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="app/style/style.css" media="screen" />
+<link rel="stylesheet" href="app/style/font-awesome-animation.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 <script type="text/javascript" src="app/js/script.js"></script>
 <script type="text/javascript" src="app/js/ui-bootstrap.js"></script>
@@ -114,6 +115,7 @@
 <script type="text/javascript" src="app/directive/modal.js"></script>
 <script src="//use.typekit.net/whc6xho.js"></script>
 <script src="//cdn.optimizely.com/js/2122921733.js"></script>
+
 
 <script>
 try {
