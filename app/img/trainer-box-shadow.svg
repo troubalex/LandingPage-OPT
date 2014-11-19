@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="155px" height="196px" viewBox="0 0 155 196" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>trainer-box-shadow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-426.000000, -2857.000000)" fill="#AAF0F3">
+            <g id="Section-trainers" sketch:type="MSLayerGroup" transform="translate(0.000000, 2336.000000)">
+                <g id="trainers-rectangular" transform="translate(85.000000, 100.000000)" sketch:type="MSShapeGroup">
+                    <g id="trainer" transform="translate(341.000000, 421.500000)">
+                        <path d="M13.2857143,0 L0,13.1781931 L0,195 L141.714286,195 L155,182 L155,0 L13.2857143,0 Z" id="trainer-box-shadow"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
