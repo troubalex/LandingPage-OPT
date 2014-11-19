@@ -1,11 +1,19 @@
 #orange-picture {
     margin-left: -30px;
 }
+#change-pt {
+    font-style: italic;
+    text-align: center;
+}
 #right {
     margin-left: 60%;
     padding-bottom: 15px;
 }
-# #header-modal {
+#random-pt-right {
+    margin-left: 56%;
+    padding-bottom: 15px;
+}
+#header-modal {
     font-size: 45px;
     padding-top: 35px;
     padding-bottom: 31px;
@@ -13,9 +21,9 @@
 #padding-price {
     margin-top: 35px;
 }
-.black-row {
+/*.black-row {
     margin-left: 100px;
-}
+}*/
 .text-proxima-semibold {
     font-family: proxima-nova;
     font-weight: 600;
@@ -35,9 +43,9 @@
 }
 .background-opacity {
     background: rgba(51, 51, 51, 0.4);
-    margin-top: 300px;
-    margin-bottom: 50px;
+    margin-top: 28%;
     color: #FFFFFF;
+    padding-bottom: 16px;
 }
 .sales-argument-text {
     font-size: 23px;
@@ -55,6 +63,11 @@
     font-size: 20px;
     position: relative;
 }
+#img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .page-container {
     max-width: 1280px;
     margin-left: auto;
@@ -63,7 +76,7 @@
 .background-image {
     background: url(../img/sats@2x.jpg);
     background-repeat: no-repeat;
-    background-position: center width: 100%;
+    background-position: center;
     margin-bottom: -4px;
 }
 #logo {
@@ -224,7 +237,6 @@
     border: 3px solid #FFFFFF;
     font-size: 23px;
 }
-
 #btn-black-buttom:hover {
     border-radius: 4px;
     border: 2px solid #AAF0F3;
@@ -235,14 +247,8 @@
     color: #AAF0F3;
     line-height: 28px;
 }
-
 .padding-area {
     padding-top: 50px;
-}
-.thumbnail {
-    box-shadow: -13px 4px 5px #888888;
-    /*    background: url(../img/trainer-box-shadow.svg) no-repeat;
-*/
 }
 .padding-btn {
     padding-top: 100px;
@@ -263,4 +269,31 @@
 .padding {
     margin-top: 37px;
     margin-bottom: 31px;
+    padding-left: 30px;
+}
+@media (max-width: 980px) {
+    .text-proxima-light {
+        text-align: center;
+    }
+
+    .orange-padding {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 900px) {
+    #opt-header {
+        font-size: 45px;
+    }
+    #opt-sub-header {
+        font-size: 30px;
+    }
+    .background-opacity {
+        background: rgba(51, 51, 51, 0);
+    }
+
+/*    #logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }*/
 }

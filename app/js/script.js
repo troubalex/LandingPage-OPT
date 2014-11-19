@@ -8,6 +8,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
     $scope.items = ['item1', 'item2', 'item3'];
     $scope.modalInstance = null;
     var currentPT = null;
+    $scope.showChoosePT = false;
 
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
@@ -35,7 +36,19 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
     }
 
 
+    $scope.anchor = function() {
+        $location.hash('third-layer');
+        $anchorScroll();
+    }
 
+    $scope.choosePT = function() {
+        var tmp = Math.random() * (slides.length - 0) + 0;
+        var random = Math.floor(tmp);
+        currentPT = slides[random];
+        open(null, true);
+        $scope.showModal = true;
+        // $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + slides[random].PTid;
+    }
 
 
     $scope.addSlide = function() {
@@ -153,9 +166,9 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
     }(document, 'script', 'facebook-jssdk'));
 
 
- 
 
-    var open = function(size) {
+
+    var open = function(size, randomPT) {
         $scope.modalInstance = $modal.open({
             templateUrl: 'myModalContent.html',
             controller: 'ModalInstanceCtrl',
@@ -164,26 +177,34 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
                 items: function() {
                     return $scope.items;
                 },
-                currentPT:function() {
+                currentPT: function() {
                     return currentPT;
+                }, 
+                randomPT:function() {
+                    return randomPT;
                 }
             }
         });
 
         $scope.modalInstance.result.then(function(selectedItem) {
             $scope.selected = selectedItem;
-        }, function() {
-        });
+        }, function() {});
 
     };
 
 });
 
-angular.module('landingPage').controller('ModalInstanceCtrl', function($scope, $modalInstance, items, currentPT) {
+angular.module('landingPage').controller('ModalInstanceCtrl', function($window, $scope, $modalInstance, items, currentPT, randomPT) {
     $scope.currentPT = currentPT;
+    $scope.randomPT = randomPT
     $scope.cancel = function() {
-       $modalInstance.dismiss('cancel');
+        $modalInstance.dismiss('cancel');
     };
+
+    $scope.redirect = function(PT) {
+        $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + PT.PTid;
+
+    }
 
 
 

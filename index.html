@@ -15,8 +15,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <img id="logo" src="app/img/SaEx_logo_white_tablet.png" />
-                        <p class="text-proxima-semibold" id="log-in"> <u>Logg inn </u> 
-                        </p>
+                        <!--                         <p class="text-proxima-semibold" id="log-in"> <u>Logg inn </u> 
+                        </p> -->
                         <div class="background-opacity col-xs-8">
                             <h1 class="text-proxima-light" id="opt-header">Online Personlig Trener</h1>
                             <h2 class="text-proxima-light" id="opt-sub-header">Bli din egen superhelt.</h2>
@@ -35,19 +35,19 @@
 
         <div class="container-fluid black-area">
             <div class="row">
-                <div class="col-xs-6">
+                <div class="col-md-6 col-xs-12 padding text-proxima-light">
+                    <h3>Ditt eget skredderskydde trenings og kostholdsplan</h3>
+                    <h3>Din personlige trener oppdatere planer og utfordrer deg i takt med din fremang</h3>
+                    <h3>Du blir fulgt opp på treningsplaner, teknikk og motivasjon</h3>
+                </div>
+                <div class="col-md-6 col-xs-12 align-text">
                     <div class="row black-row">
-                        <button id="btn-black-top" type="button" class="text-proxima-semibold btn btn-default btn-lg">Meld deg på her</button>
+                        <button ng-click="anchor()" id="btn-black-top" type="button" class="text-proxima-semibold btn btn-default btn-lg">Meld deg på her</button>
                         <div class="margin-black">
                             <p class="text-proxima-semibold ">Kun 795,- i måneden uten bindingstid</p>
                             <p class="text-proxima-semibold">30 dagers penger tilbake garanti</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-6 padding text-proxima-light">
-                    <h3>Ditt eget skredderskydde trenings og kostholdsplan</h3>
-                    <h3>Din personlige trener oppdatere planer og utfordrer deg i takt med din fremang</h3>
-                    <h3>Du blir fulgt opp på treningsplaner, teknikk og motivasjon</h3>
                 </div>
             </div>
         </div>
@@ -56,15 +56,15 @@
             <div class="padding-area">
                 <div class="row">
                     <div class="col-xs-12">
-                        <img id="orange-picture" class="col-xs-6" src="app/img/screenie-chat.svg" alt="Screen chat">
+                        <img id="orange-picture" class="col-md-6 col-xs-12 " src="app/img/screenie-chat.svg" alt="Screen chat">
                         <div class="row">
                             <div class="orange-padding">
-                                <h2 class="col-xs-6 text-proxima-light top-text">Tett på</h2>
-                                <div class="col-xs-6 text-proxima-light">
+                                <h2 class="col-md-6 col-xs-12 text-proxima-light top-text">Tett på</h2>
+                                <div class="col-md-6 col-xs-12 text-proxima-light">
                                     <h3 class="second-font-size">Tett oppfølgning</h3>
                                     <h3 class="second-font-size">Send og motta meldinger</h3>
                                     <h3 class="second-font-size">Få ris og ros fra din personlige trener</h3>
-                                    <button id="btn-orange" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
+                                    <button ng-click="anchor()" id="btn-orange" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
                                     <p class="text-proxima-semibold" id="padding-price">Kun 795,- i måneden uten bindingstid</p>
                                 </div>
 
@@ -74,9 +74,9 @@
                     </div>
 
                 </div>
-                <div class="col-xs-12">
-                    <div id="angle-down-white">
-                        <i class="fa fa-angle-down fa-3x  faa-bounce animated"></i>
+                    <div class="col-xs-12">
+                        <div id="angle-down-white">
+                            <i class="fa fa-angle-down fa-3x  faa-bounce animated"></i>
                     </div>
                 </div>
             </div>
@@ -87,19 +87,19 @@
             </p>
         </div>
 
-        <div class="container-fluid white-area" id="third-layer">
+        <div class="container-fluid white-area">
             <div class="padding-area">
                 <div class="row row-padding">
                     <div class="col-xs-12">
-                        <div class="col-xs-6 text-proxima-light">
+                        <img class="col-md-6 col-xs-12" src="app/img/screenie-plan.svg" alt="Screen plan">
+                        <div class="col-md-6 col-xs-12 text-proxima-light">
                             <h2 class="top-text">Personlig</h2>
                             <p class="second-font-size">Tilpasset treningsprogram</p>
                             <p class="second-font-size">Løpende kostholdsråd</p>
                             <p class="second-font-size">Allitd oppdatert</p>
-                            <button id="btn-white" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
+                            <button ng-click="anchor()" id="btn-white" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
                             <p class="text-proxima-semibold" id="padding-price">Kun 795,- i måneden uten bindingstid</p>
                         </div>
-                        <img class="col-xs-6" src="app/img/screenie-plan.svg" alt="Screen plan">
                     </div>
                 </div>
             </div>
@@ -113,12 +113,12 @@
 
         <div class="container-fluid black-area" id="third-layer">
             <div class="padding-area">
-                <div class="row">
-                    <div class="col-xs-6">
+                <div class="col-md-12">
+                    <div class="col-md-6">
                         <div ng-repeat="pt in slides">
-                            <div class="col-md-5" ng-click="showModals(pt)">
+                            <div ng-click="showModals(pt)">
                                 <pt-modal ng-show="showModal" pt="pt"></pt-modal>
-                                <div class="thumbnail">
+                                <div class="thumbnail col-md-4 col-xs-4">
                                     <img src="{{pt.image}}" alt="PT picture">
                                     <div class="caption">
                                         {{pt.name.split(" ")[0]}}
@@ -127,19 +127,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6 text-proxima-light">
-                        <h2 class="top-text">Faglig sterk</h2>
-                        <p class="second-font-size">Finn din match</p>
-                        <p class="second-font-size">Våre personlige trenere jobber hardt for å nå dine målsettinger</p>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12 text-proxima-light">
+                            <h2 class="top-text">Faglig sterk</h2>
+                            <p class="second-font-size">Finn din match</p>
+                            <p class="second-font-size">Våre personlige trenere jobber hardt for å nå dine målsettinger</p>
 
-                        <button id="btn-black-buttom" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
-                        <div class="margin-black">
-                            <p class="text-proxima-semibold">Kun 795,- i måneden uten bindingstid</p>
+                            <button ng-click="choosePT()" id="btn-black-buttom" type="button" class="btn btn-default btn-lg" ng-click="anchor()">Meld deg på her</button>
+
+                            <div class="margin-black">
+                                <p class="text-proxima-semibold">Kun 795,- i måneden uten bindingstid</p>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
         <div class="container-fluid orange-area">
