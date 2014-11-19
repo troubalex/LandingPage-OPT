@@ -142,12 +142,40 @@
     color: white;
     margin-top: 40px;
 }
+#btn-orange:hover {
+    /* Meld deg på: */
+    
+    border-radius: 4px;
+    /* Rectangle 64: */
+    
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    /* Rectangle 64: */
+    
+    border: 2px solid #F8E71C;
+    -moz-box-shadow: 0px 0px 5px 3px rgba(248, 230, 27, 0.80);
+    box-shadow: 0px 0px 5px 3px rgba(248, 230, 27, 0.80);
+    font-family: ProximaNova-Semibold;
+    font-size: 23px;
+    color: #F8E71C;
+    line-height: 28px;
+}
 #btn-white {
     border-color: white;
     background-color: #F7F7F7;
     border: 3px solid black;
     color: black;
     margin-top: 88px;
+}
+#btn-white:hover {
+    border-radius: 4px;
+    border: 2px solid #FF7B00;
+    -moz-box-shadow: 0px 0px 5px 3px rgba(255, 123, 0, 0.80);
+    box-shadow: 0px 0px 5px 3px rgba(255, 123, 0, 0.80);
+    font-family: ProximaNova-Semibold;
+    font-size: 23px;
+    color: #FF7B00;
+    line-height: 28px;
 }
 #btn-white-modal {
     border-radius: 4px;
@@ -177,6 +205,16 @@
     border: 3px solid #FFFFFF;
     font-size: 23px;
 }
+#btn-black-top:hover {
+    border-radius: 4px;
+    border: 2px solid #AAF0F3;
+    -moz-box-shadow: 0px 0px 5px 3px rgba(169, 240, 243, 0.80);
+    box-shadow: 0px 0px 5px 3px rgba(169, 240, 243, 0.80);
+    font-family: ProximaNova-Semibold;
+    font-size: 23px;
+    color: #AAF0F3;
+    line-height: 28px;
+}
 #btn-black-buttom {
     border-color: white;
     background-color: black;
@@ -186,6 +224,18 @@
     border: 3px solid #FFFFFF;
     font-size: 23px;
 }
+
+#btn-black-buttom:hover {
+    border-radius: 4px;
+    border: 2px solid #AAF0F3;
+    -moz-box-shadow: 0px 0px 5px 3px rgba(169, 240, 243, 0.80);
+    box-shadow: 0px 0px 5px 3px rgba(169, 240, 243, 0.80);
+    font-family: ProximaNova-Semibold;
+    font-size: 23px;
+    color: #AAF0F3;
+    line-height: 28px;
+}
+
 .padding-area {
     padding-top: 50px;
 }
