@@ -1,12 +1,15 @@
 <script type="text/ng-template" id="myModalContent.html">
-    <div class="modal-header">
-        <h2 class="modal-title align-text">{{currentPT.name}}</h2>
-    </div>
-    <div class="modal-body">
-        <div ng-include src="currentPT.path"></div>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-warning" ng-click="cancel()">Lukk</button>
+    <h2 class="modal-title align-text text-proxima-light" id="header-modal">{{currentPT.name.split(" ")[0]}}</h2>
+    <div class="container-fluid">
+        <img class="col-md-4" src="{{currentPT.image}}" alt="PT picture">
+        <div class="col-md-8">
+            <div ng-include src="currentPT.path"></div>
+        </div>
+        <div id="right">
+            <button id="btn-modal" ng-click="cancel()"> <u> Lukk </u> 
+            </button>
+            <button id="btn-white-modal" class="btn-lg" ng-click="ok()">Tren med {{currentPT.name.split(" ")[0]}}</button>
+        </div>
     </div>
 </script>
 

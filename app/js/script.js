@@ -9,9 +9,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
     $scope.modalInstance = null;
     var currentPT = null;
 
-
-
-
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
     }
@@ -107,19 +104,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
     $scope.addSlide();
 
 
-
-
-    $scope.goToSecond = function() {
-        $location.hash('second-layer');
-        $anchorScroll();
-
-    }
-
-    $scope.goToThird = function() {
-        $location.hash('third-layer');
-        $anchorScroll();
-
-    }
 
 
 
