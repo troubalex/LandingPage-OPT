@@ -3,7 +3,7 @@
     <div ng-hide="{{randomPT}}">
         <h2 class="modal-title align-text text-proxima-light" id="header-modal">{{currentPT.name.split(" ")[0]}}</h2>
         <div class="container-fluid">
-            <img class="col-md-4" src="{{currentPT.image}}" alt="PT picture">
+            <img class="col-md-4" id="img-center" src="{{currentPT.image}}" alt="PT picture">
             <div class="col-md-8">
                 <div ng-include src="currentPT.path"></div>
             </div>
