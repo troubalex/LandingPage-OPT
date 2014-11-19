@@ -24,6 +24,7 @@
 /*.black-row {
     margin-left: 100px;
 }*/
+
 .text-proxima-semibold {
     font-family: proxima-nova;
     font-weight: 600;
@@ -79,11 +80,11 @@
     background-position: center;
     margin-bottom: -4px;
 }
-#logo {
+/*#logo {
     top: 13px;
-    left: 70px;
+    right: 635px;
     position: relative;
-}
+}*/
 .orange-area {
     background-color: #FF8800;
     color: white;
@@ -275,10 +276,10 @@
     .text-proxima-light {
         text-align: center;
     }
-
     .orange-padding {
         margin-left: 0px;
     }
+
 }
 @media (max-width: 900px) {
     #opt-header {
@@ -290,8 +291,7 @@
     .background-opacity {
         background: rgba(51, 51, 51, 0);
     }
-
-/*    #logo {
+    /*    #logo {
         display: block;
         margin-left: auto;
         margin-right: auto;
