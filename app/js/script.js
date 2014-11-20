@@ -56,7 +56,13 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
     $scope.choosePT = function() {
         var tmp = Math.random() * (slides.length - 0) + 0;
         var random = Math.floor(tmp);
-        currentPT = slides[random];
+        var cntr = 1;
+
+        tmp = slides[random];
+        while (tmp.id === null) {
+            tmp = PTarray[($scope.currentPT.number + cntr) % PTarray.length];
+        }
+        currentPT = tmp;
         open(modalSize);
         $scope.showModal = true;
     }
