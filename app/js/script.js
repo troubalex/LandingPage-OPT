@@ -10,10 +10,18 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
     var currentPT = null;
     $scope.showChoosePT = false;
     var shakePT = false;
+    var modalSize = null;
 
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
     }
+
+    $scope.$watch(function() {
+        if ($window.innerWidth < 650) {
+            modalSize ="sm";
+        } 
+    });
+
 
     var QueryString = function() {
         var query_string = {};
@@ -47,7 +55,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         var tmp = Math.random() * (slides.length - 0) + 0;
         var random = Math.floor(tmp);
         currentPT = slides[random];
-        open(null, true);
+        open(modalSize);
         $scope.showModal = true;
     }
 
@@ -127,53 +135,13 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
     $scope.showModals = function(pt) {
         currentPT = pt;
-        open()
+        open(modalSize);
         $scope.showModal = true;
     }
 
-    $scope.login = function(PT) {
-        mixpanel.track("User chose PT", {
-            'ptIndex': PT.number,
-            'Random index': random,
-            'screen width': $window.innerWidth,
-            'pt-name': PT.name
-        });
-        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.PTid;
-    };
 
-    $scope.loginWithRandomPT = function(PT) {
-        mixpanel.track("User chose random PT", {
-            'ptIndex': PT.number,
-            'Random index': random,
-            'screen width': $window.innerWidth,
-            'pt-name': PT.name
-        });
-        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.PTid;
-    };
-
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId: '824591080914567',
-            cookie: true, // enable cookies to allow the server to access
-            // the session
-            xfbml: true, // parse social plugins on this page
-            version: 'v2.1' // use version 2.1
-        });
-    };
-    // Load the SDK asynchronously
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-
-
-
-    var open = function(size, randomPT) {
+    var open = function(size) {
+        console.log(size);
         $scope.modalInstance = $modal.open({
             templateUrl: 'myModalContent.html',
             controller: 'ModalInstanceCtrl',
