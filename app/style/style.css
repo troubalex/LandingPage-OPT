@@ -278,9 +278,6 @@
     margin-bottom: 31px;
     padding-left: 30px;
 }
-.thumbnail {
-/*    box-shadow: -10px 1px 5px #888888;
-*/}
 .thumbnail:hover {
     cursor: pointer;
     -webkit-transform: scale(1.1);
@@ -315,9 +312,15 @@
     .background-opacity {
         background: rgba(51, 51, 51, 0);
     }
-    /*    #logo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }*/
+    /*    .background-image {
+    background: url(../img/hero-img-mobile@2x.jpg) no-repeat;
+}*/
 }
+@media(max-width: 650px) {
+    .background-image {
+        background: url(../img/hero-img-mobile@2x.jpg) no-repeat center;
+    }
+}
+
+
+

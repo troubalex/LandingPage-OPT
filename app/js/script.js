@@ -1,7 +1,7 @@
 'use strict';
 
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
-landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
+landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
     var counter = 0;
     var slides = $scope.slides = [];
     $scope.showModal = false;
@@ -9,6 +9,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
     $scope.modalInstance = null;
     var currentPT = null;
     $scope.showChoosePT = false;
+    var shakePT = false;
 
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
@@ -41,13 +42,17 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
         $anchorScroll();
     }
 
+
     $scope.choosePT = function() {
         var tmp = Math.random() * (slides.length - 0) + 0;
         var random = Math.floor(tmp);
         currentPT = slides[random];
         open(null, true);
         $scope.showModal = true;
-        // $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + slides[random].PTid;
+    }
+
+    var yolo = function() {
+        shakePT = false;
     }
 
 
@@ -212,10 +217,10 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     }
 
     $scope.prev = function() {
-        if($scope.currentPT.number === 0)
-            $scope.currentPT = PTarray[PTarray.length-1];
+        if ($scope.currentPT.number === 0)
+            $scope.currentPT = PTarray[PTarray.length - 1];
         else {
-            $scope.currentPT = PTarray[$scope.currentPT.number-1];
+            $scope.currentPT = PTarray[$scope.currentPT.number - 1];
         }
 
     }
