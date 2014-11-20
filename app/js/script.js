@@ -190,7 +190,8 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
 
     }
     $scope.next = function() {
-        $scope.currentPT = PTarray[($scope.currentPT.number + 1) % PTarray.length];
+        $scope.currentPT= PTarray[($scope.currentPT.number + 1) % PTarray.length];
+
 
     }
 
