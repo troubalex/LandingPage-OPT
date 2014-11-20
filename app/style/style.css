@@ -318,7 +318,7 @@
 }
 @media(max-width: 650px) {
     .background-image {
-        background: url(../img/hero-img-mobile@2x.jpg) no-repeat center;
+        background: url(../img/hero-img-mobile@2x.jpg) no-repeat right;
     }
 }
 
