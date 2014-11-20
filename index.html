@@ -13,15 +13,17 @@
         <div class="img-container">
             <div class="background-image img-responsive">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <img id="logo" src="app/img/SaEx_logo_white_tablet.png" />
+                    <div class="col-xs-11 col-xs-offset-1">
+                        <img id="logo" src="app/img/SaEx_logo_white_mobil.png" />
                         <!--                         <p class="text-proxima-semibold" id="log-in"> <u>Logg inn </u> 
                         </p> -->
-                        <div class="background-opacity col-md-8">
-                            <h1 class="text-proxima-light" id="opt-header">Online Personlig Trener</h1>
-                            <h2 class="text-proxima-light" id="opt-sub-header">Bli din egen superhelt.</h2>
-                        </div>
                     </div>
+                </div>
+                <div class="row">                  
+                        <div class="col-xs-12 col-md-7 col-md-offset-1 background-opacity">
+                            <h1>Online Personlig Trener</h1>
+                            <h2>Bli din egen superhelt.</h2>
+                        </div>
                 </div>
                 <div class="col-xs-12">
                     <div id="angle-down-grey">
@@ -35,19 +37,19 @@
 
         <div class="container-fluid black-area">
             <div class="row">
-                <div class="col-md-6 col-xs-12 padding text-proxima-light">
-                    <h3>Din egen skreddersydde trenings- og kostholdsplan</h3>
-                    <h3>Din personlige trener oppdaterer planer og utfordrer deg i takt med din fremgang</h3>
-                    <h3>Du blir fulgt opp på treningsplaner, teknikk og motivasjon</h3>
+                <div class="col-md-5 col-xs-12 col-md-offset-1 padding">
+                    <p class="text-1st-slide">Din egen skreddersydde trenings- og kostholdsplan</p>
+                    <p class="text-1st-slide">Din personlige trener oppdaterer planer og utfordrer deg i takt med din fremgang</p>
+                    <p class="text-1st-slide">Du blir fulgt opp på treningsplaner, teknikk og motivasjon</p>
                 </div>
-                <div class="col-md-6 col-xs-12 align-text">
-                    <div class="row black-row">
-                        <button id="btn-black-top" type="button" class="text-proxima-semibold btn btn-default btn-lg" ng-click="choosePT()">Meld deg på her</button>
+
+                <div class="col-md-5 col-xs-12 col-md-offset-1 padding">
+                        <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="choosePT()" >Meld deg på her</button>
                         <div class="margin-black">
-                            <p class="text-proxima-semibold ">Kun 795,- i måneden uten bindingstid</p>
-                            <p class="text-proxima-semibold">30 dagers penger tilbake garanti</p>
+                            <p>Kun 795,- i måneden uten bindingstid<br>
+                            30 dagers penger tilbake garanti</p>
                         </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -55,51 +57,39 @@
         <div class="container-fluid orange-area" id="second-layer">
             <div class="padding-area">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <img id="orange-picture" class="col-md-6 col-xs-12 " src="app/img/screenie-chat.svg" alt="Screen chat">
-                        <div class="row">
-                            <div class="orange-padding">
-                                <h2 class="col-md-6 col-xs-12 text-proxima-light top-text">Tett på</h2>
-                                <div class="col-md-6 col-xs-12 text-proxima-light">
-                                    <h3 class="second-font-size">En personlig trener som følger deg opp</h3>
-                                    <h3 class="second-font-size">Send og motta meldinger</h3>
-                                    <h3 class="second-font-size">Få tilbakemeldinger fra din personlige trener</h3>
-                                    <button ng-click="choosePT()" id="btn-orange" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
-                                    <p class="text-proxima-semibold" id="padding-price">Kun 795,- i måneden uten bindingstid</p>
-                                </div>
-
-                            </div>
-                        </div>
-
+                    <div class="col-xs-12 col-md-6">
+                        <img id="orange-picture" src="app/img/screenie-chat.svg" alt="Screen chat">
                     </div>
-
-                </div>
-                <div class="col-xs-12">
-                    <div id="angle-down-white">
-                        <i class="fa fa-angle-down fa-3x  faa-bounce animated"></i>
+                    <div class="col-md-5 col-md-offset-1 col-xs-12">
+                        <h2>Tett på</h2>
+                        <p class="text-proxima-light">En personlig trener som følger deg opp</p>
+                        <p class="text-proxima-light">Send og motta meldinger</p>
+                        <p class="text-proxima-light">Få ris og ros fra din personlige trener</p>
+                        <button ng-click="choosePT()"  id="btn-orange" type="button" class="btn btn-default btn-lg text-proxima-light">Meld deg på her</button>
+                        <p id="padding-price">Kun 795,- i måneden uten bindingstid</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="container-fluid light-blue">
-            <p class="sales-argument-text">Til prisen av én ordinær PT-time får du nå oppfølging en hel måned. <u ng-click="anchor()" class="call-to-action"> Start nå! </u> 
+            <p class="sales-argument-text">Til prisen av én ordinær PT-time får du nå oppfølging en hel måned. <a ng-click="anchor()" class="call-to-action"> Start nå! </a> 
             </p>
         </div>
 
         <div class="container-fluid white-area">
             <div class="padding-area">
-                <div class="row row-padding">
-                    <div class="col-xs-12">
-                        <img class="col-md-6 col-xs-12" src="app/img/screenie-plan.svg" alt="Screen plan">
-                        <div class="col-md-6 col-xs-12 text-proxima-light">
-                            <h2 class="top-text">Personlig</h2>
-                            <p class="second-font-size">Tilpasset treningsprogram</p>
-                            <p class="second-font-size">Løpende kostholdsråd</p>
-                            <p class="second-font-size">Allitd oppdatert</p>
-                            <button ng-click="choosePT()" id="btn-white" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
-                            <p class="text-proxima-semibold" id="padding-price">Kun 795,- i måneden uten bindingstid</p>
-                        </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <img src="app/img/screenie-plan.svg" alt="Screen plan">
+                    </div>
+                    <div class="col-md-5 col-md-offset-1 col-xs-12">
+                        <h2>Personlig</h2>
+                        <p class="text-proxima-light">Tilpasset treningsprogram</p>
+                        <p class="text-proxima-light">Løpende kostholdsråd</p>
+                        <p class="text-proxima-light">Allitd oppdatert</p>
+                        <button ng-click="choosePT()"  id="btn-white" type="button" class="btn btn-default btn-lg text-proxima-light">Meld deg på her</button>
+                        <p id="padding-price">Kun 795,- i måneden uten bindingstid</p>
                     </div>
                 </div>
             </div>
@@ -107,7 +97,7 @@
 
 
         <div class="container-fluid pistachio-area">
-            <p class="sales-argument-text">Bli en bedre utgave av deg selv for prisen av en kopp kaffe om dagen . <u ng-click="anchor()">Kom i gang nå! </u> 
+            <p class="sales-argument-text">Bli en bedre utgave av deg selv for prisen av en kopp kaffe om dagen . <a ng-click="anchor()">Kom i gang nå! </a> 
             </p>
         </div>
 
@@ -161,8 +151,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+    </div> 
 
 
 </body>

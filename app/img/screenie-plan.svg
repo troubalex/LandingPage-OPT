@@ -11,7 +11,7 @@
         <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-680.000000, -1693.000000)">
             <g id="Section-plans" sketch:type="MSLayerGroup" transform="translate(0.000000, 1593.000000)">
                 <g id="screenie-plan" transform="translate(680.000000, 100.000000)">
-                    <g id="shadow" transform="translate(300.000000, 255.500000) scale(-1, 1) translate(-300.000000, -255.500000) translate(0.000000, 1.000000)" fill-opacity="0.25" fill="#A6A7A2" sketch:type="MSShapeGroup">
+                    <g id="shadow" transform="translate(300.000000, 255.500000) scale(-1, 1) translate(-300.000000, -255.500000) translate(0.000000, 1.000000)" fill-opacity="0.5" fill="#CECECE" sketch:type="MSShapeGroup">
                         <path d="M490.166916,509 L600,416.8391 L600,415.427219 L251.415173,-3.55271368e-15 L105.193741,0 L-2.13162821e-14,88.2680296 L0,509 L490.166916,509 Z" id="background"></path>
                     </g>
                     <g id="Browser" sketch:type="MSShapeGroup">
