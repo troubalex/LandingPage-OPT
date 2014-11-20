@@ -61,9 +61,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         $scope.showModal = true;
     }
 
-    var yolo = function() {
-        shakePT = false;
-    }
 
 
     $scope.addSlide = function() {
@@ -127,6 +124,15 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
         });
         counter++;
+        slides.push({
+            image: 'app/img/per.jpg',
+            name: 'Per Arnér',
+            // path: 'app/text/per.html',
+            number: counter,
+            id: null,
+        });
+        counter++;
+
     };
 
     $scope.addSlide();
@@ -136,9 +142,11 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
 
     $scope.showModals = function(pt) {
-        currentPT = pt;
-        open(modalSize);
-        $scope.showModal = true;
+        if (pt.id) {
+            currentPT = pt;
+            open(modalSize);
+            $scope.showModal = true;
+        }
     }
 
 

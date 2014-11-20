@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-md-6 col-xs-12 align-text">
                     <div class="row black-row">
-                        <button id="btn-black-top" type="button" class="text-proxima-semibold btn btn-default btn-lg" ng-click="choosePT()" >Meld deg på her</button>
+                        <button id="btn-black-top" type="button" class="text-proxima-semibold btn btn-default btn-lg" ng-click="choosePT()">Meld deg på her</button>
                         <div class="margin-black">
                             <p class="text-proxima-semibold ">Kun 795,- i måneden uten bindingstid</p>
                             <p class="text-proxima-semibold">30 dagers penger tilbake garanti</p>
@@ -64,7 +64,7 @@
                                     <h3 class="second-font-size">En personlig trener som følger deg opp</h3>
                                     <h3 class="second-font-size">Send og motta meldinger</h3>
                                     <h3 class="second-font-size">Få ris og ros fra din personlige trener</h3>
-                                    <button ng-click="choosePT()"  id="btn-orange" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
+                                    <button ng-click="choosePT()" id="btn-orange" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
                                     <p class="text-proxima-semibold" id="padding-price">Kun 795,- i måneden uten bindingstid</p>
                                 </div>
 
@@ -97,7 +97,7 @@
                             <p class="second-font-size">Tilpasset treningsprogram</p>
                             <p class="second-font-size">Løpende kostholdsråd</p>
                             <p class="second-font-size">Allitd oppdatert</p>
-                            <button ng-click="choosePT()"  id="btn-white" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
+                            <button ng-click="choosePT()" id="btn-white" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
                             <p class="text-proxima-semibold" id="padding-price">Kun 795,- i måneden uten bindingstid</p>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
             </div>
         </div>
 
- 
+
         <div class="container-fluid pistachio-area">
             <p class="sales-argument-text">Bli en bedre utgave av deg selv for prisen av en kopp kaffe om dagen . <u ng-click="anchor()">Kom i gang nå! </u> 
             </p>
@@ -120,6 +120,9 @@
                                 <pt-modal ng-show="showModal" pt="pt"></pt-modal>
                                 <div class="thumbnail col-md-4 col-xs-4">
                                     <img src="{{pt.image}}" alt="PT picture">
+                                    <div ng-show="!pt.id" class="booked ">
+                                    <p class="text-proxima-semibold" id="fullbooked">Fullbooket </p></div>
+                                    </img>
                                     <div class="caption">
                                         {{pt.name.split(" ")[0]}}
                                     </div>
@@ -131,7 +134,7 @@
                         <div class="col-md-6 col-xs-12 text-proxima-light">
                             <h2 class="top-text">Faglig sterk</h2>
                             <p class="second-font-size">Våre personlige trenere jobber hardt for at du skal nå dine målsetninger</p>
-                            <p class="second-font-size">Finn din match </p>
+                            <p class="second-font-size">Finn din match</p>
 
 
                             <button ng-click="choosePT()" id="btn-black-buttom" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
@@ -164,10 +167,7 @@
 </body>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
 <link rel="stylesheet" type="text/css" href="app/style/style.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="app/style/shake.css" media="screen" />
-
 <link rel="stylesheet" href="app/style/bounce.css">
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 <script type="text/javascript" src="app/js/script.js"></script>

@@ -24,7 +24,9 @@
 /*.black-row {
     margin-left: 100px;
 }*/
-
+#fullbooked {
+    font-size:20px;
+}
 .text-proxima-semibold {
     font-family: proxima-nova;
     font-weight: 600;
@@ -150,6 +152,16 @@
     color: white;
     margin-top: 40px;
 }
+.booked {
+    color: white;
+    position: relative;
+    right: 0px;
+    top: -18px;
+    background-color: #FF8800;;
+    text-align: center;
+    margin-bottom: -20px;
+
+}
 #btn-orange:hover {
     /* Meld deg på: */
     
@@ -185,6 +197,9 @@
     color: #FF7B00;
     line-height: 28px;
 }
+.strikethrough {
+    background: url(../img/strikethrough.jpg) no-repeat;
+}
 #btn-white-modal {
     border-radius: 4px;
     margin-left: 6px;
@@ -218,7 +233,6 @@
 #change-pt-btn {
     margin-bottom: 40px;
     width: 41%;
-    font-size: 25px;
 }
 #btn-black-top {
     border-color: white;
