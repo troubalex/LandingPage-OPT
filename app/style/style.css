@@ -208,11 +208,13 @@
     -webkit-border-radius: 70px;
     -moz-border-radius: 70px;
 }
-
-#btn-modal:hover{
+#logo {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+#btn-modal:hover {
     cursor: pointer;
 }
-
 #change-pt-btn {
     margin-bottom: 40px;
     width: 41%;
@@ -353,9 +355,6 @@
         font-size: 15px;
     }
     #btn-black-top {
-        font-size: 15px;
-    }
-    #btn-black-top:hover {
         font-size: 15px;
     }
     #btn-black-buttom {
