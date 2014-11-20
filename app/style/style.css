@@ -85,6 +85,7 @@
     right: 635px;
     position: relative;
 }*/
+
 .orange-area {
     background-color: #FF8800;
     color: white;
@@ -210,6 +211,11 @@
     background-color: white;
     margin-left: 10px;
 }
+#change-pt-btn {
+    margin-bottom: 40px;
+    width: 41%;
+    font-size: 25px;
+}
 #btn-black-top {
     border-color: white;
     background-color: black;
@@ -272,6 +278,25 @@
     margin-bottom: 31px;
     padding-left: 30px;
 }
+.thumbnail {
+/*    box-shadow: -10px 1px 5px #888888;
+*/}
+.thumbnail:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    /* Safari and Chrome */
+    
+    -moz-transform: scale(1.1);
+    /* Firefox */
+    
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    
+    -o-transform: scale(1.1);
+    /* Opera */
+    
+    transform: scale(1.1);
+}
 @media (max-width: 980px) {
     .text-proxima-light {
         text-align: center;
@@ -279,7 +304,6 @@
     .orange-padding {
         margin-left: 0px;
     }
-
 }
 @media (max-width: 900px) {
     #opt-header {

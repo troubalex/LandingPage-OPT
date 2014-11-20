@@ -2,7 +2,7 @@
 
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
 landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
-    var counter = 1;
+    var counter = 0;
     var slides = $scope.slides = [];
     $scope.showModal = false;
     $scope.items = ['item1', 'item2', 'item3'];
@@ -179,9 +179,9 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
                 },
                 currentPT: function() {
                     return currentPT;
-                }, 
-                randomPT:function() {
-                    return randomPT;
+                },
+                PTarray: function() {
+                    return slides;
                 }
             }
         });
@@ -194,9 +194,10 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $http, $cook
 
 });
 
-angular.module('landingPage').controller('ModalInstanceCtrl', function($window, $scope, $modalInstance, items, currentPT, randomPT) {
+angular.module('landingPage').controller('ModalInstanceCtrl', function($window, $scope, $modalInstance, items, currentPT, PTarray) {
     $scope.currentPT = currentPT;
-    $scope.randomPT = randomPT
+    var PTarray = PTarray
+
     $scope.cancel = function() {
         $modalInstance.dismiss('cancel');
     };
@@ -205,7 +206,18 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
         $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + PT.PTid;
 
     }
+    $scope.next = function() {
+        $scope.currentPT = PTarray[($scope.currentPT.number + 1) % PTarray.length];
 
+    }
 
+    $scope.prev = function() {
+        if($scope.currentPT.number === 0)
+            $scope.currentPT = PTarray[PTarray.length-1];
+        else {
+            $scope.currentPT = PTarray[$scope.currentPT.number-1];
+        }
+
+    }
 
 });

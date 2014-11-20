@@ -1,8 +1,11 @@
 <script type="text/ng-template" id="myModalContent.html">
 
-    <div ng-hide="{{randomPT}}">
         <h2 class="modal-title align-text text-proxima-light" id="header-modal">{{currentPT.name.split(" ")[0]}}</h2>
         <div class="container-fluid">
+            <div class="align-text">
+                <button ng-click="prev()" id="change-pt-btn" class="btn btn-default btn-lg">Forrige PT</button>
+                <button ng-click="next()" id="change-pt-btn" class="btn btn-default btn-lg"> Neste PT</button>
+            </div>
             <img class="col-md-4" id="img-center" src="{{currentPT.image}}" alt="PT picture">
             <div class="col-md-8">
                 <div ng-include src="currentPT.path"></div>
@@ -14,26 +17,7 @@
 
             </div>
         </div>
-    </div>
 
-
-    <div ng-show="{{randomPT}}">
-        <h4 class="modal-title align-text text-proxima-light" id="header-modal">Du har valgt {{currentPT.name}} som din personlige trener</h4>
-        <h4 id="change-pt">Du kan endre ved å trykke på Endre PT knappen, og deretter trykke på et av PT bildene</h4>
-
-        <div class="container-fluid">
-            <img id="img-center" src="{{currentPT.image}}" alt="PT picture">
-
-            <div class="col-md-8">
-                <div ng-include src="currentPT.path"></div>
-            </div>
-            <div id="random-pt-right">
-                <button id="btn-modal" ng-click="cancel()"> <u> Endre PT </u> 
-                </button>
-                <button id="btn-white-modal" class="btn-lg" ng-click="redirect(currentPT)">Tren med {{currentPT.name.split(" ")[0]}}</button>
-            </div>
-        </div>
-    </div>
 </script>
 
 <!-- <button class="btn btn-default" ng-click="open()">Open me!</button>
