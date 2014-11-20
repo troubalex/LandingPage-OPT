@@ -65,6 +65,11 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         currentPT = tmp;
         open(modalSize);
         $scope.showModal = true;
+
+        mixpanel.track("User pressed 'Meld deg på her'");
+
+
+
     }
 
 
@@ -157,7 +162,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
 
     var open = function(size) {
-        console.log(size);
         $scope.modalInstance = $modal.open({
             templateUrl: 'myModalContent.html',
             controller: 'ModalInstanceCtrl',
@@ -177,7 +181,9 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
         $scope.modalInstance.result.then(function(selectedItem) {
             $scope.selected = selectedItem;
-        }, function() {});
+        }, function() {
+            mixpanel.track("User closes modal");
+        });
 
     };
 
@@ -192,6 +198,7 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     };
 
     $scope.redirect = function(PT) {
+        mixpanel.track("User redirected to heroku");
         $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + PT.PTid;
 
     }
