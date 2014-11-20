@@ -159,7 +159,7 @@
     top: -18px;
     background-color: #FF8800;;
     text-align: center;
-    margin-bottom: -20px;
+    margin-bottom: -38px;
 
 }
 #btn-orange:hover {
@@ -200,7 +200,7 @@
 .strikethrough {
     background: url(../img/strikethrough.jpg) no-repeat;
 }
-#btn-white-modal {
+.btn-white-modal {
     border-radius: 4px;
     margin-left: 6px;
     border: 2px solid #333333;
@@ -212,6 +212,7 @@
     color: black;
     line-height: 19px;
     background-color: white;
+    margin-bottom: 4%;
 }
 #btn-modal {
     border: 0px solid white;
@@ -362,7 +363,7 @@
     #btn-white:hover {
         font-size: 15px;
     }
-    #btn-white-modal {
+    .btn-white-modal {
         font-size: 15px;
     }
     #change-pt-btn {

@@ -190,18 +190,32 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
 
     }
     $scope.next = function() {
-        $scope.currentPT= PTarray[($scope.currentPT.number + 1) % PTarray.length];
-
+        var cntr = 2;
+        var tmp = PTarray[($scope.currentPT.number + 1) % PTarray.length];
+        while (tmp.id === null) {
+            tmp = PTarray[($scope.currentPT.number + cntr) % PTarray.length];
+        }
+        $scope.currentPT = tmp;
 
     }
 
     $scope.prev = function() {
-        if ($scope.currentPT.number === 0)
-            $scope.currentPT = PTarray[PTarray.length - 1];
-        else {
-            $scope.currentPT = PTarray[$scope.currentPT.number - 1];
+        var tmp = null;
+        var cntr = -1;
+        if ($scope.currentPT.number === 0) {
+            tmp = PTarray[PTarray.length - 1];
+            while (tmp.id === null) {
+                tmp = PTarray[(PTarray.length + cntr--) % PTarray.length];
+            }
+        } else {
+            tmp = PTarray[$scope.currentPT.number - 1];
+            while (tmp.id === null) {
+                tmp = PTarray[($scope.currentPT.number + cntr--) % PTarray.length];
+            }
         }
+        $scope.currentPT = tmp;
 
     }
+
 
 });
