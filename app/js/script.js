@@ -18,8 +18,10 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
     $scope.$watch(function() {
         if ($window.innerWidth < 650) {
-            modalSize ="sm";
-        } 
+            modalSize = "sm";
+        } else {
+            modalSize = " ";
+        }
     });
 
 

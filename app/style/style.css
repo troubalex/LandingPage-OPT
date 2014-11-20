@@ -202,7 +202,17 @@
     border: 0px solid white;
     background-color: white;
     margin-left: 10px;
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
 }
+
+#btn-modal:hover{
+    cursor: pointer;
+}
+
 #change-pt-btn {
     margin-bottom: 40px;
     width: 41%;
@@ -359,5 +369,4 @@
         padding-right: 101px;
         margin-top: 60%;
     }
-
 }
