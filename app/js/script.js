@@ -66,7 +66,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         open(modalSize);
         $scope.showModal = true;
 
-        mixpanel.track("User pressed 'Meld deg på her'");
+        mixpanel.track("User pressed 'Meld deg pÃ¥ her'");
 
 
 
@@ -137,7 +137,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         counter++;
         slides.push({
             image: 'app/img/per.jpg',
-            name: 'Per Arnér',
+            name: 'Per ArnÃ©r',
             // path: 'app/text/per.html',
             number: counter,
             id: null,
@@ -198,7 +198,9 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     };
 
     $scope.redirect = function(PT) {
-        mixpanel.track("User redirected to heroku");
+        mixpanel.track("User redirected to heroku with PT",{
+            'PT-Name':pt.name
+        });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + PT.PTid;
 
     }
