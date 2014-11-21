@@ -136,7 +136,15 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             number: counter,
             id: null,
         });
+
         counter++;
+        slides.push({
+            image: 'app/img/nikita.jpg',
+            name: 'Nikita Murphy',
+            path: 'app/text/nikita.html',
+            number: counter,
+            id: null,
+        });
 
     };
 
@@ -217,7 +225,7 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     }
 
     $scope.ptBooked = function() {
-        if(!currentPT.id)
+        if (!currentPT.id)
             return "ptBooked";
     }
 
