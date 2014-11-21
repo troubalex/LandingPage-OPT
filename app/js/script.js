@@ -225,8 +225,8 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     }
 
     $scope.ptBooked = function() {
-        if (currentPT.id)
-            return "ptBooked";
+        if (!$scope.currentPT.id)
+            return "pt-booked";
         else
             return "";
     }

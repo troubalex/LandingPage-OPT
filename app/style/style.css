@@ -386,7 +386,7 @@ a:hover {
     
     transform: scale(1.1);
 }
-.ptBooked {
+.pt-booked {
     border-radius: 3px;
     border-bottom: 3px solid #BF6403;
 }
