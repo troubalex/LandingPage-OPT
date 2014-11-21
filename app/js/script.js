@@ -56,13 +56,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
     $scope.choosePT = function() {
         var tmp = Math.random() * (slides.length - 0) + 0;
         var random = Math.floor(tmp);
-        var cntr = 1;
-
-        tmp = slides[random];
-        while (tmp.id === null) {
-            tmp = PTarray[($scope.currentPT.number + cntr) % PTarray.length];
-        }
-        currentPT = tmp;
+        currentPT = slides[random];
         open(modalSize);
         $scope.showModal = true;
 
@@ -137,8 +131,8 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         counter++;
         slides.push({
             image: 'app/img/per.jpg',
-            name: 'Per ArnÃ©r',
-            // path: 'app/text/per.html',
+            name: 'Per Arnér',
+            path: 'app/text/per.html',
             number: counter,
             id: null,
         });
@@ -153,11 +147,10 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
 
     $scope.showModals = function(pt) {
-        if (pt.id) {
-            currentPT = pt;
-            open(modalSize);
-            $scope.showModal = true;
-        }
+        currentPT = pt;
+        open(modalSize);
+        $scope.showModal = true;
+
     }
 
 
@@ -198,19 +191,15 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     };
 
     $scope.redirect = function(PT) {
-        mixpanel.track("User redirected to heroku with PT",{
-            'PT-Name':pt.name
+        mixpanel.track("User redirected to heroku with PT", {
+            'PT-Name': pt.name
         });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + PT.PTid;
 
     }
     $scope.next = function() {
         var cntr = 2;
-        var tmp = PTarray[($scope.currentPT.number + 1) % PTarray.length];
-        while (tmp.id === null) {
-            tmp = PTarray[($scope.currentPT.number + cntr) % PTarray.length];
-        }
-        $scope.currentPT = tmp;
+        $scope.currentPT = PTarray[($scope.currentPT.number + 1) % PTarray.length];
 
     }
 
@@ -219,14 +208,9 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
         var cntr = -1;
         if ($scope.currentPT.number === 0) {
             tmp = PTarray[PTarray.length - 1];
-            while (tmp.id === null) {
-                tmp = PTarray[(PTarray.length + cntr--) % PTarray.length];
-            }
+
         } else {
             tmp = PTarray[$scope.currentPT.number - 1];
-            while (tmp.id === null) {
-                tmp = PTarray[($scope.currentPT.number + cntr--) % PTarray.length];
-            }
         }
         $scope.currentPT = tmp;
 

@@ -39,10 +39,11 @@ a {
     cursor: pointer;
     line-height: 1.414;
 }
-a:after {
+/*a:after {
     content: '»';
     border-bottom: none;
-}
+}*/
+
 a:hover {
     color: white;
     text-decoration: none;
@@ -77,10 +78,14 @@ a:hover {
     margin-top: 35px;
     margin-bottom: 2.1875em;
 }
-/*.black-row {
-    margin-left: 100px;
-}*/
-
+#arrow-left {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+#arrow-right {
+    padding-left: 80px;
+    padding-top: 50px;
+}
 #fullbooked {
     font-size: 20px;
 }
@@ -129,6 +134,9 @@ a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    border-radius: 3px;
+    border-bottom: 3px solid #BF6403;
 }
 .page-container {
     max-width: 1280px;
