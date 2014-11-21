@@ -100,10 +100,7 @@ a:hover {
     padding-left: 30px;
     padding-right: 30px;
 }
-.fa {
-    padding: 1em;
-    color: #333;
-}
+
 .fa:hover {
     color: #666;
 }
@@ -295,6 +292,10 @@ a:hover {
     -moz-box-shadow: 0px 0px 5px 3px rgba(255, 160, 51, 0.30);
     box-shadow: 0px 0px 5px 3px rgba(255, 160, 51, 0.30);
     color: #888;
+}
+#exit-modal {
+    padding: 1em;
+    color: #333;
 }
 .btn-white-modal {
     font-family: proxima-nova, sans-serif;

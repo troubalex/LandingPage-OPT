@@ -23,7 +23,7 @@
             <div ng-include src="currentPT.path"></div>
         </div>
         <div id="right">
-            <p id="btn-modal" ng-click="cancel()"> <i class="fa fa-times"></i> 
+            <p id="btn-modal" ng-click="cancel()"> <i id="exit-modal" class="fa fa-times"></i> 
             </p>
             <button ng-class="modalButton()"  ng-click="redirect(currentPT)">Tren med {{currentPT.name.split(" ")[0]}}</button>
 
