@@ -214,7 +214,11 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
             tmp = PTarray[$scope.currentPT.number - 1];
         }
         $scope.currentPT = tmp;
+    }
 
+    $scope.ptBooked = function() {
+        if(!currentPT.id)
+            return "ptBooked";
     }
 
 
