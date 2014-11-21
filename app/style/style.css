@@ -143,9 +143,9 @@ a:hover {
     margin-right: auto;
 }
 .background-image {
-    background: url(../img/header@2x.jpg);
+    background: url(../img/hero-img.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     margin-bottom: -4px;
 }
 .background-image .row{
@@ -262,9 +262,7 @@ a:hover {
     box-shadow: 0px 0px 5px 3px rgba(255, 160, 51, 0.30);
     color: #888;
 }
-.strikethrough {
-    background: url(../img/strikethrough.jpg) no-repeat;
-}
+
 .btn-white-modal {
     border-radius: 4px;
     margin-left: 6px;
@@ -407,6 +405,7 @@ a:hover {
     }
     .background-image {
         background: url(../img/hero-img-mobile@2x.jpg) no-repeat right;
+        background-size: 155%;
     }
     #orange-picture, #white-picture {
         padding-bottom: 3.157em;
