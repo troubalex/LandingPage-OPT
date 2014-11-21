@@ -197,7 +197,12 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     $scope.cancel = function() {
         $modalInstance.dismiss('cancel');
     };
-
+    $scope.modalButton = function() {
+        if(!$scope.currentPT.id)
+            return "btn-lg disable-modal-button";
+        else
+            return "btn-lg btn-white-modal";
+    }
     $scope.redirect = function(PT) {
         console.log("sadas");
         mixpanel.track("User redirected to heroku with PT", {
