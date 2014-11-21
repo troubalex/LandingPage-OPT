@@ -98,41 +98,42 @@
 
 
         <div class="container-fluid pistachio-area">
-            <p class="sales-argument-text">Bli en bedre versjon av deg selv for prisen av en kopp kaffe om dagen . <a ng-click="anchor()" class="sap">Kom i gang nå! </a> 
+            <p class="sales-argument-text">Bli en bedre versjon av deg selv for prisen av en kopp kaffe om dagen . <a ng-click="anchor()">Kom i gang nå! </a> 
             </p>
         </div>
 
         <div class="container-fluid black-area" id="third-layer">
             <div class="padding-area">
-                <div class="col-md-12">
-                    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-5 col-xs-12 col-md-offset-1">
+                        <h2>Faglig sterk</h2>
+                        <p class="text-1st-slide">Våre personlige trenere jobber hardt for at du skal nå dine målsetninger</p>
+                        <p class="text-1st-slide">Finn din match</p>
+                    </div>
+
+                    <div class="col-md-5 col-xs-12 col-md-offset-1">
+                        <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="choosePT()" >Meld deg på her</button>
+                        <div class="margin-black">
+                            <p>Kun 795,- i måneden uten bindingstid<br>
+                            30 dagers penger tilbake garanti</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row trainer-thumbs">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1">
                         <div ng-repeat="pt in slides">
                             <div ng-click="showModals(pt)">
                                 <pt-modal ng-show="showModal" pt="pt"></pt-modal>
-                                <div class="thumbnail col-md-4 col-xs-4">
+                                <div class="thumbnail col-md-2 col-xs-4">
                                     <img src="{{pt.image}}" alt="PT picture">
                                     <div ng-show="!pt.id" class="booked ">
-                                        <p class="text-proxima-semibold" id="fullbooked">Fullbooket</p>
+                                        <div id="fullbooked"><p>fullbooket</p></div>
                                     </div>
                                     </img>
-                                    <div class="caption">
+                                    <div class="caption text-1st-slide">
                                         {{pt.name.split(" ")[0]}}
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-xs-12 text-proxima-light">
-                            <h2 class="top-text">Faglig sterk</h2>
-                            <p class="second-font-size">Våre personlige trenere jobber hardt for at du skal nå dine målsetninger</p>
-                            <p class="second-font-size">Finn din match</p>
-
-
-                            <button ng-click="choosePT()" id="btn-black-buttom" type="button" class="btn btn-default btn-lg">Meld deg på her</button>
-
-                            <div class="margin-black">
-                                <p class="text-proxima-semibold">Kun 795,- i måneden uten bindingstid</p>
                             </div>
                         </div>
                     </div>
@@ -141,20 +142,20 @@
         </div>
         <div class="container-fluid orange-area">
             <div class="padding-area">
-                <div class="col-xs-6">
-                    <h2 id="buttom-padding" class="text-proxima-light second-font-size">Akkurat nå får du abonnement på 795 kr
-                        <div style="text-decoration: line-through; display:inline;">995</div>kr i måneden
-                        <br>Ingen bindingstid
-                        <br>30 dagers penger tilbake garanti
-                        <br>14 dagers angrerett
-                        <br>Bytt PT hvis du ikke er fornøyd
-                    </h2>
-
+                <div class="col-xs-6 col-md-5 col-md-offset-1">
+                    <div id="buttom-padding">
+                        <p><em>Akkurat nå får du abonnement på 795 kr</em><p>
+                        <p><span style="text-decoration: line-through; display:inline;">Kr 995,-</span> i måneden<br>
+                        Ingen bindingstid<br>
+                        30 dagers penger tilbake garanti<br>
+                        14 dagers angrerett<br>
+                        Bytt PT hvis du ikke er fornøyd<br>
+                    </div>
                 </div>
-                <div class="col-xs-6 text-proxima-light second-font-size">
+                <div class="col-xs-6 col-md-5">
                 <ol>
                     Det er enkelt å komme i gang: 
-                    <li> Registrerer deg </li>
+                    <li>Registrerer deg </li>
                     <li>Fyll ut ditt skjema</li>
                     <li>Din PT kontakter deg innen 24 timer Du mottar en tilpasset utfordring allerede den første uken, før du mottar ditt ferdige program innen en uke.</li> 
                 </div>
@@ -175,7 +176,7 @@
 <script type="text/javascript" src="app/js/angular-cookies.min.js"></script>
 <script type="text/javascript" src="app/directive/modal.js"></script>
 <script src="//use.typekit.net/whc6xho.js"></script>
-<script src="//cdn.optimizely.com/js/796180544.js"></script>
+<!-- <script src="//cdn.optimizely.com/js/796180544.js"></script> -->
 
 <script>
 try {
