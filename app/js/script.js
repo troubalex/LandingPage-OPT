@@ -106,6 +106,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             number: counter,
             id: 'Sandra',
             PTid: '545a04a65d52590a0053ff00',
+            sideImg: 'app/img/sandra_side.jpg',
 
         });
         counter++;
@@ -126,6 +127,8 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             number: counter,
             id: 'Shamal',
             PTid: '545385172e34da0a008d0041',
+            sideImg: 'app/img/shamal_side.jpg',
+
 
         });
         counter++;
@@ -198,7 +201,7 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
         $modalInstance.dismiss('cancel');
     };
     $scope.modalButton = function() {
-        if(!$scope.currentPT.id)
+        if (!$scope.currentPT.id)
             return "btn-lg disable-modal-button";
         else
             return "btn-lg btn-white-modal";
