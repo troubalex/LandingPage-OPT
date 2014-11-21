@@ -87,8 +87,12 @@ a:hover {
     padding-top: 50px;
 }
 #fullbooked {
-    font-size: 20px;
+    font-size: 1.333em;
 }
+.caption {
+    padding: 1em;
+}
+
 .text-proxima-semibold {
     font-family: proxima-nova;
     font-weight: 600;
@@ -228,9 +232,10 @@ a:hover {
     color: white;
     position: relative;
     right: 0px;
-    top: -18px;
+    top: -2em;
     background-color: #FF8800;
-    ;
+    border-bottom: 3px solid #BF6403;
+    border-radius: 3px;
     text-align: center;
     margin-bottom: -38px;
 }
@@ -354,8 +359,15 @@ a:hover {
     text-align: center;
 }
 .padding {
-    margin-top: 1.875em;
-    margin-bottom: 2.375em;
+    margin-top: 3.157em;
+    margin-bottom: 2.369em;
+}
+.trainer-thumbs {
+    margin-top: 2.369em;
+    margin-bottom: 2.369em;
+}
+.thumbnail {
+    margin-right: 1.414em;
 }
 .thumbnail:hover {
     cursor: pointer;
