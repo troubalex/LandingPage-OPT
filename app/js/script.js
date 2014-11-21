@@ -191,8 +191,9 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     };
 
     $scope.redirect = function(PT) {
+        console.log("sadas");
         mixpanel.track("User redirected to heroku with PT", {
-            'PT-Name': pt.name
+            'PT-Name': PT.name
         });
         $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + PT.PTid;
 
