@@ -225,9 +225,10 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
     }
 
     $scope.ptBooked = function() {
-        if (!currentPT.id)
+        if (currentPT.id)
             return "ptBooked";
+        else
+            return "";
     }
-
 
 });
