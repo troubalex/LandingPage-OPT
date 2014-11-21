@@ -1,13 +1,13 @@
 <script type="text/ng-template" id="myModalContent.html">
     <div class="modal-title">
         <div class="row">
-            <p ng-click="prev()" id="arrow-left" class="col-md-4">
+            <div ng-click="prev()" id="arrow-left" class="col-md-4">
                 <a>
                     < Forrige </a>
-            </p>
-            <h3 class="col-md-4" id="header-modal">{{currentPT.name.split(" ")[0]}}</h3>
-            <p ng-click="next()" id="arrow-right" class="col-md-4"> <a> Neste > </a>
-            </p>
+            </div>
+            <h1 class="col-md-4" id="header-modal">{{currentPT.name.split(" ")[0]}}</h3>
+            <div ng-click="next()" id="arrow-right" class="col-md-4"> <a> Neste > </a>
+            </div>
         </div>
     </div>
     <div class="container-fluid">
@@ -23,7 +23,7 @@
             <div ng-include src="currentPT.path"></div>
         </div>
         <div id="right">
-            <p id="btn-modal" ng-click="cancel()"> <i class="fa fa-times fa-2x"></i> 
+            <p id="btn-modal" ng-click="cancel()"> <i class="fa fa-times"></i> 
             </p>
             <button ng-class="modalButton()" ng-hide="currentPT.id==null" class="btn-lg btn-white-modal" ng-click="redirect(currentPT)">Tren med {{currentPT.name.split(" ")[0]}}</button>
 
