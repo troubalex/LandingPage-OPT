@@ -1,540 +1,476 @@
 body {
-    background-color: #efefef;
-    color: #222;
-    font-family: Arial, sans-serif;
     font-size: 16px;
-    line-height: 1.2em;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.45;
+    color: #333;
+    background-color: #efefef;
+}
+p {
+    font-family: Arial, sans-serif;
+}
+h1, h2, h3, h4 {
+    margin-top: 0 !important;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+}
+h1 {
+    margin-bottom: 0.7em !important;
+    margin-top: 0.369em;
+    font-size: 3.157em;
+}
+h2 {
+    font-size: 2.369em;
+    margin-bottom: 0.8em;
+}
+h3 {
+    font-size: 1.777em;
+}
+h4 {
+    font-size: 1.333em;
+}
+small, .font_small {
+    font-size: 0.75em;
+}
+blockquote {
+    font-size: 1.333em;
+    font-family: "museo-slab", serif;
+    font-style: italic;
+    font-weight: 300;
 }
 a {
+    border-bottom: 1px solid #1F5279;
+    color: #1F5279;
+    cursor: pointer;
+    line-height: 1.414;
+}
+.disable-modal-button {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+    border: 0;
+    font-size: 1.333em;
+    color: white;
+    background-color: #777;
+    margin-top: 1.414em;
+    background-color: #ababab;
+    margin-bottom: 1.777em;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #1F5279;
+    border-bottom: 1px solid #FFFFFF;
+}
+#orange-picture {
+    margin-left: -15px;
+    width: 100%;
+}
+.p-fullbooked {
+    margin-bottom: -2px;
+    margin-top: 2px;
+}
+#white-picture {
+    width: 100%;
+    margin-right: -15px;
+}
+#change-pt {
+    font-style: italic;
+    text-align: center;
+}
+#right {
+    margin-left: 60%;
+    padding-bottom: 15px;
+}
+#random-pt-right {
+    margin-left: 56%;
+    padding-bottom: 15px;
+}
+#header-modal {
+    padding-top: 35px;
+    padding-bottom: 31px;
+    text-align: center;
+}
+.modal-title .row {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+#padding-price {
+    margin-top: 35px;
+    margin-bottom: 2.1875em;
+}
+#arrow-left {
+    padding-top: 50px;
+}
+#arrow-right {
+    padding-top: 50px;
+    text-align: right;
+}
+#fullbooked {
+    font-size: 1.333em;
+}
+.caption {
+    padding: 1em;
+}
+.text-proxima-semibold {
+    font-family: proxima-nova;
+    font-weight: 600;
+}
+.text-proxima-light {
+    font-family: proxima-nova;
+    font-weight: 300 !important;
+    font-size: 1.777em;
+}
+.text-1st-slide {
+    font-family: proxima-nova;
+    font-size: 1.333em;
+}
+.orange-padding {
+    margin-left: 110px;
+}
+#buttom-padding {
+    margin-bottom: 61px;
+}
+#grey-transparent {
+    background-color: grey;
+}
+.background-opacity {
+    background: rgba(51, 51, 51, 0.4);
+    margin-top: 25%;
+    color: #FFFFFF;
+    padding-top: 1.56em;
+    margin-bottom: 2.1875em;
+}
+.background-opacity h1 h2 {
+    font-weight: 100 !important;
+}
+.sales-argument-text {
+    font-size: 1.333em;
+    font-family: "museo-slab", serif;
+    font-style: italic;
+    font-weight: 300;
+}
+.second-font-size {
+    font-size: 32px;
+}
+#img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.page-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.background-image {
+    background: url(../img/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-bottom: -4px;
+}
+.background-image .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+/*#logo {
+    top: 13px;
+    right: 635px;
+    position: relative;
+}*/
+
+.orange-area {
+    background-color: #FF8800;
     color: white;
 }
-
-
-.glyphicon {
-    color: #4B186C;
-    font-size: 50px !important;
-    right: 10% !important;
+.align-text {
+    text-align: center;
 }
-.padding-left {
-    padding-left: 30px;
-}
-.wrapper {
-    max-width: 980px !important;
-    margin-right: auto;
-    margin-left: auto;
-}
-.container {
-    max-width: 980px !important;
-}
-#second-logo {
+.opt {
     font-family: proxima-nova, sans-serif;
-    font-size: 20px;
     line: 130%;
     color: white;
     box-shadow: 1px 1px 4px #000000 0, 0, 0;
-    position: relative;
-    top: 30px;
-}
-#slides_control > div {
-    height: 200px;
-}
-#logo {
-    position: relative;
-    background-repeat: no-repeat !important;
-    background: url("../img/SaEx_logo_white_mobil.png") center;
-}
-#slides_control {
     position: absolute;
-    width: 400px;
-    left: 50%;
-    top: 20px;
-    margin-left: -200px;
 }
-#last-second-layer-text {
-    padding-bottom: 30px;
+.top-text {
+    font-size: 45px;
+    margin-bottom: 50px;
 }
-#background {
-    background: url("../img/hero_mobil.jpg") center;
-    background-repeat: no-repeat;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding-top: 1px;
-    position: relative;
+#opt-header {
+    top: 75%;
+    left: 70px;
 }
-#second-layer {
-    background-color: white;
+#opt-sub-header {
+    top: 85%;
+    left: 70px;
+    font-size: 45px;
 }
-.text {
-    font-family: proxima-nova, sans-serif;
+#angle-down-white {
+    text-align: center;
+    color: #F7F7F7;
+}
+#angle-down-black {
+    text-align: center;
+    color: black;
+}
+#angle-down-grey {
+    text-align: center;
     color: white;
-    padding: 0px 20px 0px 20px;
-    margin: 0px;
-}
-#padding-text-first {
-    padding: 85% 0 0 0;
-    max-width: 980px;
-    font-size: 3.5em;
-    color: #FFFFFF;
-    line-height: 1.3em;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    font-family: "proxima-nova-n6", "proxima-nova", sans-serif;
-    font-weight: 600;
-}
-#padding-text-second {
-    padding-bottom: 23px;
-    font-size: 16px;
-    color: #FFFFFF;
-    line-height: 20px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    padding: 0px 20px 25px 20px;
-    font-family: 'ProximaNova-Light';
-}
-#fb-info {
-    padding: 0px 20px 20px 20px;
-    font-style: italic;
-    font-family: Arial;
-    font-size: 10px;
-}
-.train-btn {
-    color: white;
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 10px;
-    height: 52px;
-    background: #4B186C;
-    padding: 0px;
-}
-.train-btn #inner-text-btn {
-    font-size: 20px;
-}
-#CTA-btn {
-    padding-bottom: 480px;
-}
-.btn {
-    background-color: rgba(0, 0, 0, 0);
-    height: 50px;
-    font-family: proxima-nova, sans-serif;
-    font-weight: 600;
-    padding: 0 0 0 0;
-    margin-top: 10%;
-}
-.text-center {
-    text-align: center;
-}
-#inner-text {
-    text-indent: 100%;
-    margin-top: 10px;
-    padding-bottom: 15px;
-}
-#inner-text-choose-trainer {
-    white-space: nowrap;
-    font-family: arial;
-}
-.header-text {
-    text-align: center;
-    color: #222222;
-}
-.header-text i {
-    margin-right: 3px;
-}
-.money-box {
-    font-family: 'proxima-nova';
-    font-weight: 300;
-}
-#our-coach-background {
-    background-color: #FFFFFF;
-    border-right: 1px solid #ddd;
-}
-.contact .fa {
-    color: #FFFFFF;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    font-size: 14px;
-    padding-bottom: 10px;
-    padding-left: 14px;
-}
-.second-layer-heading {
-    padding-bottom: 7px;
-    font-size: 18px;
-    font-family: ProximaNova, sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-.second-layer-text {
-    color: #222222;
-    font-family: arial;
-    font-size: 16px;
-    line-height: 1.3em;
-}
-#fb-padding {
-    padding-top: 25px;
-}
-#carousel-index {
-    text-align: center;
-    font-size: 14px;
-    font-family: Arial;
-    font-weight: bold;
-    color: #979797;
-    padding: 10px 0 10px 0;
-}
-.section-header {
-    font-family: 'proxima-nova';
-    font-weight: 300;
-    font-size: 24px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #d8d8d8;
-    text-transform: uppercase;
-}
-.sales-section-header {
-    margin: 0 15px 0 15px;
-}
-.sales-section {
-    padding-bottom: 0;
-}
-.price {
-    color: #222222;
-    line-height: 1.2;
-    font-family: 'proxima-nova';
-    font-weight: 300;
-    padding: 20px 0 10px 0;
-}
-.price h1 {
-    padding-left: 48px;
-}
-.price #month {
-    font-size: 18px;
-    font-family: 'proxima-nova';
-    font-weight: 300;
-    margin-top: 0;
-}
-.price button {
-    width: 40%;
-}
-.btn-choose-trainer {
-    border: 2px solid #4B186C;
-    width: 75%;
-    font-size: 22px;
-    text-align: center;
-    background-color: #4B186C;
-    outline: 0;
-    color: white;
-    border-radius: 4px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    padding: 15px 20px;
-}
-#hero-btn {
-    padding-bottom: 60px;
-}
-#hero-btn-text {
-    font-family: arial;
-    text-transform: uppercase;
-}
-.contact-margin {
-    margin-left: 10px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-}
-.price #padding {
-    padding-bottom: 10px;
-}
-.price #current-price {
-    font-size: 55px;
-    padding-top: 25px;
-    padding-bottom: -5px;
-    line-height: 0.7;
-}
-.layer-container {
-    background: #FFFFFF;
-    padding: 0px 0px 0px 0px;
-    border-bottom: 1px solid #ababab;
-    border-right: 1px solid #ddd;
-    margin-bottom: 15px;
-}
-.center {
-    text-align: center;
-}
-.slides {
-    margin: 0px;
-    padding: 0px;
-}
-.slides img {
-    width: 100%;
-}
-.slides .item {
-    padding: 0px;
-}
-.two-slides {
-    float: left;
-    width: 48.5% !important;
-}
-.second-slide {
-    margin-left: 1.5%;
-}
-.one-slide {
-    width: 100%;
-}
-.quote-section {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.quote {
-    padding: 8% 0 8% 0;
-}
-.benefits {
+    position: absolute;
+    top: -30px;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    left: 0;
+    right: 0;
 }
-.bullets {
-    padding: 20px 10% 20px 10%;
-    font-size: 18px;
-    line-height: 1.3;
+.margin-black {
+    margin-top: 35px;
+    margin-bottom: 58px;
 }
-.bullets li {
-    padding-bottom: 10px;
-    list-style-type: none;
-    list-style-position: outside;
-    margin-left: 0;
-    padding-left: 0;
-}
-.bullets li:before {
-    content: "\f00c";
-    font-family: FontAwesome;
-    font-size: 20px;
-    margin: 0 15px 0 -35px;
-    color: #222;
-}
-blockquote {
-    font-size: 16px;
-    font-family: Georgia, serif;
-    font-style: italic;
-    line-height: 1.3;
-    margin: 0 0 10px 0;
-    border: none;
+.yellow {
+    background-color: yellow;
+    padding-bottom: 60px;
+    padding-top: 60px;
     text-align: center;
 }
-#contact-us {
-    padding-left: 14px;
-    padding-top: 12px;
-    font-family: 'proxima-nova';
-    font-weight: 600;
+.light-blue {
+    background-color: #AAF0F3;
+    padding-bottom: 53px;
+    padding-top: 53px;
+    text-align: center;
 }
-#contact-text {
+#btn-orange {
+    background-color: #FF8800;
     color: white;
+}
+.booked {
+    color: white;
+    position: relative;
+    right: 0px;
+    top: -2em;
+    background-color: #FF8800;
+    border-bottom: 3px solid #BF6403;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: -38px;
+}
+#btn-orange {
+    border-radius: 4px;
+    border: 2px solid #FFFFFF;
+    font-size: 1.25em;
+    margin-top: 1.414em;
+}
+#btn-orange:hover {
+    border-radius: 4px;
+    border: 2px solid #FFB866;
+    -moz-box-shadow: 0px 0px 5px 3px rgba(255, 160, 51, 0.80);
+    box-shadow: 0px 0px 5px 3px rgba(255, 160, 51, 0.80);
+    color: #FFE7CC;
+}
+#btn-white {
+    border-radius: 4px;
+    background-color: #F7F7F7;
+    border: 2px solid #333;
+    color: #333;
+    font-size: 1.25em;
+    margin-top: 1.414em;
+}
+#btn-white:hover {
+    border-radius: 4px;
+    border: 2px solid #FFB866;
+    -moz-box-shadow: 0px 0px 5px 3px rgba(255, 160, 51, 0.30);
+    box-shadow: 0px 0px 5px 3px rgba(255, 160, 51, 0.30);
+    color: #888;
+}
+#exit-modal {
+    padding: 1em;
+    color: #333;
+}
+.btn-white-modal {
     font-family: proxima-nova, sans-serif;
-    font-size: 18px;
+    font-size: 1.333em;
+    border-radius: 4px;
+    margin-left: 6px;
+    border-bottom: 3px solid #BF6403;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+    background-color: #FF8800;
+    margin-bottom: 1.777em;
+    margin-top: 1.414em;
 }
-.contact {
-    text-align: left;
-    background-color: #222222;
-    padding-left: 14px;
+.btn-white-modal:hover {
+    background-color: #BF6403;
 }
-#pt-name {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
+#btn-modal {
+    border: 0px solid white;
+    background-color: white;
+    margin-left: 10px;
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+}
+#logo {
+    margin-top: 1.25em;
+}
+#btn-modal:hover {
+    cursor: pointer;
+}
+#change-pt-btn {
+    margin-bottom: 40px;
+    width: 41%;
+}
+#btn-black-top {
+    border-color: white;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    border: 2px solid #FFFFFF;
+    font-size: 1.25em;
+}
+#btn-black-top:hover {
+    border-radius: 4px;
+    background-color: #333;
+    border: 2px solid #AAF0F3;
+    -moz-box-shadow: 0px 0px 5px 3px rgba(169, 240, 243, 0.80);
+    box-shadow: 0px 0px 5px 3px rgba(169, 240, 243, 0.80);
+    font-size: 1.25em;
+    color: #AAF0F3;
+}
+#btn-black-buttom {
+    border-color: white;
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+    border-radius: 4px;
+    border: 3px solid #FFFFFF;
+    font-size: 23px;
+}
+#btn-black-buttom:hover {
+    border-radius: 4px;
+    border: 2px solid #AAF0F3;
+    -moz-box-shadow: 0px 0px 5px 3px rgba(169, 240, 243, 0.80);
+    box-shadow: 0px 0px 5px 3px rgba(169, 240, 243, 0.80);
+    font-size: 23px;
+    color: #AAF0F3;
+    line-height: 28px;
+}
+.padding-area {
+    padding-top: 6.25em;
+}
+.padding-btn {
+    padding-top: 100px;
+}
+.black-area {
+    color: white;
+    background-color: #333333;
+}
+.white-area {
+    background-color: #F7F7F7;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+}
+.pistachio-area {
+    background-color: #F3FFE1;
+    padding-bottom: 53px;
+    padding-top: 53px;
     text-align: center;
-    color: #222;
 }
-#pt-text {
-    font-family: Arial;
-    font-size: 14px;
-    min-height: 200px;
+.padding {
+    margin-top: 3.157em;
+    margin-bottom: 2.369em;
 }
-
-#inner-text-train-btn {
-    font-family: Arial;
+#description {
+    margin-top: 0;
 }
-#feedback-text {
-    text-align: right;
-    padding-right: 20px;
-    font-size: 14px;
-    line-height: 1;
+.trainer-thumbs {
+    margin-top: 2.369em;
+    margin-bottom: 2.369em;
 }
-.contact-info {
-    font-size: 16px;
+.thumbnail {
+    margin-right: 1.414em;
 }
-.bottom {
-    padding-bottom: 50px;
-}
-#contact-footer {
-    font-family: Arial;
-    font-style: italic;
-    font-size: 14px;
-    padding-top: 10px;
-    padding-left: 15px;
-}
-#price-color {
-    background-color: rgba(231, 236, 243, 100);
-    margin-top: 20px;
-}
-.carousel-indicators {
-    display: none;
-}
-#pay-one-price {
-    padding-bottom: 20px;
-}
-#carousel-background {
-    padding-top: 10px;
-    padding-bottom: 30px;
-    background-color: #FFFFFF;
-    border-right: 1px solid #ddd;
-}
-.left, .right {
-    background-image: none !important;
-}
-.glyphicon-chevron-left {
-    margin-left: -30px;
-}
-.glyphicon-chevron-right {
+.thumbnail:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    /* Safari and Chrome */
     
-    right: 10%;
+    -moz-transform: scale(1.1);
+    /* Firefox */
+    
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    
+    -o-transform: scale(1.1);
+    /* Opera */
+    
+    transform: scale(1.1);
 }
-h4 {
-    font-family: Arial, sans-serif;
-    font-weight: regular;
-    font-size: 18px;
-    line-height: 18px;
-    text-align: center;
-    padding-top: 20px;
+.pt-booked {
+    border-radius: 3px;
+    border-bottom: 3px solid #BF6403;
 }
-@media (max-width: 600px) {
+@media (max-width: 980px) {
+    /*.text-proxima-light {
+        text-align: center;
+    }
+    .orange-padding {
+        margin-left: 0px;
+    }*/
+}
+@media (max-width: 900px) {
+    #opt-header {
+        font-size: 45px;
+    }
+    #opt-sub-header {
+        font-size: 30px;
+    }
+    .background-opacity {
+        background: rgba(51, 51, 51, 0);
+    }
+    /*    .background-image {
+    background: url(../img/hero-img-mobile@2x.jpg) no-repeat;
+}*/
+}
+@media(max-width: 650px) {
     body {
-        font-size: 14px;
+        font-size: 12px;
     }
-    .layer-container {
-        width: 100%;
+    .text-1st-slide {
+        font-family: proxima-nova;
+        font-size: 1.777em;
     }
-    #background {
-        background: url("../img/hero_mobil.jpg");
-        background-repeat: no-repeat;
-        width: 100%;
-        -webkit-background-size: cover !important;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+    .background-image {
+        background: url(../img/hero-img-mobile@2x.jpg) no-repeat right;
+        background-size: 150%;
     }
-    .btn {
-        background-color: rgba(75, 24, 108, 0.6);
-        color: white;
-        width: 100%;
+    #orange-picture, #white-picture {
+        padding-bottom: 3.157em;
     }
-    .btn #inner-text {
-        font-family: proxima-nova, sans-serif;
-        font-size: 20px;
-        color: #FFFFFF;
-        line-height: 26px;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-        text-indent: 0%;
+    #fullbooked {
+        font-size: 15px;
     }
-    .col-xs-6 {
-        width: 100%;
-    }
-    #current-price, #month {
-        text-align: center;
-    }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        #background {
-            background-image: url('../img/hero_mobil@2x.jpg');
-        }
-        /* FIXME weird stuff going on with size
-        #logo {
-            background: url('../img/SaEx_logo_white_mobil@2x.png');
-        }*/
+    .background-opacity {
+        background: rgba(51, 51, 51, 0.4);
+        padding-right: 101px;
+        margin-top: 55%;
     }
 }
-@media (min-width: 600px) {
-    #background {
-        background: url("../img/hero_tablet.jpg") center;
-        background-repeat: no-repeat;
-        width: 100%;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        padding-top: 1px;
-        position: relative;
-    }
-    #logo {
-        background: url("../img/SaEx_logo_white_tablet.png") center;
-        position: relative;
-        background-repeat: no-repeat;
-        padding-top: 25px;
-    }
-    #current-price, #month {
-        text-align: center;
-    }
-    #price-color {
-        margin-left: 20px;
-        border-right: 15px solid #FFFFFF;
-        border-bottom: 15px solid #FFFFFF;
-    }
-    #second-logo {
-        font-family: proxima-nova, sans-serif;
-        font-size: 24px;
-        line: 130%;
-        top: 10px;
-    }
-    #padding-text-first {
-        padding-top: 52%;
-        padding-bottom: 105px;
-    }
-    .sales-section {
-        padding-bottom: 15px;
-    }
-    .benefits {
-        width: 50%;
-    }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        #background {
-            background-image: url('../img/hero_tablet@2x.jpg');
-        }
-        /*  FIXME weird stuff going on with size
-        #logo {
-            background: url('../img/SaEx_logo_white_tablet@2x.png');
-        }*/
-    }
-}
-@media (min-width: 980px) {
-    #background {
-        background: url("../img/hero_desktop.jpg") center;
-        background-repeat: no-repeat;
-        width: 100%;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        padding-top: 1px;
-        position: relative;
-    }
-    #padding-text-first {
-        padding-top: 28%;
-        padding-bottom: 105px;
-    }
-    #logo {
-        background: url("../img/SaEx_logo_white_desktop.png") center;
-        position: relative;
-        background-repeat: no-repeat;
-        padding-top: 40px;
-    }
-    #second-logo {
-        font-family: proxima-nova, sans-serif;
-        font-size: 36px;
-        line: 130%;
-        top: 35px;
-    }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        #background {
-            background-image: url('../img/hero_desktop@2x.jpg');
-        }
-        /*  FIXME weird stuff going on with size
-        #logo {
-            background: url('../img/SaEx_logo_white_desktop@2x.png');
-        } */
+@media(max-width: 470px) {
+    .background-image {
+        background-size: 200%;
     }
 }

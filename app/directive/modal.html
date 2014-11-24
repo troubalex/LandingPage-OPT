@@ -1,0 +1,38 @@
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-title">
+        <div class="row">
+            <div ng-click="prev()" id="arrow-left" class="col-xs-4">
+                <a>
+                    < Forrige </a>
+            </div>
+            <h1 class="col-xs-4" id="header-modal">{{currentPT.name.split(" ")[0]}}</h3>
+            <div ng-click="next()" id="arrow-right" class="col-xs-4"> <a> Neste > </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <img ng-class="ptBooked()" id="img-center" src="{{currentPT.image}}" alt="PT picture">
+            <div ng-show="!currentPT.id" class="booked">
+                <p class="text-proxima-semibold p-fullbooked" id="fullbooked">Fullbooket</p>
+            </div>
+        </div>
+
+
+        <div class="col-md-8">
+            <div ng-include src="currentPT.path"></div>
+        </div>
+        <div id="right">
+            <p id="btn-modal" ng-click="cancel()"> <i id="exit-modal" class="fa fa-times"></i> 
+            </p>
+            <button ng-class="modalButton()"  ng-click="redirect(currentPT)">Tren med {{currentPT.name.split(" ")[0]}}</button>
+
+        </div>
+    </div>
+
+</script>
+
+<!-- <button class="btn btn-default" ng-click="open()">Open me!</button>
+<button class="btn btn-default" ng-click="open('lg')">Large modal</button>
+<button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+<div ng-show="selected">Selection from a modal: {{ selected }}</div> -->

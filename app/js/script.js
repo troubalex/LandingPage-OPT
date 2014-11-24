@@ -1,29 +1,29 @@
 'use strict';
 
-var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
-landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $cookieStore, $location, $anchorScroll) {
-    $scope.currentText = '';
-    var counter = 1;
+var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
+landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
+    var counter = 0;
     var slides = $scope.slides = [];
-    $scope.showTwoSlides = true;
-    $scope.currentPersonText = '';
-    var PtId;
-    var random;
-
-    function showToSlides() {
-        return $scope.showTwoSlides;
-    }
-    $scope.$watch(function() {
-        if ($window.innerWidth < 560) {
-            $scope.showTwoSlides = false;
-        } else {
-            $scope.showTwoSlides = true;
-        }
-    });
+    $scope.showModal = false;
+    $scope.items = ['item1', 'item2', 'item3'];
+    $scope.modalInstance = null;
+    var currentPT = null;
+    $scope.showChoosePT = false;
+    var shakePT = false;
+    var modalSize = null;
 
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
     }
+
+    $scope.$watch(function() {
+        if ($window.innerWidth < 650) {
+            modalSize = "sm";
+        } else {
+            modalSize = " ";
+        }
+    });
+
 
     var QueryString = function() {
         var query_string = {};
@@ -47,13 +47,24 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
     }
 
 
+    $scope.anchor = function() {
+        $location.hash('third-layer');
+        $anchorScroll();
+    }
 
-    $scope.imgClass = function() {
-        if ($scope.showTwoSlides)
-            return 'two-slides';
-        else
-            return 'one-slide';
-    };
+
+    $scope.choosePT = function() {
+        var tmp = Math.random() * (slides.length - 0) + 0;
+        var random = Math.floor(tmp);
+        currentPT = slides[random];
+        open(modalSize);
+        $scope.showModal = true;
+
+        mixpanel.track("User pressed 'Meld deg på her'");
+
+
+
+    }
 
 
 
@@ -95,6 +106,7 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             number: counter,
             id: 'Sandra',
             PTid: '545a04a65d52590a0053ff00',
+            sideImg: 'app/img/sandra_side.jpg',
 
         });
         counter++;
@@ -115,112 +127,116 @@ landingPage.controller('CarouselDemoCtrl', function($scope, $window, $http, $coo
             number: counter,
             id: 'Shamal',
             PTid: '545385172e34da0a008d0041',
+            sideImg: 'app/img/shamal_side.jpg',
+
 
         });
         counter++;
+        slides.push({
+            image: 'app/img/per.jpg',
+            name: 'Per Arnér',
+            path: 'app/text/per.html',
+            number: counter,
+            id: null,
+        });
+
+        counter++;
+        slides.push({
+            image: 'app/img/nikita.jpg',
+            name: 'Nikita Murphy',
+            path: 'app/text/nikita.html',
+            number: counter,
+            id: null,
+        });
+
     };
 
     $scope.addSlide();
 
-    $scope.random = function() {
-
-        var tmp = Math.random() * (slides.length - 0) + 0;
-        random = Math.floor(tmp);
-        slides[random].active = true;
 
 
-    }
 
 
-    $scope.getActiveSlide = function() {
-        return slides.filter(function(s) {
-            return s.active;
-        })[0];
-
-
-    };
-    $scope.goToSale = function() {
-        $location.hash('second-layer');
-        $anchorScroll();
+    $scope.showModals = function(pt) {
+        currentPT = pt;
+        open(modalSize);
+        $scope.showModal = true;
 
     }
 
-    $scope.goToPT = function() {
-        $location.hash('our-coach-background');
-        $anchorScroll();
 
-    }
-
-    $scope.getNextActiveSlide = function() {
-        for (var i = 0; i < slides.length; i++) {
-            if (slides[i].active) {
-                return slides[(i + 1) % slides.length];
-            }
-        }
-
-    };
-
-
-    var findPT = function() {
-        slides.forEach(function(PT) {
-            if (PT.id.toLowerCase() === PtId.toLowerCase()) {
-                PT.active = true;
+    var open = function(size) {
+        $scope.modalInstance = $modal.open({
+            templateUrl: 'myModalContent.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+                items: function() {
+                    return $scope.items;
+                },
+                currentPT: function() {
+                    return currentPT;
+                },
+                PTarray: function() {
+                    return slides;
+                }
             }
         });
-    };
-    PtId = QueryString().pt;
 
-    if (PtId)
-        findPT();
-    else {
-        PtId = QueryString().PT;
-        if (PtId)
-            findPT();
+        $scope.modalInstance.result.then(function(selectedItem) {
+            $scope.selected = selectedItem;
+        }, function() {
+            mixpanel.track("User closes modal");
+        });
+
+    };
+
+});
+
+angular.module('landingPage').controller('ModalInstanceCtrl', function($window, $scope, $modalInstance, items, currentPT, PTarray) {
+    $scope.currentPT = currentPT;
+    var PTarray = PTarray
+
+    $scope.cancel = function() {
+        $modalInstance.dismiss('cancel');
+    };
+    $scope.modalButton = function() {
+        if (!$scope.currentPT.id)
+            return "btn-lg disable-modal-button";
         else
-            $scope.random();
+            return "btn-lg btn-white-modal";
+    }
+    $scope.redirect = function(PT) {
+        console.log("sadas");
+        mixpanel.track("User redirected to heroku with PT", {
+            'PT-Name': PT.name
+        });
+        $window.location.href = " https://online-pt-test.herokuapp.com/#/signup?PtId=" + PT.PTid;
+
+    }
+    $scope.next = function() {
+        var cntr = 2;
+        $scope.currentPT = PTarray[($scope.currentPT.number + 1) % PTarray.length];
+
     }
 
+    $scope.prev = function() {
+        var tmp = null;
+        var cntr = -1;
+        if ($scope.currentPT.number === 0) {
+            tmp = PTarray[PTarray.length - 1];
 
+        } else {
+            tmp = PTarray[$scope.currentPT.number - 1];
+        }
+        $scope.currentPT = tmp;
+    }
 
-
-    $scope.login = function(PT) {
-        mixpanel.track("User chose PT", {
-            'ptIndex': PT.number,
-            'Random index': random,
-            'screen width': $window.innerWidth,
-            'pt-name': PT.name
-        });
-        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.PTid;
-    };
-
-    $scope.loginWithRandomPT = function(PT) {
-        mixpanel.track("User chose random PT", {
-            'ptIndex': PT.number,
-            'Random index': random,
-            'screen width': $window.innerWidth,
-            'pt-name': PT.name
-        });
-        $window.location.href = " https://online-pt-test.herokuapp.com/#/login?PtId=" + PT.PTid;
-    };
-
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId: '824591080914567',
-            cookie: true, // enable cookies to allow the server to access
-            // the session
-            xfbml: true, // parse social plugins on this page
-            version: 'v2.1' // use version 2.1
-        });
-    };
-    // Load the SDK asynchronously
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
+    $scope.ptBooked = function() {
+        if (!$scope.currentPT.id)
+            return "pt-booked";
+        else
+            return "";
+    }
 
 });

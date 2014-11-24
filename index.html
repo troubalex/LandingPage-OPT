@@ -8,167 +8,181 @@
     <title>Online Personlig Trener &ndash; online-pt.no</title>
 </head>
 
-<body ng-controller="CarouselDemoCtrl" ng-init="init()">
-    <div class="wrapper">
-        <div class="layer-container col-lg-12">
-            <div id="background">
-                <div class="text-center">
-                    <div id="logo" alt="SATS ELIXIA">
-                        <h1 id="second-logo">Online Personlig Trener</h1>
+<body ng-controller="landingPageCtrl" ng-init="init()">
+    <div class="page-container">
+        <div class="img-container">
+            <div class="background-image img-responsive">
+                <div class="row">
+                    <div class="col-xs-11 col-xs-offset-1">
+                        <img id="logo" src="app/img/SaEx_logo_white_mobil.png" />
+                        <!--                         <p class="text-proxima-semibold" id="log-in"> <u>Logg inn </u> 
+                        </p> -->
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="text-center">
-                                    <div class="text" id="padding-text-first">
-                                        Tett p&aring;.
-                                        <br>Personlig.
-                                        <br>Faglig sterk.
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-7 col-md-offset-1 background-opacity">
+                        <h1>Online Personlig Trener</h1>
+                        <h2>Bli din egen superhelt.</h2>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div id="angle-down-grey">
+                        <i class="fa fa-angle-down fa-3x  faa-bounce animated"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid black-area">
+
+            <div class="row">
+                <div class="col-md-5 col-xs-12 col-md-offset-1 padding">
+                    <p class="text-1st-slide">Din egen skreddersydde trenings- og kostholdsplan</p>
+                    <p class="text-1st-slide">Din personlige trener oppdaterer planer og utfordrer deg i takt med din fremgang</p>
+                    <p class="text-1st-slide">Du blir fulgt opp på treningsplaner, teknikk og motivasjon</p>
+                </div>
+
+                <div class="col-md-5 col-xs-12 col-md-offset-1 padding">
+                    <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="choosePT()">Meld deg på her</button>
+                    <div class="margin-black">
+                        <p>Kun 795,- i måneden uten bindingstid
+                            <br>30 dagers penger tilbake garanti</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-1 col-md-10 padding" id="description">
+                    <h3>Web-tjenesten samler all kontakt mellom deg og din PT på et sted. Her finner du treningsplan, kostholdsveiledning og kommunikasjon i en løsning. </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid orange-area" id="second-layer">
+            <div class="padding-area">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <img id="orange-picture" src="app/img/screenie-chat.svg" alt="Screen chat">
+                    </div>
+                    <div class="col-md-5 col-md-offset-1 col-xs-12">
+                        <h2>Tett på</h2>
+                        <p class="text-proxima-light">En personlig trener som følger deg opp</p>
+                        <p class="text-proxima-light">Send og motta meldinger</p>
+                        <p class="text-proxima-light">Få tilbakemeldinger fra din personlige trener</p>
+                        <button ng-click="choosePT()" id="btn-orange" type="button" class="btn btn-default btn-lg text-proxima-light">Meld deg på her</button>
+                        <p id="padding-price">Kun 795,- i måneden uten bindingstid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid light-blue">
+            <p class="sales-argument-text">Til prisen av én ordinær PT-time får du nå oppfølging en hel måned. <a ng-click="anchor()" class="call-to-action"> Start nå! </a> 
+            </p>
+        </div>
+
+        <div class="container-fluid white-area">
+            <div class="padding-area">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1 col-xs-12">
+                        <h2>Personlig</h2>
+                        <p class="text-proxima-light">Tilpasset treningsprogram</p>
+                        <p class="text-proxima-light">Løpende kostholdsråd</p>
+                        <p class="text-proxima-light">Alltid oppdatert</p>
+
+                        <button ng-click="choosePT()" id="btn-white" type="button" class="btn btn-default btn-lg text-proxima-light">Meld deg på her</button>
+                        <p id="padding-price">Kun 795,- i måneden uten bindingstid</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <img id="white-picture" src="app/img/screenie-plan.svg" alt="Screen plan">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid pistachio-area">
+            <p class="sales-argument-text">Bli en bedre versjon av deg selv for prisen av en kopp kaffe om dagen . <a ng-click="anchor()">Kom i gang nå! </a> 
+            </p>
+        </div>
+
+        <div class="container-fluid black-area" id="third-layer">
+            <div class="padding-area">
+                <div class="row">
+                    <div class="col-md-5 col-xs-12 col-md-offset-1">
+                        <h2>Faglig sterk</h2>
+                        <p class="text-1st-slide">Våre personlige trenere jobber hardt for at du skal nå dine målsetninger</p>
+                        <p class="text-1st-slide">Finn din match</p>
+                    </div>
+
+                    <div class="col-md-5 col-xs-12 col-md-offset-1">
+                        <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="choosePT()" >Meld deg på her</button>
+                        <div class="margin-black">
+                            <p>Kun 795,- i måneden uten bindingstid<br>
+                            30 dagers penger tilbake garanti</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row trainer-thumbs">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                        <div ng-repeat="pt in slides">
+                            <div ng-click="showModals(pt)">
+                                <pt-modal ng-show="showModal" pt="pt"></pt-modal>
+                                <div class="thumbnail col-md-2 col-xs-4">
+                                    <img src="{{pt.image}}" alt="PT picture">
+                                    <div ng-show="!pt.id" class="booked ">
+                                        <div id="fullbooked"><p class="p-fullbooked"> fullbooket </p></div>
+                                    </div>
+                                    </img>
+                                    <div class="caption text-1st-slide">
+                                        {{pt.name.split(" ")[0]}}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button ng-click="goToSale()" class="btn" ng-hide="showTwoSlides">
-                        <div id="inner-text">Les mer
-                        </div>
-                        </bitton>
                 </div>
             </div>
         </div>
-
-        <div class="layer-container col-xs-12" id="second-layer">
-            <h2 class="section-header sales-section-header">Om tjenesten</h2>
-            <div class="row sales-section">
-                <div class="col-xs-6">
-                    <h3 class="header-text second-layer-heading">
-                        Ett opplegg for deg</h3>
-                    <div class="text second-layer-text padding-left">Din trener vil lage ditt
-                        <strong>personlig kosthold- og treningsprogram</strong>&nbsp;som er tilpasset deg og dine m&aring;lsettinger.
-                        <strong>Jevnlige oppdateringer</strong>&nbsp;s&oslash;rger for at du til enhver tid har et program som passer ditt behov og din hverdag.
+        <div class="container-fluid orange-area">
+            <div class="padding-area">
+                <div class="col-xs-6 col-md-5 col-md-offset-1">
+                    <div id="buttom-padding">
+                        <p><em>Akkurat nå får du abonnement på 795 kr</em><p>
+                        <p><span style="text-decoration: line-through; display:inline;">Kr 995,-</span> i måneden<br>
+                        Ingen bindingstid<br>
+                        30 dagers penger tilbake garanti<br>
+                        14 dagers angrerett<br>
+                        Bytt PT hvis du ikke er fornøyd<br>
                     </div>
                 </div>
-                <div class="col-xs-6">
-                    <h3 class="header-text second-layer-heading">
-                        Tett oppf&oslash;lging</h3>
-                    <div class="text second-layer-text" id="pay-one-price">Gjennomf&oslash;ringen av treningen m&aring; du selv st&aring; for, men din personlige trener vil v&aelig;re tilgjengelig og
-                        <strong>f&oslash;lge deg opp l&oslash;pende</strong>&nbsp;med f&aring; dagers mellomrom.
-                        <strong>Jevnlig dialog</strong>&nbsp;med din personlige trener vil sikre at du har progresjon og det rette fokus til enhver tid.
-                    </div>
+                <div class="col-xs-6 col-md-5">
+                <ol>
+                    Det er enkelt å komme i gang: 
+                    <li>Registrerer deg </li>
+                    <li>Fyll ut ditt skjema</li>
+                    <li>Din PT kontakter deg innen 24 timer Du mottar en tilpasset utfordring allerede den første uken, før du mottar ditt ferdige program innen en uke.</li> 
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-6">
-                    <h3 class="header-text second-layer-heading">
-                        V&aring;r ekspertise</h3>
-
-                    <div class="text second-layer-text padding-left" id="last-second-layer-text">Din trener vil
-                        <strong>dele av sin kunnskap</strong>&nbsp;og hjelpe deg med &aring; sette gode m&aring;l som passer ditt niv&aring; og dine ambisjoner b&aring;de n&aring;r det gjelder kosthold og trening.
-
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div id="price-color">
-                        <div class="price">
-                            <div class="money-box">
-                                <div id="current-price">kr 795</div>
-                                <h4 id="month">/m&aring;ned uten bindingstid</h4>
-                            </div>
-                            <div class="text-center" id="padding">
-                                <button ng-click="loginWithRandomPT(getActiveSlide())" class="btn-choose-trainer">
-                                    <div id="inner-text-choose-trainer">Bestill
-                                    </div>
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="layer-container col-xs-12">
-            <h2 class="section-header sales-section-header">Dette f&aring;r du</h2>
-            <div class="benefits">
-                <ul class="bullets">
-                    <li>Personlig treningsplan og kostholdsveiledning</li>
-                    <li>Ubegrensede meldinger med din personlige trener</li>
-                    <li>Tett oppf&oslash;lging av din personlige trener</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-xs-12" id="our-coach-background">
-            <h2 class="section-header">V&aring;re trenere</h2>
-        </div>
-
-        <div class="col-xs-12" id="carousel-background">
-            <carousel class="slides">
-                <slide ng-repeat="slide in slides" active="slide.active" id="{{slide.name}}">
-                    <div>
-                        <img ng-src="{{slide.image}}" ng-class="imgClass()">
-                        <img ng-show="showTwoSlides" class="two-slides second-slide" ng-src="{{getNextActiveSlide().image}}">
-                    </div>
-                </slide>
-            </carousel>
-
-            <div ng-class="imgClass()">
-                <div id="carousel-index">{{getActiveSlide().number}} av {{slides.length}}</div>
-                <h3 id="pt-name">{{getActiveSlide().name}}</h3>
-                <div class="text-center">
-                    <Button ng-click="login(getActiveSlide())" class="btn-choose-trainer">
-                        <div id="inner-text-train-btn">Velg {{getActiveSlide().name.split(" ")[0]}}</div>
-                    </Button>
-                </div>
-                <div class="text second-layer-text" id="pt-text">
-                    <div ng-include="getActiveSlide().path"></div>
-                    <div class="center">
-                    </div>
-                </div>
-            </div>
-
-            <div class="two-slides second-slide" ng-show="showTwoSlides">
-                <div id="carousel-index">{{getNextActiveSlide().number}} av {{slides.length}}</div>
-                <h3 id="pt-name">{{getNextActiveSlide().name}}</h3>
-                <div class="text-center">
-                    <Button ng-click="login(getNextActiveSlide())" class="btn-choose-trainer">
-                        <div id="inner-text-train-btn">Velg {{getNextActiveSlide().name.split(" ")[0]}}</div>
-                    </Button>
-                </div>
-                <div class="text second-layer-text" id="pt-text">
-                    <div ng-include="getNextActiveSlide().path"></div>
-                    <div class="center">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contact col-xs-12 " id="contact-text">
-            <h3 id="contact-us">Kontakt oss</h3>
-            <i class="fa fa-envelope fa-2x contact-info"></i> 
-            <span class="contact-margin"> <u><a href="mailto:online-pt@iterate.no"> online-pt@iterate.no </a></u>
-            </span>
-
-            <br>
-            <i class="fa fa-phone fa-2x contact-info"> </i> 
-            <span class="contact-margin">995 69 938</span>
-            <p id="contact-footer">Online Personlig Trener krever en facebook konto i betafasen. Vi kommer aldri til &aring; poste p&aring; din profile eller lese din data.</p>
-            <p id="contact-footer" class="contact-info">L&oslash;sningen Online Personlig Trener er under kontinuerlig forbedring og videreutvikling.</p>
-            <p id="contact-footer" class="contact-info bottom">Kontakt oss gjerne med kommentarer, informasjon om tekniske/praktiske komplikasjoner, &oslash;nsker om endringer eller nye funksjoner, eller andre sp&oslash;rsm&aring;l.
-            </p>
         </div>
     </div>
+
+
 </body>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="app/style/style.css" media="screen" />
+<link rel="stylesheet" href="app/style/bounce.css">
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 <script type="text/javascript" src="app/js/script.js"></script>
 <script type="text/javascript" src="app/js/ui-bootstrap.js"></script>
 <script type="text/javascript" src="app/js/angular-resource.js"></script>
 <script type="text/javascript" src="app/js/angular-cookies.min.js"></script>
+<script type="text/javascript" src="app/directive/modal.js"></script>
 <script src="//use.typekit.net/whc6xho.js"></script>
-<script src="//cdn.optimizely.com/js/2122921733.js"></script>
+<script src="//cdn.optimizely.com/js/796180544.js"></script>
 
 <script>
 try {

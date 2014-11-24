@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600px" height="510px" viewBox="0 0 600 510" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>screenie-chat</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M19.8220211,39.5810811 C30.8677161,39.5810811 39.8220211,30.6267761 39.8220211,19.5810811 C39.8220211,8.53538609 30.8677161,-0.418918919 19.8220211,-0.418918919 C8.77632612,-0.418918919 -0.177978884,8.53538609 -0.177978884,19.5810811 C-0.177978884,30.6267761 8.77632612,39.5810811 19.8220211,39.5810811 Z"></path>
+        <circle id="path-2" cx="20" cy="20.4358108" r="20"></circle>
+        <circle id="path-3" cx="19.7541478" cy="20.2905405" r="20"></circle>
+        <path id="path-4" d="M19.8220211,40.1452703 C30.8677161,40.1452703 39.8220211,31.1909653 39.8220211,20.1452703 C39.8220211,9.09957527 30.8677161,0.14527027 19.8220211,0.14527027 C8.77632612,0.14527027 -0.177978884,9.09957527 -0.177978884,20.1452703 C-0.177978884,31.1909653 8.77632612,40.1452703 19.8220211,40.1452703 Z"></path>
+        <circle id="path-5" cx="20" cy="20" r="20"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(0.000000, -950.000000)">
+            <g id="Section-messages" sketch:type="MSLayerGroup" transform="translate(0.000000, 850.000000)">
+                <g id="screenie-chat" transform="translate(0.000000, 100.000000)">
+                    <g id="shadow" fill-opacity="0.5" fill="#7F4106" sketch:type="MSShapeGroup">
+                        <path d="M488.975162,510 L600,416.8391 L600,415.427219 L251.415173,8.52651283e-14 L105.193741,2.84217094e-14 L-1.0658141e-14,88.2680296 L0,510 L488.975162,510 Z" id="background"></path>
+                    </g>
+                    <g id="Browser" transform="translate(100.000000, 0.000000)" sketch:type="MSShapeGroup">
+                        <rect id="background" stroke="#DEDEDE" fill="#F4F4F4" x="0" y="40.5287162" width="500" height="375"></rect>
+                        <path d="M6.99651398,0 C3.13244601,0 0,3.13842658 0,6.99782015 L0,41.5287162 L500,41.5287162 L500,6.99782015 C500,3.1330308 496.87222,0 493.003486,0 L6.99651398,0 Z" id="background" stroke="#DEDEDE" fill="#DFDFDF"></path>
+                        <ellipse id="object" opacity="0.5" fill="#E96E4C" cx="19.2307692" cy="20.7643581" rx="5.6561086" ry="5.66300676"></ellipse>
+                        <path d="M36.5761689,26.4273649 C39.6999515,26.4273649 42.2322775,23.8919504 42.2322775,20.7643581 C42.2322775,17.6367658 39.6999515,15.1013514 36.5761689,15.1013514 C33.4523864,15.1013514 30.9200603,17.6367658 30.9200603,20.7643581 C30.9200603,23.8919504 33.4523864,26.4273649 36.5761689,26.4273649 Z" id="object" opacity="0.5" fill="#E6AA34"></path>
+                        <ellipse id="object" opacity="0.5" fill="#85C33D" cx="53.9215686" cy="20.7643581" rx="5.6561086" ry="5.66300676"></ellipse>
+                        <rect id="search" opacity="0.899999976" fill="#FFFFFF" x="73.1523379" y="10.5709459" width="408.748115" height="20.3868243"></rect>
+                    </g>
+                    <g id="Chat-UI" transform="translate(181.000000, 57.000000)">
+                        <rect id="background" stroke="#DDDDDD" fill="#FFFFFF" sketch:type="MSShapeGroup" x="-0.306184012" y="-0.0439189189" width="338.612368" height="330.043919" rx="3"></rect>
+                        <g id="Group" transform="translate(193.411011, 268.077703) scale(-1, 1) translate(-193.411011, -268.077703) translate(73.911011, 241.577703)">
+                            <g id="Oval-39">
+                                <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                                <use fill="#DEDEDE" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="0.422297297" width="188.5" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="30.4222973" width="188.5" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="15.4222973" width="150.829563" height="7.55067568"></rect>
+                            <rect id="Rectangle-3" fill="#CACBCC" sketch:type="MSShapeGroup" x="49.9547511" y="45.4222973" width="82.9562594" height="7.55067568"></rect>
+                        </g>
+                        <g id="Group" transform="translate(25.088989, 188.722973)">
+                            <g id="Oval-39">
+                                <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-2"></use>
+                                <use fill="#DEDEDE" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            </g>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="0" width="188.536953" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0110167" y="15.1013514" width="150.829563" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0110167" y="29.8547297" width="37.7073906" height="7.55067568"></rect>
+                        </g>
+                        <g id="Group" transform="translate(24.334842, 135.868243)">
+                            <g id="Oval-39">
+                                <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-3"></use>
+                                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            </g>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="0" width="188.536953" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="15.1013514" width="188.536953" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="30.2027027" width="82.9562594" height="7.55067568"></rect>
+                        </g>
+                        <g id="Group" transform="translate(193.411011, 102.013514) scale(-1, 1) translate(-193.411011, -102.013514) translate(73.911011, 82.013514)">
+                            <g id="Oval-39">
+                                <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-4"></use>
+                                <use fill="#DEDEDE" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            </g>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="1" width="188.536953" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="16.1013514" width="188.536953" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="50.0196078" y="31.2027027" width="150.829563" height="7.55067568"></rect>
+                        </g>
+                        <g id="Group" transform="translate(24.088989, 30.158784)">
+                            <g id="Oval-39">
+                                <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-5"></use>
+                                <use fill="#DEDEDE" fill-rule="evenodd" xlink:href="#path-5"></use>
+                            </g>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="51.0196078" y="0" width="188.536953" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="51.0196078" y="15.1013514" width="150.829563" height="7.55067568"></rect>
+                            <rect id="Rectangle-2" fill="#CACBCC" sketch:type="MSShapeGroup" x="51.0196078" y="30.2027027" width="120.829563" height="7.55067568"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
