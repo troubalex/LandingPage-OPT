@@ -60,7 +60,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         open(modalSize);
         $scope.showModal = true;
 
-        mixpanel.track("User pressed 'Meld deg pÃ¥ her'");
+        mixpanel.track("User pressed 'Meld deg på her'");
 
 
 
