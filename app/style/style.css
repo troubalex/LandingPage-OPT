@@ -76,6 +76,7 @@ a:hover {
 }
 #white-picture {
     width: 100%;
+    margin-right: -15px;
 }
 #change-pt {
     font-style: italic;
@@ -392,6 +393,9 @@ a:hover {
     margin-top: 3.157em;
     margin-bottom: 2.369em;
 }
+#description {
+    margin-top: 0;
+}
 .trainer-thumbs {
     margin-top: 2.369em;
     margin-bottom: 2.369em;
@@ -451,7 +455,7 @@ a:hover {
     }
     .background-image {
         background: url(../img/hero-img-mobile@2x.jpg) no-repeat right;
-        background-size: 146%;
+        background-size: 150%;
     }
     #orange-picture, #white-picture {
         padding-bottom: 3.157em;
@@ -467,6 +471,6 @@ a:hover {
 }
 @media(max-width: 470px) {
     .background-image {
-        background-size: 176%;
+        background-size: 200%;
     }
 }
