@@ -14,61 +14,8 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
-    }
-
-    $scope.$watch(function() {
-        if ($window.innerWidth < 650) {
-            modalSize = "sm";
-        } else {
-            modalSize = " ";
-        }
-    });
 
 
-    var QueryString = function() {
-        var query_string = {};
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=");
-            // If first entry with this name
-            if (typeof query_string[pair[0]] === "undefined") {
-                query_string[pair[0]] = pair[1];
-                // If second entry with this name
-            } else if (typeof query_string[pair[0]] === "string") {
-                var arr = [query_string[pair[0]], pair[1]];
-                query_string[pair[0]] = arr;
-                // If third or later entry with this name
-            } else {
-                query_string[pair[0]].push(pair[1]);
-            }
-        }
-        return query_string;
-    }
-
-
-    $scope.anchor = function() {
-        $location.hash('third-layer');
-        $anchorScroll();
-    }
-
-
-    $scope.choosePT = function() {
-        var tmp = Math.random() * (slides.length - 0) + 0;
-        var random = Math.floor(tmp);
-        currentPT = slides[random];
-        open(modalSize);
-        $scope.showModal = true;
-
-        mixpanel.track("User pressed 'Meld deg på her'");
-
-
-
-    }
-
-
-
-    $scope.addSlide = function() {
         slides.push({
             image: 'app/img/erik.jpg',
             name: 'Erik Flågen',
@@ -148,11 +95,57 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             number: counter,
             id: null,
         });
+    }
 
-    };
+    $scope.$watch(function() {
+        if ($window.innerWidth < 650) {
+            modalSize = "sm";
+        } else {
+            modalSize = " ";
+        }
+    });
 
-    $scope.addSlide();
 
+    var QueryString = function() {
+        var query_string = {};
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            // If first entry with this name
+            if (typeof query_string[pair[0]] === "undefined") {
+                query_string[pair[0]] = pair[1];
+                // If second entry with this name
+            } else if (typeof query_string[pair[0]] === "string") {
+                var arr = [query_string[pair[0]], pair[1]];
+                query_string[pair[0]] = arr;
+                // If third or later entry with this name
+            } else {
+                query_string[pair[0]].push(pair[1]);
+            }
+        }
+        return query_string;
+    }
+
+
+    $scope.anchor = function() {
+        $location.hash('third-layer');
+        $anchorScroll();
+    }
+
+
+    $scope.choosePT = function() {
+        var tmp = Math.random() * (slides.length - 0) + 0;
+        var random = Math.floor(tmp);
+        currentPT = slides[random];
+        open(modalSize);
+        $scope.showModal = true;
+
+        mixpanel.track("User pressed 'Meld deg på her'");
+
+
+
+    }
 
 
 
@@ -207,7 +200,6 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
             return "btn-lg btn-white-modal";
     }
     $scope.redirect = function(PT) {
-        console.log("sadas");
         mixpanel.track("User redirected to heroku with PT", {
             'PT-Name': PT.name
         });
