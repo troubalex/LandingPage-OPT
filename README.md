@@ -1,5 +1,8 @@
 LandingPage
 ===========
+## Install and run
+npm install - you may need sudo before npm install
+After installation, run gulp and a server will start up at localhost:8000 
 
 ## Push to online-pt.no
 Install https://github.com/git-ftp/git-ftp 
