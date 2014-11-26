@@ -135,14 +135,10 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             if (PT) {
                 /*need to add this, so modal.html can load*/
                 $timeout(function() {
-                        $scope.showModals(PT);
-                    }, 100)
+                    $scope.showModals(PT);
+                }, 100)
             }
         });
-
-        // ?id=sandra
-        // if (findPT(queryParam))
-        //     console.log(QueryString());
     }
 
 
@@ -163,9 +159,19 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
 
     $scope.choosePT = function() {
-        var tmp = Math.random() * (slides.length - 0) + 0;
-        var random = Math.floor(tmp);
-        currentPT = slides[random];
+        var tmp = {id:''}
+        /* quick fix 
+        This could go for ever, one should try to increase the random nr until
+        one hits a PT who are not fullbooked
+        */
+        while (tmp.id === '') {
+            var decimals = Math.random() * (slides.length - 0);
+            var random = Math.floor(decimals);
+            tmp = slides[random];
+        }   
+
+
+        currentPT = tmp
         open(modalSize);
         $scope.showModal = true;
         mixpanel.track("User pressed 'Meld deg på her'");
