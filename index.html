@@ -132,7 +132,7 @@
                                 <pt-modal ng-show="showModal" pt="pt"></pt-modal>
                                 <div class="thumbnail col-md-2 col-xs-4">
                                     <img ng-src="{{pt.image}}" alt="PT picture">
-                                    <div ng-show="!pt.id" class="booked ">
+                                    <div ng-show="pt.id == '' " class="booked ">
                                         <div id="fullbooked"><p class="p-fullbooked"> fullbooket </p></div>
                                     </div>
                                     </img>

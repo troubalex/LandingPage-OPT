@@ -84,7 +84,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             name: 'Per Arnér',
             path: 'app/text/per.html',
             number: counter,
-            id: null,
+            id: '',
         });
 
         counter++;
@@ -93,8 +93,9 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             name: 'Nikita Murphy',
             path: 'app/text/nikita.html',
             number: counter,
-            id: null,
+            id: '',
         });
+        QueryStringShowModal();
     }
 
     $scope.$watch(function() {
@@ -128,6 +129,33 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
     }
 
 
+
+    var QueryStringShowModal = function() {
+        var PT = findPT(QueryString(), function(PT) {
+            if (PT) {
+                /*need to add this, so modal.html can load*/
+                $timeout(function() {
+                        $scope.showModals(PT);
+                    }, 100)
+            }
+        });
+
+        // ?id=sandra
+        // if (findPT(queryParam))
+        //     console.log(QueryString());
+    }
+
+
+    var findPT = function(query, callback) {
+        if (query.id != null) {
+            slides.forEach(function(PT) {
+                if (PT.id.toLowerCase() === query.id.toLowerCase()) {
+                    callback(PT)
+                }
+            });
+        }
+        callback(null);
+    }
     $scope.anchor = function() {
         $location.hash('third-layer');
         $anchorScroll();
@@ -140,11 +168,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         currentPT = slides[random];
         open(modalSize);
         $scope.showModal = true;
-
         mixpanel.track("User pressed 'Meld deg på her'");
-
-
-
     }
 
 
@@ -178,6 +202,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
         $scope.modalInstance.result.then(function(selectedItem) {
             $scope.selected = selectedItem;
+            console.log(selectedItem);
         }, function() {
             mixpanel.track("User closes modal");
         });
