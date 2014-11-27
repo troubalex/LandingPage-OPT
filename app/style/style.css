@@ -101,8 +101,6 @@ a:hover {
     padding-left: 30px;
     padding-right: 30px;
 }
-
-
 #padding-price {
     margin-top: 35px;
     margin-bottom: 2.1875em;
@@ -188,6 +186,15 @@ a:hover {
     position: relative;
 }*/
 
+#log-in {
+    position: absolute;
+    right: 5px;
+    top: 17px;
+    color: white;
+}
+#log-in:hover {
+    cursor: pointer;
+}
 .orange-area {
     background-color: #FF8800;
     color: white;

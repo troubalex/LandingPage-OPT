@@ -159,16 +159,18 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
 
     $scope.choosePT = function() {
-        var tmp = {id:''}
-        /* quick fix 
-        This could go for ever, one should try to increase the random nr until
-        one hits a PT who are not fullbooked
-        */
+        var tmp = {
+                id: ''
+            }
+            /* quick fix 
+            This could go for ever, one should try to increase the random nr until
+            one hits a PT who are not fullbooked
+            */
         while (tmp.id === '') {
             var decimals = Math.random() * (slides.length - 0);
             var random = Math.floor(decimals);
             tmp = slides[random];
-        }   
+        }
 
 
         currentPT = tmp
@@ -177,8 +179,9 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         mixpanel.track("User pressed 'Meld deg på her'");
     }
 
-
-
+    $scope.logIn = function() {
+        $window.location.href = "http://app.online-pt.no/#/"
+    }
 
     $scope.showModals = function(pt) {
         currentPT = pt;
