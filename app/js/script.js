@@ -1,20 +1,21 @@
-'use strict';
+/* global angular, mixpanel*/
 
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
 landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
+
     var counter = 0;
     var slides = $scope.slides = [];
-    $scope.showModal = false;
-    $scope.items = ['item1', 'item2', 'item3'];
-    $scope.modalInstance = null;
     var currentPT = null;
-    $scope.showChoosePT = false;
     var shakePT = false;
     var modalSize = null;
 
+    $scope.showModal = false;
+    $scope.items = ['item1', 'item2', 'item3'];
+    $scope.modalInstance = null;
+    $scope.showChoosePT = false;
+
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
-
 
         slides.push({
             image: 'app/img/erik.jpg',
@@ -23,7 +24,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             number: counter,
             id: 'Erik',
             PTid: '5433c1cf0779ed12008a1509'
-
         });
         counter++;
         slides.push({
@@ -86,7 +86,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             number: counter,
             id: '',
         });
-
         counter++;
         slides.push({
             image: 'app/img/nikita.jpg',
@@ -96,7 +95,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             id: '',
         });
         QueryStringShowModal();
-    }
+    };
 
     $scope.$watch(function() {
         if ($window.innerWidth < 650) {
@@ -105,7 +104,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             modalSize = " ";
         }
     });
-
 
     var QueryString = function() {
         var query_string = {};
@@ -126,9 +124,7 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             }
         }
         return query_string;
-    }
-
-
+    };
 
     var QueryStringShowModal = function() {
         var PT = findPT(QueryString(), function(PT) {
@@ -136,32 +132,31 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
                 /*need to add this, so modal.html can load*/
                 $timeout(function() {
                     $scope.showModals(PT);
-                }, 100)
+                }, 100);
             }
         });
-    }
-
+    };
 
     var findPT = function(query, callback) {
         if (query.id != null) {
             slides.forEach(function(PT) {
                 if (PT.id.toLowerCase() === query.id.toLowerCase()) {
-                    callback(PT)
+                    callback(PT);
                 }
             });
         }
         callback(null);
-    }
+    };
+
     $scope.anchor = function() {
         $location.hash('third-layer');
         $anchorScroll();
-    }
-
+    };
 
     $scope.choosePT = function() {
         var tmp = {
                 id: ''
-            }
+            };
             /* quick fix 
             This could go for ever, one should try to increase the random nr until
             one hits a PT who are not fullbooked
@@ -173,23 +168,22 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         }
 
 
-        currentPT = tmp
+        currentPT = tmp;
         open(modalSize);
         $scope.showModal = true;
         mixpanel.track("User pressed 'Meld deg på her'");
-    }
+    };
 
     $scope.logIn = function() {
-        $window.location.href = "http://app.online-pt.no/#/"
-    }
+        $window.location.href = 'http://app.online-pt.no/#/';
+    };
 
     $scope.showModals = function(pt) {
         currentPT = pt;
         open(modalSize);
         $scope.showModal = true;
 
-    }
-
+    };
 
     var open = function(size) {
         $scope.modalInstance = $modal.open({
@@ -222,29 +216,31 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
 angular.module('landingPage').controller('ModalInstanceCtrl', function($window, $scope, $modalInstance, items, currentPT, PTarray) {
     $scope.currentPT = currentPT;
-    var PTarray = PTarray
+    var PTarray = PTarray;
 
     $scope.cancel = function() {
         $modalInstance.dismiss('cancel');
     };
+
     $scope.modalButton = function() {
         if (!$scope.currentPT.id)
             return "btn-lg disable-modal-button";
         else
             return "btn-lg btn-white-modal";
-    }
+    };
+
     $scope.redirect = function(PT) {
         mixpanel.track("User redirected to heroku with PT", {
             'PT-Name': PT.name
         });
         $window.location.href = "http://app.online-pt.no/#/signup?PtId=" + PT.PTid;
+    };
 
-    }
     $scope.next = function() {
         var cntr = 2;
         $scope.currentPT = PTarray[($scope.currentPT.number + 1) % PTarray.length];
 
-    }
+    };
 
     $scope.prev = function() {
         var tmp = null;
@@ -256,13 +252,13 @@ angular.module('landingPage').controller('ModalInstanceCtrl', function($window, 
             tmp = PTarray[$scope.currentPT.number - 1];
         }
         $scope.currentPT = tmp;
-    }
+    };
 
     $scope.ptBooked = function() {
         if (!$scope.currentPT.id)
             return "pt-booked";
         else
             return "";
-    }
+    };
 
 });
