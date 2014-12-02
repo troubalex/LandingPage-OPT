@@ -46,10 +46,10 @@
                 </div>
 
                 <div class="col-md-5 col-xs-12 col-md-offset-1 padding">
-                    <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="anchor()">Kom igang nå</button>
+                    <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="anchor()">Kom i gang nå</button>
                     <div class="margin-black">
                         <p>Kun 795,- i måneden uten bindingstid
-                            <br>30 dagers penger tilbake garanti</p>
+                        <br>30 dagers penger tilbake garanti</p>
                     </div>
 
                 </div>
@@ -57,7 +57,7 @@
 
             <div class="row">
                 <div class="col-xs-12 col-md-offset-1 col-md-10 padding" id="description">
-                    <h3>Web-tjenesten samler all kontakt mellom deg og din PT på et sted. Her finner du treningsplan, kostholdsveiledning og kommunikasjon i en løsning. </h3>
+                    <p class="text-proxima-light">Web-tjenesten samler all kontakt mellom deg og din PT på et sted. Her finner du treningsplan, kostholdsveiledning og kommunikasjon i en løsning. </p>
                 </div>
             </div>
             
@@ -74,8 +74,9 @@
                         <p class="text-proxima-light">En personlig trener som følger deg opp</p>
                         <p class="text-proxima-light">Send og motta meldinger</p>
                         <p class="text-proxima-light">Få tilbakemeldinger fra din personlige trener</p>
-                        <button ng-click="anchor()" id="btn-orange" type="button" class="btn btn-default btn-lg text-proxima-light">Kom igang nå</button>
-                        <p id="padding-price">Kun 795,- i måneden uten bindingstid</p>
+                        <button ng-click="anchor()" id="btn-orange" type="button" class="btn btn-default btn-lg text-proxima-light">Kom i gang nå</button>
+                        <p id="padding-price">Kun 795,- i måneden uten bindingstid
+                        <br>30 dagers penger tilbake garanti</p>
                     </div>
                 </div>
             </div>
@@ -95,8 +96,9 @@
                         <p class="text-proxima-light">Løpende kostholdsråd</p>
                         <p class="text-proxima-light">Alltid oppdatert</p>
 
-                        <button ng-click="anchor()" id="btn-white" type="button" class="btn btn-default btn-lg text-proxima-light">Kom igang nå</button>
-                        <p id="padding-price">Kun 795,- i måneden uten bindingstid</p>
+                        <button ng-click="anchor()" id="btn-white" type="button" class="btn btn-default btn-lg text-proxima-light">Kom i gang nå</button>
+                        <p id="padding-price">Kun 795,- i måneden uten bindingstid
+                        <br>30 dagers penger tilbake garanti</p>
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <img id="white-picture" src="app/img/screenie-plan.svg" alt="Screen plan">
@@ -110,25 +112,25 @@
             </p>
         </div>
 
-        <div class="container-fluid black-area" id="third-layer">
+        <div class="container-fluid black-area">
             <div class="padding-area">
                 <div class="row">
                     <div class="col-md-5 col-xs-12 col-md-offset-1">
                         <h2>Faglig sterk</h2>
                         <p class="text-1st-slide">Våre personlige trenere jobber hardt for at du skal nå dine målsetninger</p>
-                        <p class="text-1st-slide">Finn din match</p>
                     </div>
 
                     <div class="col-md-5 col-xs-12 col-md-offset-1">
-                        <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="choosePT()">Kom igang nå</button>
+                        <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="choosePT()">Velg din trener nå</button>
                         <div class="margin-black">
                             <p>Kun 795,- i måneden uten bindingstid
-                                <br> 30 dagers penger tilbake garanti</p>
+                            <br> 30 dagers penger tilbake garanti</p>
                         </div>
                     </div>
                 </div>
-                <div class="row trainer-thumbs">
+                <div class="row trainer-thumbs" id="third-layer">
                     <div class="col-xs-12 col-md-10 col-md-offset-1">
+                        <h3>Finn din trener blandt våre beste</h3>
                         <div ng-repeat="pt in slides">
                             <div ng-click="showModals(pt)">
                                 <pt-modal ng-show="showModal" pt="pt"></pt-modal>
