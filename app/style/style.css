@@ -527,3 +527,8 @@ a:hover {
         background-size: 200%;
     }
 }
+
+.modal-element{
+    margin-left: 0;
+    margin-right: 0;
+}
