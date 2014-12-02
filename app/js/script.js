@@ -75,8 +75,26 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             id: 'Shamal',
             PTid: '545385172e34da0a008d0041',
             sideImg: 'app/img/shamal_side.jpg',
-
-
+        });
+        // counter++;
+        // slides.push({
+        //     image: 'app/img/inga_small.jpg',
+        //     name: 'Inga Aune',
+        //     path: 'app/text/inga.html',
+        //     number: counter,
+        //     id: 'Inga',
+        //     PTid: '',
+        //     sideImg: 'app/img/inga_side.jpg',
+        // });
+        counter++;
+        slides.push({
+            image: 'app/img/tone_small.jpg',
+            name: 'Tone Madsen',
+            path: 'app/text/tone.html',
+            number: counter,
+            id: 'Tone',
+            PTid: '547c72190718d40900fc4248',
+            sideImg: 'app/img/tone_side.jpg',
         });
         counter++;
         slides.push({
