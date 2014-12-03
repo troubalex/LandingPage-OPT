@@ -76,16 +76,16 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
             PTid: '545385172e34da0a008d0041',
             sideImg: 'app/img/shamal_side.jpg',
         });
-        // counter++;
-        // slides.push({
-        //     image: 'app/img/inga_small.jpg',
-        //     name: 'Inga Aune',
-        //     path: 'app/text/inga.html',
-        //     number: counter,
-        //     id: 'Inga',
-        //     PTid: '',
-        //     sideImg: 'app/img/inga_side.jpg',
-        // });
+        counter++;
+        slides.push({
+            image: 'app/img/inga_small.jpg',
+            name: 'Inga Aune',
+            path: 'app/text/inga.html',
+            number: counter,
+            id: 'Inga',
+            PTid: '547cc81b94bead09007e3830',
+            sideImg: 'app/img/inga_side.jpg',
+        });
         counter++;
         slides.push({
             image: 'app/img/tone_small.jpg',
