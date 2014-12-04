@@ -145,7 +145,7 @@
                             <div ng-click="openPtModal($index)">
                                 <div class="thumbnail col-md-2 col-xs-4">
                                     <img ng-src="{{pt.image}}" class="pt-thumbnail">
-                                    <div ng-show="pt.id == '' " class="booked ">
+                                    <div ng-show="!pt.PTid" class="booked ">
                                         <div id="fullbooked">
                                             <p class="p-fullbooked"> fullbooket </p>
                                         </div>

@@ -1,17 +1,24 @@
 <div class="modal-header row modal-element">
 	<div class="col-md-12">
-		<h3 class="modal-title">{{currentPT.name}}</h3>
+		<a class="previous-pt-link" href="" ng-click="previousPt()">Forrige</a>
+		<a class="next-pt-link" href="" ng-click="nextPt()">Neste</a>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12 modal-pt-name-container">
+		<h2 class="modal-title modal-pt-name">{{currentPT.name}}</h2>
 	</div>
 </div>
 <div class="modal-body row modal-element">
 	<div class="col-md-12">
-		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<img class="side-img" ng-src="{{currentPT.sideImg}}">
+			<img class="hq-img" ng-src="{{currentPT.hqImg}}">
+		</div>
     	<div class="col-md-8" ng-include="currentPT.path"></div>
 	</div>
 </div>
 <div class="modal-footer row modal-element">
 	<div class="col-md-12">
-		<button class="btn-lg btn-white-modal" ng-click="cancel()">Back</button>
-    	<button class="btn-lg btn-white-modal" ng-click="ok()">OK</button>
+		<a ng-click="cancel()">Back</a>
+    	<button class="btn-lg btn-white-modal" ng-click="ok()" ng-show="currentPT.PTid">Tren med {{ptFirstName}}!</button>
 	</div>	
 </div>

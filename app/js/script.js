@@ -21,92 +21,88 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
                 image: 'app/img/erik.jpg',
                 name: 'Erik Flågen',
                 path: 'app/text/erik.html',
-                number: counter,
-                id: 'Erik',
-                PTid: '5433c1cf0779ed12008a1509'
+                PTid: '5433c1cf0779ed12008a1509',
+                sideImg: 'app/img/erik_big.jpg',
+                hqImg: 'app/img/erik_hq.jpg'
             },
             {
                 image: 'app/img/mikael.jpg',
                 name: 'Mikael Johansson',
                 path: 'app/text/mikael.html',
-                number: counter,
-                id: 'Mikael',
                 PTid: '544a58c93b55751200daafb4',
+                sideImg: 'app/img/mikael.jpg',
+                hqImg: 'app/img/mikael.jpg'
             },
             {
                 image: 'app/img/sondre.jpg',
                 name: 'Sondre Krogh-Bjerke',
                 path: 'app/text/sondre.html',
-                number: counter,
-                id: 'Sondre',
                 PTid: '5410c5283877801100ced009',
+                sideImg: 'app/img/sondre.jpg',
+                hqImg: 'app/img/sondre.jpg',
             },
             {
                 image: 'app/img/sandra.jpg',
                 name: 'Sandra Gavrilov',
                 path: 'app/text/sandra.html',
-                number: counter,
-                id: 'Sandra',
                 PTid: '545a04a65d52590a0053ff00',
                 sideImg: 'app/img/sandra_side.jpg',
+                hqImg: 'app/img/sandra_hq.jpg',
             },
             {
-                image: 'app/img/maren.jpg',
+                image: 'app/img/maren_small.jpg',
                 name: 'Maren Hovdenakk',
                 path: 'app/text/maren.html',
-                number: counter,
-                id: 'Maren',
                 PTid: '544a34b586d6511200fc8010',
-
+                sideImg: 'app/img/maren_stripe.jpg',
+                hqImg: 'app/img/maren_hq.jpg',
             },
             {
                 image: 'app/img/shamal.jpg',
                 name: 'Shamal Kamal',
                 path: 'app/text/shamal.html',
-                number: counter,
-                id: 'Shamal',
                 PTid: '545385172e34da0a008d0041',
                 sideImg: 'app/img/shamal_side.jpg',
+                hqImg: 'app/img/shamal_hq.jpg',
             },
             {
                 image: 'app/img/inga_small.jpg',
                 name: 'Inga Aune',
                 path: 'app/text/inga.html',
-                number: counter,
-                id: 'Inga',
-                PTid: '',
+                PTid: '547cc81b94bead09007e3830',
                 sideImg: 'app/img/inga_side.jpg',
+                hqImg: 'app/img/inga_small.jpg',
             },
             {
                 image: 'app/img/tone_small.jpg',
                 name: 'Tone Madsen',
                 path: 'app/text/tone.html',
-                number: counter,
-                id: 'Tone',
                 PTid: '547c72190718d40900fc4248',
                 sideImg: 'app/img/tone_side.jpg',
+                hqImg: 'app/img/tone_small_hq.jpg',
             },
             {
                 image: 'app/img/caroline_small.jpg',
                 name: 'Caroline Hauge',
                 path: 'app/text/caroline.html',
-                number: counter,
-                id: 'Caroline',
                 PTid: '547f74170065ba0900bfbf0d',
+                sideImg: 'app/img/caroline_small.jpg',
+                hqImg: 'app/img/caroline_hq.jpg',
             },
             {
                 image: 'app/img/per.jpg',
                 name: 'Per Arnér',
                 path: 'app/text/per.html',
-                number: counter,
-                id: '',
+                sideImg: 'app/img/per.jpg',
+                hqImg: 'app/img/per.jpg',
+
             },
             {
                 image: 'app/img/nikita.jpg',
                 name: 'Nikita Murphy',
                 path: 'app/text/nikita.html',
-                number: counter,
-                id: '',
+                sideImg: 'app/img/nikita.jpg',
+                hqImg: 'app/img/nikita.jpg',
             }
         ];
     };
@@ -148,34 +144,8 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         $window.location.href = 'http://app.online-pt.no/#/';
     };
 
-    $scope.showModals = function(pt) {
-        currentPT = pt;
-        open(modalSize);
-        $scope.showModal = true;
-    };
-
-    var open = function(size) {
-        $scope.modalInstance = $modal.open({
-            templateUrl: 'app/directive/modal.html',
-            controller: 'ModalInstanceCtrl',
-            size: size,
-            resolve: {
-                currentPT: function() {
-                    return currentPT;
-                },
-                PTarray: function() {
-                    return $scope.pts;
-                }
-            }
-        });
-
-        $scope.modalInstance.result.then(function() {
-            mixpanel.track("User closes modal");
-        });
-
-    };
-
     $scope.openPtModal = function(ptIndex) {
+
         $scope.modalInstance = $modal.open({
             templateUrl: 'app/modal/pt_modal_template.html',
             controller: 'PtModalController',
@@ -183,63 +153,18 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
                 currentPT: function() {
                     return $scope.pts[ptIndex];
                 },
-                PTarray: function() {
+                ptArray: function() {
                     return $scope.pts;
+                },
+                currentIndex: function(){
+                    return ptIndex;
                 }
-            },
+            }
         });
 
         $scope.modalInstance.result.then(function() {
             mixpanel.track("User closes modal");
         });
-    };
-
-});
-
-angular.module('landingPage').controller('ModalInstanceCtrl', function($window, $scope, $modalInstance, currentPT, PTarray) {
-    $scope.currentPT = currentPT;
-
-    $scope.cancel = function() {
-        $modalInstance.dismiss('cancel');
-    };
-
-    $scope.modalButton = function() {
-        if (!$scope.currentPT.id)
-            return "btn-lg disable-modal-button";
-        else
-            return "btn-lg btn-white-modal";
-    };
-
-    $scope.redirect = function(PT) {
-        mixpanel.track("User redirected to heroku with PT", {
-            'PT-Name': PT.name
-        });
-        $window.location.href = "http://app.online-pt.no/#/signup?PtId=" + PT.PTid;
-    };
-
-    $scope.next = function() {
-        var cntr = 2;
-        $scope.currentPT = PTarray[($scope.currentPT.number + 1) % PTarray.length];
-
-    };
-
-    $scope.prev = function() {
-        var tmp = null;
-        var cntr = -1;
-        if ($scope.currentPT.number === 0) {
-            tmp = PTarray[PTarray.length - 1];
-
-        } else {
-            tmp = PTarray[$scope.currentPT.number - 1];
-        }
-        $scope.currentPT = tmp;
-    };
-
-    $scope.ptBooked = function() {
-        if (!$scope.currentPT.id)
-            return "pt-booked";
-        else
-            return "";
     };
 
 });

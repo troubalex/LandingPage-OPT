@@ -81,8 +81,49 @@ a {
   color: #AAF0F3;
 }
 
+.side-img{
+  width: 100%;
+}
+
+.hq-img{
+  width: 100%;
+}
+
+.modal-element{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.modal-pt-name{
+  text-align: center;
+}
+
+.modal-pt-name-container{
+  margin-top: 1em;
+}
+
+.previous-pt-link{
+  float: left;
+}
+
+.next-pt-link{
+  float: right;
+}
+
+@media(max-width: 991px){
+  .side-img{
+    display: none;
+  }
+}
+
+@media(min-width: 992px){
+  .hq-img{
+    display: none;
+  }
+}
+
 .faq-column{
-  
+
 }
 
 .faq-question{
@@ -526,9 +567,4 @@ a:hover {
     .background-image {
         background-size: 200%;
     }
-}
-
-.modal-element{
-    margin-left: 0;
-    margin-right: 0;
 }
