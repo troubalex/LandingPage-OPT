@@ -76,9 +76,22 @@ a {
 }
 
 .opt-navbar-element a:hover{
-	border: none;
-	background-color: inherit;
+  border: none;
+  background-color: inherit;
   color: #AAF0F3;
+}
+
+.faq-column{
+  
+}
+
+.faq-question{
+    margin-bottom: 0.5em;
+}
+
+.faq-answer{
+    margin-bottom: 1em;
+    font-size: 1.2em;
 }
 
 .disable-modal-button {
