@@ -98,20 +98,29 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         });
         counter++;
         slides.push({
+            image: 'app/img/caroline_small.jpg',
+            name: 'Caroline Hauge',
+            path: 'app/text/caroline.html',
+            number: counter,
+            id: 'Caroline',
+            PTid: '547f74170065ba0900bfbf0d',
+        });
+        counter++;
+        slides.push({
             image: 'app/img/per.jpg',
             name: 'Per Arnér',
             path: 'app/text/per.html',
             number: counter,
             id: '',
         });
-        counter++;
-        slides.push({
-            image: 'app/img/nikita.jpg',
-            name: 'Nikita Murphy',
-            path: 'app/text/nikita.html',
-            number: counter,
-            id: '',
-        });
+        // counter++;
+        // slides.push({
+        //     image: 'app/img/nikita.jpg',
+        //     name: 'Nikita Murphy',
+        //     path: 'app/text/nikita.html',
+        //     number: counter,
+        //     id: '',
+        // });
         QueryStringShowModal();
     };
 
