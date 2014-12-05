@@ -1,6 +1,6 @@
 /* global angular, mixpanel*/
 
-var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
+var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
 landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $http, $cookieStore, $location, $modal, $log) {
 
     $scope.showModal = false;
@@ -102,7 +102,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
 
     $scope.goToElement = function(element){
         var targetElement = document.getElementById(element);
-        console.log(targetElement);
         targetElement.scrollIntoView();
     };
 
