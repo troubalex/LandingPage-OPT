@@ -18,16 +18,16 @@
                     <div class="col-xs-11 col-xs-offset-1 opt-navbar">
                         <img src="app/img/SaEx_logo_white_mobil.png" class="opt-navbar-element navbar-logo"/>
                         <div class="opt-navbar-element">
-                            <a ng-click="anchor()" href="">Registrer deg</a>
+                            <a href="" ng-click="goToElement('pts')">Registrer deg</a>
                         </div>
                         <div class="opt-navbar-element" >
-                            <a ng-click="logIn()" href="">Logg inn</a>
+                            <a ng-click="goToLogIn()" href="">Logg inn</a>
                         </div>
                         <div class="opt-navbar-element" >
-                            <a href="##faq">Ofte Stilte Spørsmål</a>
+                            <a href="" ng-click="goToElement('faq')">Ofte Stilte Spørsmål</a>
                         </div>
                         <div class="opt-navbar-element" >
-                            <a href="##pts">Våre Trenere</a>
+                            <a href="" ng-click="goToElement('pts')">Våre Trenere</a>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                     </div>
 
                     <div class="col-md-5 col-xs-12 col-md-offset-1">
-                        <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="choosePT()">Velg din trener nå</button>
+                        <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="openRandomPtModal()">Velg din trener nå</button>
                         <div class="margin-black">
                             <p>Kun 795,- i måneden uten bindingstid
                             <br> 30 dagers penger tilbake garanti</p>
@@ -161,6 +161,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container-fluid white-area" id="faq">
             <div class="padding-area">
                 <div class="col-md-12">

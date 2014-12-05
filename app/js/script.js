@@ -1,13 +1,7 @@
 /* global angular, mixpanel*/
 
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies', 'PTmodal']);
-landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $http, $cookieStore, $location, $anchorScroll, $modal, $log) {
-
-    var counter = 0;
-    $scope.PTs = [];
-    var currentPT = null;
-    var shakePT = false;
-    var modalSize = null;
+landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $http, $cookieStore, $location, $modal, $log) {
 
     $scope.showModal = false;
     $scope.modalInstance = null;
@@ -95,7 +89,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
                 path: 'app/text/per.html',
                 sideImg: 'app/img/per.jpg',
                 hqImg: 'app/img/per.jpg',
-
             },
             {
                 image: 'app/img/nikita.jpg',
@@ -107,40 +100,13 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         ];
     };
 
-    $scope.$watch(function() {
-        if ($window.innerWidth < 650) {
-            modalSize = "sm";
-        } else {
-            modalSize = " ";
-        }
-    });
-
-    $scope.anchor = function() {
-        $location.hash('third-layer');
-        $anchorScroll();
+    $scope.goToElement = function(element){
+        var targetElement = document.getElementById(element);
+        console.log(targetElement);
+        targetElement.scrollIntoView();
     };
 
-    $scope.choosePT = function() {
-        var tmp = {
-                id: ''
-            };
-            /* quick fix 
-            This could go for ever, one should try to increase the random nr until
-            one hits a PT who are not fullbooked
-            */
-        while (tmp.id === '') {
-            var decimals = Math.random() * ($scope.pts.length - 0);
-            var random = Math.floor(decimals);
-            tmp = $scope.pts[random];
-        }
-
-        currentPT = tmp;
-        open(modalSize);
-        $scope.showModal = true;
-        mixpanel.track("User pressed 'Meld deg på her'");
-    };
-
-    $scope.logIn = function() {
+    $scope.goToLogIn = function() {
         $window.location.href = 'http://app.online-pt.no/#/';
     };
 
@@ -165,6 +131,14 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
         $scope.modalInstance.result.then(function() {
             mixpanel.track("User closes modal");
         });
+    };
+
+    $scope.openRandomPtModal = function() {
+
+        var randomIndex = Math.floor(Math.random() * ($scope.pts.length - 3)); // -3 since the last 2 pts are unavailable
+        $scope.openPtModal(randomIndex);
+
+        mixpanel.track("User clicked 'Velg din trener nå'");
     };
 
 });
