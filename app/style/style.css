@@ -47,6 +47,10 @@ a {
     line-height: 1.414;
 }
 
+.credits{
+    font-size: 10px;
+}
+
 .screenshot {
     width: 100%;
     padding-top: 2em;
@@ -568,6 +572,11 @@ a:hover {
         background-size: 125%;
     }
 }
+@media (max-width: 800px) {
+    .background-image {
+        background-size: 150%;
+    }
+}
 @media(max-width: 650px) {
     body {
         font-size: 12px;
@@ -577,7 +586,7 @@ a:hover {
         font-size: 1.777em;
     }
     .background-image {
-        background: url(../img/marathon-hero-img.png) no-repeat right;
+        background: url(../img/marathon-hero-img.jpg) no-repeat right;
         background-size: 150%;
     }
     #orange-picture, #white-picture {
@@ -591,7 +600,7 @@ a:hover {
         padding-left: 0;
     }
 }
-@media(max-width: 560px) {
+@media(max-width: 590px) {
     .menu {
         display: none;
     }
