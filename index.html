@@ -12,6 +12,7 @@
 
 <body ng-controller="landingPageCtrl" ng-init="init()">
     <div class="page-container">
+
         <div class="img-container">
             <div class="background-image img-responsive">
                 <div class="row">
@@ -37,39 +38,13 @@
                         <h2>Bli din egen superhelt.</h2>
                     </div>
                 </div>
-                <div class="col-xs-12">
-                    <div id="angle-down-grey">
-                        <i class="fa fa-angle-down fa-3x  faa-bounce animated"></i>
-                    </div>
-                </div>
             </div>
         </div>
 
-        <div class="container-fluid black-area">
-
-            <div class="row">
-                <div class="col-md-5 col-xs-12 col-md-offset-1 padding">
-                    <p class="text-1st-slide">Din egen skreddersydde trenings- og kostholdsplan</p>
-                    <p class="text-1st-slide">Din personlige trener oppdaterer planer og utfordrer deg i takt med din fremgang</p>
-                    <p class="text-1st-slide">Du blir fulgt opp på treningsplaner, teknikk og motivasjon</p>
-                </div>
-
-                <div class="col-md-5 col-xs-12 col-md-offset-1 padding">
-                    <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="goToElement('pts')">Kom i gang nå</button>
-                    <div class="margin-black">
-                        <p>Kun 795,- i måneden uten bindingstid
-                        <br>30 dagers penger tilbake garanti</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10 padding" id="description">
-                    <p class="text-proxima-light">Web-tjenesten samler all kontakt mellom deg og din PT på et sted. Her finner du treningsplan, kostholdsveiledning og kommunikasjon i en løsning. </p>
-                </div>
-            </div>
-            
+        <div class="slide banner-slide black-area" id="faq">
+            <h2>Din personlige trener - på nett</h2>
+            <p class="text-proxima-light">Få en trener som kjenner deg og forstår din hverdag</p>
+            <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="goToElement('pts')">Velg din trener nå</button>
         </div>
 
         <div class="container-fluid orange-area" id="second-layer">
@@ -79,10 +54,10 @@
                         <img id="orange-picture" src="app/img/screenie-chat.svg" alt="Screen chat">
                     </div>
                     <div class="col-md-5 col-md-offset-1 col-xs-12">
-                        <h2>Tett på</h2>
-                        <p class="text-proxima-light">En personlig trener som følger deg opp</p>
-                        <p class="text-proxima-light">Send og motta meldinger</p>
-                        <p class="text-proxima-light">Få tilbakemeldinger fra din personlige trener</p>
+                        <h2>Alt på ett sted</h2>
+                        <p class="text-proxima-light">Tren når du vil, hvor du vil</p>
+                        <p class="text-proxima-light">Snakk med en flink personlig trener</p>
+                        <p class="text-proxima-light">Diskuter fremgang via PC, mobil eller nettbrett</p>
                         <button ng-click="goToElement('pts')" id="btn-orange" type="button" class="btn btn-default btn-lg text-proxima-light">Kom i gang nå</button>
                         <p id="padding-price">Kun 795,- i måneden uten bindingstid
                         <br>30 dagers penger tilbake garanti</p>
@@ -92,7 +67,7 @@
         </div>
 
         <div class="container-fluid light-blue">
-            <p class="sales-argument-text">Til prisen av én ordinær PT-time får du nå oppfølging en hel måned. <a ng-click="anchor()" class="call-to-action"> Start nå! </a>
+            <p class="sales-argument-text">Til prisen av én ordinær PT-time får du nå oppfølging en hel måned. <a ng-click="goToElement('pts')" class="call-to-action"> Start nå! </a>
             </p>
         </div>
 
@@ -100,10 +75,10 @@
             <div class="padding-area">
                 <div class="row">
                     <div class="col-md-5 col-md-offset-1 col-xs-12">
-                        <h2>Personlig</h2>
-                        <p class="text-proxima-light">Tilpasset treningsprogram</p>
-                        <p class="text-proxima-light">Løpende kostholdsråd</p>
-                        <p class="text-proxima-light">Alltid oppdatert</p>
+                        <h2>Mer energi og overskudd</h2>
+                        <p class="text-proxima-light">Uansett hva du streber etter, så vil din trener gi deg konkrete kostholdsråd for å nå dine mål.</p>
+                        <p class="text-proxima-light">Du vil få forslag til gode måltider, tilpasset dine behov.</p>
+                        <p class="text-proxima-light">Spis rett, men spis godt!</p>
 
                         <button ng-click="goToElement('pts')" id="btn-white" type="button" class="btn btn-default btn-lg text-proxima-light">Kom i gang nå</button>
                         <p id="padding-price">Kun 795,- i måneden uten bindingstid
@@ -119,6 +94,13 @@
         <div class="container-fluid pistachio-area">
             <p class="sales-argument-text">Bli en bedre versjon av deg selv for prisen av en kopp kaffe om dagen . <a ng-click="goToElement('pts')">Kom i gang nå! </a>
             </p>
+        </div>
+
+        <div class="slide banner-slide orange-area" id="faq">
+            <h2>Kom i drømmeform!</h2>
+            <p class="text-proxima-light">Få konkrete resultater med et program som oppdateres etter hvert som du ser fremgang.</p>
+            <p class="text-proxima-light">Bli fulgt opp og motivert hele veien til mål.</p>
+            <p class="text-proxima-light">Chat med din personlige trener når som helst og hvor som helst.</p>
         </div>
 
         <div class="container-fluid black-area" id="pts">
@@ -197,6 +179,46 @@
                 </div>
             </div>
         </div>
+
+        <div class="container-fluid white-area" id="faq">
+            <div class="padding-area">
+                <div class="col-md-12" id="buttom-padding">
+                    <h2>Om tjenesten</h2>
+
+                    <div class="col-md-12">
+                        <h3 class="faq-question">Nettløsning:</h3>
+                        <p class="faq-answer">
+                            SATS ELIXIA Online Personlig Trener er en webplattform tilgjengelig på PC, nettbrett og mobil. Via din profil vil din personlige trener gi deg treningsplaner, kostholdstips og oppfølging på din fremgang online. For prisen av en PT-time får du mye av den samme verdien som du får med en vanlig personlig trener, bortsett fra at din trener ikke er tilstede akkurat når du gjennomfører treningen.
+                        </p>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h3 class="faq-question">Registrering og oppstart:</h3>
+                        <ul class="faq-answer">
+                            <li>Du registrerer deg ved å velge en presonlig trener du ønsker skal følge deg opp via nett, og opprette en profil.</li>
+                            <li>Deretter fyller du inn informasjon om deg, dine trenings og kostholdsvaner, og hvilke mål du har.</li>
+                            <li>Denne informasjonen bruker din personlige trener til å sette opp et treningsprogram og kostholdsveiledning som er tilpasset deg og dine målsetninger.</li>
+                            <li>Din personlige trener vil følge deg opp inne i løsningen via meldinger.</li>
+                            <li>Du kan stille spørsmål, få tips og råd, og din trener vil veilede deg hele veien.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h3 class="faq-question">Inne i løsningen får du:</h3>
+                        <ul class="faq-answer">
+                            <li>Din egen personlige trener som kjenner dine behov og din hverdag</li>
+                            <li>Skreddersydd treningsplan som holdes oppdatert etter din progresjon</li>
+                            <li>Tilpassede kostholdstips og ernæringsveildedning som passer deg, enten du ønsker enkle råd og tips eller detaljerte kostholdsplaner</li>
+                            <li>Oppfølging og inspirasjon fra din trener etter ditt ønske, alt fra flere ganger i uken til noen ganger i måneden. Hva som er best for deg avtaler du med din trener.</li>
+                            <li>Muligheten til å stille spørsmål direkte til din trener når som helst</li>
+                            <li>Du får tilgang til din PT og din profil med alt innhold på PC, nettbrett og smarttelefon uansett hvor du er i verden</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid orange-area">
             <div class="padding-area">
                 <div class="col-xs-6 col-md-5 col-md-offset-1">
@@ -236,6 +258,7 @@
 <link rel="stylesheet" href="app/style/bounce.css">
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 <script type="text/javascript" src="app/js/landing_page_controller.js"></script>
+<script type="text/javascript" src="app/js/routing.js"></script>
 <script type="text/javascript" src="app/modal/pt_modal_controller.js"></script>
 <script type="text/javascript" src="app/js/ui-bootstrap.js"></script>
 <script type="text/javascript" src="app/js/angular-resource.js"></script>

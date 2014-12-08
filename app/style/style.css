@@ -81,6 +81,21 @@ a {
   color: #AAF0F3;
 }
 
+.slide{
+    padding: 3em;
+    padding-top: 6.5em;
+    padding-bottom: 6.5em;
+    font-family: proxima-nova;
+}
+
+.banner-slide{
+    text-align: center;
+}
+
+.banner-slide button{
+    margin-top: 20px;
+}
+
 .side-img{
   width: 100%;
 }
@@ -464,6 +479,7 @@ a:hover {
 }
 .padding-area {
     padding-top: 6.25em;
+    padding-bottom: 6.25em;
 }
 .padding-btn {
     padding-top: 100px;
@@ -474,6 +490,11 @@ a:hover {
 }
 .white-area {
     background-color: #F7F7F7;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+}
+.gray-area{
+    background-color: #585858;
     border-top: 1px solid #E6E6E6;
     border-bottom: 1px solid #E6E6E6;
 }
