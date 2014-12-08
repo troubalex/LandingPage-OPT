@@ -47,6 +47,12 @@ a {
     line-height: 1.414;
 }
 
+.screenshot {
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
 .opt-navbar {
   margin-left: auto;
   margin-right: auto;
