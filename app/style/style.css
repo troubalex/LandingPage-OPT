@@ -61,6 +61,12 @@ a {
   background-color: rgba(51, 51, 51, 0.75);
 }
 
+.opt-navbar-section{
+    position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .opt-navbar-element {
   position: relative;
   top: 50%;
@@ -282,10 +288,11 @@ a:hover {
     margin-right: auto;
 }
 .background-image {
-    background: url(../img/hero-img.jpg);
+    background: url(../img/marathon-hero-img.png);
     background-repeat: no-repeat;
     background-position: right;
     margin-bottom: -4px;
+    height: 100%;
 }
 .background-image .row {
     margin-left: 0;
@@ -544,14 +551,7 @@ a:hover {
     border-radius: 3px;
     border-bottom: 3px solid #BF6403;
 }
-@media (max-width: 980px) {
-    /*.text-proxima-light {
-        text-align: center;
-    }
-    .orange-padding {
-        margin-left: 0px;
-    }*/
-}
+
 @media (max-width: 900px) {
     #opt-header {
         font-size: 45px;
@@ -560,11 +560,12 @@ a:hover {
         font-size: 30px;
     }
     .background-opacity {
-        background: rgba(51, 51, 51, 0);
+        background: rgba(51, 51, 51, 0.4);
+        padding-right: 101px;
     }
-    /*    .background-image {
-    background: url(../img/hero-img-mobile@2x.jpg) no-repeat;
-}*/
+    .background-image {
+        background-size: 125%;
+    }
 }
 @media(max-width: 650px) {
     body {
@@ -575,7 +576,7 @@ a:hover {
         font-size: 1.777em;
     }
     .background-image {
-        background: url(../img/hero-img-mobile@2x.jpg) no-repeat right;
+        background: url(../img/marathon-hero-img.png) no-repeat right;
         background-size: 150%;
     }
     #orange-picture, #white-picture {
@@ -587,7 +588,11 @@ a:hover {
     .background-opacity {
         background: rgba(51, 51, 51, 0.4);
         padding-right: 101px;
-        margin-top: 55%;
+    }
+}
+@media(max-width: 560px) {
+    .menu {
+        display: none;
     }
 }
 @media(max-width: 470px) {

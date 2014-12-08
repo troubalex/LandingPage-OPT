@@ -13,11 +13,13 @@
 <body ng-controller="landingPageCtrl" ng-init="init()">
     <div class="page-container">
 
-        <div class="img-container">
-            <div class="background-image img-responsive">
-                <div class="row">
-                    <div class="col-xs-11 col-xs-offset-1 opt-navbar">
-                        <img src="app/img/SaEx_logo_white_mobil.png" class="opt-navbar-element navbar-logo"/>
+        <div class="background-image img-responsive">
+            <div class="row">
+                <div class="opt-navbar col-md-12">
+                    <div class="opt-navbar-section">
+                        <img src="app/img/SaEx_logo_white_mobil.png" class="navbar-logo opt-navbar-element"/>
+                    </div>
+                    <div class="opt-navbar-section menu">
                         <div class="opt-navbar-element">
                             <a href="" ng-click="goToElement('pts')">Registrer deg</a>
                         </div>
@@ -31,12 +33,13 @@
                             <a href="" ng-click="goToElement('pts')">Våre Trenere</a>
                         </div>
                     </div>
+                    
                 </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-7 col-md-offset-1 background-opacity">
-                        <h1>Online Personlig Trener</h1>
-                        <h2>Bli din egen superhelt.</h2>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="background-opacity">
+                    <h1>Online Personlig Trener</h1>
+                    <h2>Bli din egen superhelt.</h2>
                 </div>
             </div>
         </div>
