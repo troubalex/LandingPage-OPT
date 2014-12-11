@@ -564,9 +564,6 @@ a:hover {
     .background-opacity {
         padding-right: 101px;
     }
-/*    .title-slide {
-        background-size: 125%;
-    }*/
 }
 @media(max-width: 650px) {
     body {
