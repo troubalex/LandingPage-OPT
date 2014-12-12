@@ -1,12 +1,8 @@
 /* global angular, mixpanel*/
 
-var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
+var landingPage = angular.module('landingPage', ['ui.bootstrap']);
 
-landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $http, $cookieStore, $location, $modal, $log) {
-
-    $scope.showModal = false;
-    $scope.modalInstance = null;
-    $scope.showChoosePT = false;
+landingPage.controller('landingPageCtrl', function($scope, $window, $modal) {
 
     $scope.init = function() {
         mixpanel.track('User viewed sales page');
