@@ -1,6 +1,7 @@
 /* global angular, mixpanel*/
 
 var landingPage = angular.module('landingPage', ['ui.bootstrap', 'ngResource', 'ngCookies']);
+
 landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $http, $cookieStore, $location, $modal, $log) {
 
     $scope.showModal = false;
@@ -58,14 +59,6 @@ landingPage.controller('landingPageCtrl', function($scope, $window, $timeout, $h
                 PTid: '545385172e34da0a008d0041',
                 sideImg: 'app/img/shamal_side.jpg',
                 hqImg: 'app/img/shamal_hq.jpg',
-            },
-            {
-                image: 'app/img/inga_small.jpg',
-                name: 'Inga Aune',
-                path: 'app/text/inga.html',
-                PTid: '547cc81b94bead09007e3830',
-                sideImg: 'app/img/inga_side.jpg',
-                hqImg: 'app/img/inga_small.jpg',
             },
             {
                 image: 'app/img/tone_small.jpg',
