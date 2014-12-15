@@ -6,14 +6,12 @@ var paths = {
     scss: './app/**/*.scss'
 };
 
-gulp.task('default', ['webserver', 'sass','watch']);
+gulp.task('default', ['webserver','watch']);
 
 gulp.task('webserver', function() {
 	gulp.src('./')
 	.pipe(webserver());
-
 });
-
 
 gulp.task('sass', function () {
   gulp.src('./app/scss/*.scss')
@@ -23,14 +21,12 @@ gulp.task('sass', function () {
    .pipe(gulp.dest('./app/style'));
 });
 
-
 gulp.task('html', function () {
 	gulp.src('./app/*.html');
 });
 
-
 gulp.task('watch', function () {
 	gulp.watch(['./app/*.html'], ['html']);
-	gulp.watch(['./app/scss/*.scss', './app/scss/**/*.scss'], ['sass']);
+	//gulp.watch(['./app/scss/*.scss', './app/scss/**/*.scss'], ['sass']);
 
 });

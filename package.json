@@ -4,6 +4,7 @@
   "description": "SalesPage",
   "main": "gulpfile.js",
   "dependencies": {
+    "express": "^4.10.6",
     "gulp": "^3.8.10",
     "gulp-sass": "^1.2.2",
     "gulp-webserver": "^0.8.7",
