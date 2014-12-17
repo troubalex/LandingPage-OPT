@@ -50,6 +50,12 @@ small, .font_small {
     margin-top: 2em;
 }
 
+.feature-description{
+    font-size: 2em;
+    margin-top: 2em !important;
+    margin-bottom: 1em !important;
+}
+
 blockquote {
     font-size: 1.333em;
     font-family: "museo-slab", serif;
