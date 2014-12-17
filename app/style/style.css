@@ -113,11 +113,31 @@ a {
   color: #AAF0F3;
 }
 
+.top-slide{
+    min-height: 200px;
+    width: 100%;
+    padding: 0;
+    font-size: 2.369em;
+}
+
 .slide{
     padding: 3em;
     padding-top: 6.5em;
     padding-bottom: 6.5em;
     font-family: proxima-nova;
+}
+
+.fade-slide{
+    padding-top: 1em;
+    font-family: proxima-nova;
+    font-size: 2.4em;
+    min-height: 170px;
+    text-align: center;
+}
+
+.slide .top-slide {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .banner-slide{
@@ -167,10 +187,6 @@ a {
   .hq-img{
     display: none;
   }
-}
-
-.faq-column{
-
 }
 
 .faq-question{
