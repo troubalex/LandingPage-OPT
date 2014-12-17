@@ -34,6 +34,22 @@ h4 {
 small, .font_small {
     font-size: 0.75em;
 }
+
+.site-title {
+    text-shadow: 0 1px 0 #333;
+}
+
+.centered {
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 2em;
+}
+.section-cta {
+    margin-top: 2em;
+}
+
 blockquote {
     font-size: 1.333em;
     font-family: "museo-slab", serif;
@@ -252,6 +268,10 @@ a:hover {
     font-family: proxima-nova;
     font-size: 1.333em;
 }
+.text-intro {
+    font-family: proxima-nova;
+    font-size: 1.777em;
+}
 .orange-padding {
     margin-left: 110px;
 }
@@ -262,7 +282,11 @@ a:hover {
     background-color: grey;
 }
 .background-opacity {
-    background: rgba(51, 51, 51, 0.4);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    );
     margin-top: 25%;
     color: #FFFFFF;
     padding-top: 1.56em;
@@ -272,7 +296,7 @@ a:hover {
     font-weight: 100 !important;
 }
 .sales-argument-text {
-    font-size: 1.333em;
+    font-size: 1.777em;
     font-family: "museo-slab", serif;
     font-style: italic;
     font-weight: 300;
@@ -292,9 +316,11 @@ a:hover {
     margin-right: auto;
 }
 .title-slide {
-    background: url(../img/marathon-hero-img.jpg);
-    background-repeat: no-repeat;
-    background-position: top;
+    background: url(../img/marathon-hero-img.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height: 100%;
 }
 .title-slide .row {
@@ -517,7 +543,6 @@ a:hover {
     background-color: #F3FFE1;
     padding-bottom: 53px;
     padding-top: 53px;
-    text-align: center;
 }
 .padding {
     margin-top: 3.157em;

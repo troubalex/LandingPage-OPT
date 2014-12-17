@@ -36,10 +36,10 @@
                     
                 </div>
             </div>
-            <div class="row">
-                <div class="background-opacity col-md-11">
-                    <h1>Online Personlig Trener</h1>
-                    <h2>Bli din egen superhelt.</h2>
+            <div class="row background-opacity">
+                <div class="col-md-11 col-md-offset-1">
+                    <h1 class="site-title">Level up!</h1>
+                    <h2 class="site-title">Kosthold og trening som gir resultater.</h2>
                     <p class="credits">
                         Foto: <a href="https://www.flickr.com/photos/andymoss461/15475057366">Andy Moss</a>
                     </p>
@@ -47,77 +47,96 @@
             </div>
         </div>
 
-        <div class="slide banner-slide black-area">
-            <h2>Din personlige trener - på nett.</h2>
-            <p class="text-proxima-light">Få en trener som kjenner deg og forstår din hverdag</p>
-            <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="goToElement('pts')">Velg din trener nå</button>
+        <div class="slide black-area">
+            <div class="row">
+                <div class="col-xs-12 col-md-5 col-md-offset-1">
+                    <p class="text-intro">
+                        Ingenting kommer gratis! Du må jobbe målrettet og fokusere på de små forbedringene fra uke til uke.
+                    </p>
+
+                    <p class="text-intro">
+                        Det er dette Level Up hjelper deg med. Her får du verktøyene og oppfølgingen du trenger hele veien til mål.
+                    </p>
+
+                    <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg section-cta" ng-click="goToElement('pts')">Kom i gang og velg din trener</button>
+                    <p id="padding-price">Kun 795,- i måneden uten bindingstid
+                    <br>30 dagers penger tilbake garanti</p>
+
+                </div>
+
+                <div class="col-xs-12 col-md-5">
+
+                    <p class="text-1st-slide">Level Up er en nettplattform hvor du får alle verktøyene for å nå målene dine. Du får:</p>
+
+                    <ul class="text-1st-slide">
+                        <li>Personlig tilpasset kostholdsveiledning</li>
+                        <li>Skreddersydde treningsprogram som oppdateres etter ditt behov</li>
+                        <li>Logging av trening og dine resultater</li>
+                        <li>Ukentlig oppfølging av en kvalifisert personlig trener som pusher deg og holder deg motivert.</li>
+                    </ul>
+
+                    <p class="text-1st-slide">
+                        Følg med på din fremgang fra milepæl til milepæl, og se de første målbare resultatene allerede etter få uker. Du og din trener setter sammen konkrete mål som dere skal jobbe mot.
+                    </p>
+
+                    <p class="text-1st-slide">Alt er tilpasset de resultatene <i>du</i> er ute etter.</p>
+
+                </div>
+            </div>
         </div>
 
-        <div class="container-fluid orange-area" id="second-layer">
+        <div class="container-fluid white-area" id="second-layer">
             <div class="padding-area">
-                <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <img id="orange-picture" src="app/img/screenie-chat.svg" alt="Screen chat">
+                <div class="row section-header">
+                    <div class="col-xs-12">
+                        <h2 class="centered">Alt du trenger for å komme deg dit</h2>
                     </div>
-                    <div class="col-md-5 col-md-offset-1 col-xs-12">
-                        <h2>Alt på ett sted</h2>
-                        <p class="text-proxima-light">Tren når du vil, hvor du vil</p>
-                        <p class="text-proxima-light">Snakk med en flink personlig trener</p>
-                        <p class="text-proxima-light">Diskuter fremgang via PC, mobil eller nettbrett</p>
-                        <button ng-click="goToElement('pts')" id="btn-orange" type="button" class="btn btn-default btn-lg text-proxima-light">Kom i gang nå</button>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <h3>Kostholdsplan</h3>
+                        <p class="text-1st-slide">For å nå dine mål er det viktig å spise sunt, men også rett for deg og din hverdag. I Level Up får du en detaljert kostholdsplan fra din trener som er personlig tilpasset dine mål og din trening.</p> 
+
+                        <p class="text-1st-slide">Dette kan være alt fra oppskrifter på sunne måltider for hele familien, ned til detaljerte planer med antall gram og kalorier. Vi leverer det du trenger! </p>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <h3>Treningsprogram</h3>
+                        <p class="text-1st-slide">Du får et treningsprogram som er designet for akkurat deg. Din trener vil lage økter som passer din travle hverdag, tilpasset ditt nivå uansett om du aldri har trent før eller allerede trener mye. </p>
+                        <p class="text-1st-slide">Din treningsplan vil fokusere på at du skal nå ditt mål, og har ukesplaner med økter som er spisset etter dine behov.<p>
+                   </div>
+                    <div class="col-md-4 col-xs-12">
+                        <h3>Resultater</h3>
+                        <p class="text-1st-slide">Hold oversikt over din trening og din fremgang. Logg dine treningsøkter, sett deg mål og registrer din fremgang.</p>
+
+                        <p class="text-1st-slide"> Se hvordan treningsresultatene blir bedre eller vekten går ned. Ved å ukentlig registrere dine resultater kan du hele tiden følge med på hvordan du utvikler deg og hvor langt det er igjen til mål. </p>
+                   </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 col-md-offset-4">
+                        <button ng-click="goToElement('pts')" id="btn-white" type="button" class="btn btn-default btn-lg text-proxima-light">Kom i gang og velg din trener</button>
                         <p id="padding-price">Kun 795,- i måneden uten bindingstid
                         <br>30 dagers penger tilbake garanti</p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container-fluid light-blue">
-            <p class="sales-argument-text">Til prisen av én ordinær PT-time får du nå oppfølging en hel måned. <a ng-click="goToElement('pts')" class="call-to-action"> Start nå! </a>
-            </p>
-        </div>
-
-        <div class="container-fluid white-area">
-            <div class="padding-area">
-                <div class="row">
-                    <div class="col-md-5 col-md-offset-1 col-xs-12">
-                        <h2>Mer energi og overskudd</h2>
-                        <p class="text-proxima-light">Uansett hva du streber etter, så vil din trener gi deg konkrete kostholdsråd for å nå dine mål.</p>
-                        <p class="text-proxima-light">Du vil få forslag til gode måltider, tilpasset dine behov.</p>
-                        <p class="text-proxima-light">Spis rett, men spis godt!</p>
-
-                        <button ng-click="goToElement('pts')" id="btn-white" type="button" class="btn btn-default btn-lg text-proxima-light">Kom i gang nå</button>
-                        <p id="padding-price">Kun 795,- i måneden uten bindingstid
-                        <br>30 dagers penger tilbake garanti</p>
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <img id="white-picture" src="app/img/screenie-plan.svg" alt="Screen plan">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid pistachio-area">
-            <p class="sales-argument-text">Bli en bedre versjon av deg selv for prisen av en kopp kaffe om dagen. <a ng-click="goToElement('pts')">Kom i gang nå! </a>
-            </p>
-        </div>
-
-        <div class="slide banner-slide orange-area">
-            <h2>Kom i drømmeform!</h2>
-            <p class="text-proxima-light">Få konkrete resultater med et program som oppdateres etter hvert som du ser fremgang.</p>
-            <p class="text-proxima-light">Bli fulgt opp og motivert hele veien til mål.</p>
-            <p class="text-proxima-light">Chat med din personlige trener når som helst og hvor som helst.</p>
         </div>
 
         <div class="container-fluid black-area" id="pts">
             <div class="padding-area">
+                <div class="row section-header">
+                    <div class="col-xs-12">
+                        <h2 class="centered">Din trener</h2>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-5 col-xs-12 col-md-offset-1">
-                        <h2>Faglig sterk</h2>
-                        <p class="text-1st-slide">Våre personlige trenere jobber hardt for at du skal nå dine målsetninger</p>
+                        <p class="text-1st-slide">Vi har mange dyktige trenenere som er kvalifiserte innen ulike spesialfelt. Du velger den treneren som passer for deg, som kan hjelpe deg på veien mot ditt mål og er god på det du liker å trene.</p>
+
+                        <p class="text-1st-slide"> Din trener vil hjelpe deg å sette konkrete mål og holde deg motivert gjennom ukentlig oppfølging. Planene dine vil alltid holdes oppdatert slik at du får maksimalt utbytte og fremgang av den innsatsen du legger inn. 
+                        </p>
                     </div>
 
-                    <div class="col-md-5 col-xs-12 col-md-offset-1">
+                    <div class="col-md-5 col-xs-12">
                         <button id="btn-black-top" type="button" class="text-proxima-light btn btn-default btn-lg" ng-click="openRandomPtModal()">Velg din trener nå</button>
                         <div class="margin-black">
                             <p>Kun 795,- i måneden uten bindingstid
@@ -127,8 +146,6 @@
                 </div>
                 <div class="row trainer-thumbs" id="third-layer">
                     <div class="col-xs-12 col-md-10 col-md-offset-1">
-                        <h3>Finn din trener blant våre beste</h3>
-
                         <div ng-repeat="pt in pts">
                             <div ng-click="openPtModal($index)">
                                 <div class="thumbnail col-md-2 col-xs-4">
@@ -150,120 +167,93 @@
             </div>
         </div>
 
+        <div class="container-fluid light-blue">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="sales-argument-text centered">Spis rett. Tren rett. Level Up!</p>
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid white-area">
             <div class="padding-area">
-                <div class="col-md-12" id="buttom-padding">
-                    <h2>Om tjenesten</h2>
-
-                    <div class="col-md-6">
-                        <h3 class="faq-question">Nettløsning:</h3>
-                        <p class="faq-answer">
-                            SATS ELIXIA Online Personlig Trener er en webplattform tilgjengelig på PC, nettbrett og mobil. Via din profil vil din personlige trener gi deg treningsplaner, kostholdstips og oppfølging på din fremgang online. For prisen av en PT-time får du mye av den samme verdien som du får med en vanlig personlig trener, bortsett fra at din trener ikke er tilstede akkurat når du gjennomfører treningen.
-                        </p>
-                    </div>
-
-                    <div class="col-md-6">
-                        <img src="app/img/screenshot_1.png" class="screenshot">
-                    </div>
-
-                    <div class="col-md-12">
-                        <h3 class="faq-question">Registrering og oppstart:</h3>
-                        <ul class="faq-answer">
-                            <li>Du registrerer deg ved å velge en presonlig trener du ønsker skal følge deg opp via nett, og opprette en profil.</li>
-                            <li>Deretter fyller du inn informasjon om deg, dine trenings og kostholdsvaner, og hvilke mål du har.</li>
-                            <li>Denne informasjonen bruker din personlige trener til å sette opp et treningsprogram og kostholdsveiledning som er tilpasset deg og dine målsetninger.</li>
-                            <li>Din personlige trener vil følge deg opp inne i løsningen via meldinger.</li>
-                            <li>Du kan stille spørsmål, få tips og råd, og din trener vil veilede deg hele veien.</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-12">
-                        <h3 class="faq-question">Inne i løsningen får du:</h3>
-                        <ul class="faq-answer">
-                            <li>Din egen personlige trener som kjenner dine behov og din hverdag</li>
-                            <li>Skreddersydd treningsplan som holdes oppdatert etter din progresjon</li>
-                            <li>Tilpassede kostholdstips og ernæringsveildedning som passer deg, enten du ønsker enkle råd og tips eller detaljerte kostholdsplaner</li>
-                            <li>Oppfølging og inspirasjon fra din trener etter ditt ønske, alt fra flere ganger i uken til noen ganger i måneden. Hva som er best for deg avtaler du med din trener.</li>
-                            <li>Muligheten til å stille spørsmål direkte til din trener når som helst</li>
-                            <li>Du får tilgang til din PT og din profil med alt innhold på PC, nettbrett og smarttelefon uansett hvor du er i verden</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-12">
-                        <button ng-click="goToElement('pts')" id="btn-white" type="button" class="btn btn-default btn-lg text-proxima-light">Kom i gang nå</button>
-                    </div>
-
+            <div class="row section-header">
+                <div class="col-md-12">
+                    <h2 class="centered">Om tjenesten</h2>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-1">
+                    <h3 class="faq-question">Nettløsning:</h3>
+                    <p class="faq-answer">
+                        Level UP er en webplattform tilgjengelig på PC, nettbrett og mobil uansett hvor du er i verden. Via din profil vil din personlige trener gi deg treningsprogram, kostholdsplaner og oppfølging på din fremgang online.
+                    </p>
+                    <h3 class="faq-question">Du får:</h3>
+                    <p class="faq-answer">
+                        En erfaren personlig trener som følger deg opp gjennom Level UP og tilpasser et personlig trenings- og kostholdsopplegg for deg og ditt mål:
+                    </p>
+                    <ul class="faq-answer">
+                        <li>Tren på en måte som passer deg og din kalender med ditt eget treningsprogram </li>
+                        <li>Spis rett mat for deg og din hverdag. Det er enkelt å lage sunn mat, og ja, du kan spise deg mett til hvert måltid med god samvittighet</li>
+                        <li>Få hjelp til å sette gode og realistiske mål som gjør det lett å se fremgang og holde motivasjonen oppe </li>
+                        <li>Logg din trening og se resultatene! </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="app/img/screenshot_1.png" class="screenshot">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-11 col-md-offset-1">
+                    <h3 class="faq-question">Registrering og oppstart:</h3>
+                    <ul class="faq-answer">
+                        <li>Opprett en profil via våre nettsider og utifra ditt mål finner vi trenere som passer deg.</li>
+                        <li>Velg din trener og fyll inn informasjon om deg, dine trenings og kostholdsvaner, og hvilke mål du har, slik at din trener kan lage et program til akkurat deg</li>
+                        <li>Motta treningsplaner og kostholdsprogram som er tilpasset deg og dine målsetninger</li>
+                        <li>Logg din trening og følg med på dine resultater og fremgang</li>
+                        <li>Din trener følger deg opp ukentlig inne i løsningen via meldinger og holder planene dine oppdatert etterhvert som du utvikler deg</li>
+                        <li>Du kan stille spørsmål, få tips og råd, og din trener vil veilede deg hele veien.</li>
+                    </ul>
+                </div>
+            </div>
             </div>
         </div>
 
-        <div class="container-fluid white-area" id="faq">
+        <div class="container-fluid pistachio-area" id="faq">
             <div class="padding-area">
-                <div class="col-md-12">
+                <div class="row section-header">
+                    <div class="col-md-12">
+                        <h2 class="centered">Ofte Stilte Spørsmål</h2>
+                    </div>
+                </div>
+                <div class="row">
                     <div id="buttom-padding">
-                        <h2>Ofte Stilte Spørsmål</h2>
+                        <div class="col-md-5 col-md-offset-1 faq-column">
+                            <h3 class="faq-question">Er jeg låst til én personlig trener?</h3>
+                            <p class="faq-answer">Du kan bytte trener når som helst, uansett hva grunnen måtte være.</p>
 
-                        <div class="col-md-6 faq-column">
-                            <h3 class="faq-question"> - Må jeg være medlem i SATS-ELIXIA?</h3>
-                            <p class="faq-answer">Nei, alle kan bli medlem i Online PT! Tjenesten forutsetter ikke medlemskap i noe treningssenter.</p>
-
-                            <h3 class="faq-question"> - Er jeg låst til én personlig trener?</h3>
+                            <h3 class="faq-question">Hva koster det?</h3>
                             <p class="faq-answer">
-                                Du kan bytte trener når som helst, uansett hva grunnen måtte være.
+                                Level up koster 795,- i måneden helt uten bindingstid. Dersom du binder deg til 3 måneder får du Level UP for 700,- i måneden, og dersom du binder deg til 6 måneder koster det kun 650,- per måned. Summen for antallet måneder du binder deg til blir trukket ved registrering, deretter blir prisen per måned trukket månedlig.
                             </p>
-
-                            <h3 class="faq-question"> - Hva koster det?</h3>
-                            <p class="faq-answer">Online Personlig Trener koster 795,- i måneden og har ingen bindingstid. Summen blir trukket månedlig.</p>
+                            <h3 class="faq-question">Har du andre spørsmål?</h3>
+                            <p class="faq-answer">Kontakt oss på <a href="mailto:online-pt.no">online-pt@iterate.no</a>
+                            </p>
                         </div>
                         
-                        <div class="col-md-6">
-                            <h3 class="faq-question"> - Hva skjer når jeg har registrert meg?</h3>
-                            <p class="faq-answer">
-                                Etter fullført registrering får du mulighet til å fortelle din personlige trener om deg selv.
-                                Din personlige trener bruker så denne informasjonen til å skreddersy et treningsopplegg for deg, i tillegg til å gi deg råd om kosthold som passer din hverdag.
-                                Du kommer til å bli fulgt opp jevnlig av din personlige trener. Sammen kan dere vurdere fremgang, og kontinuerlig sette nye treningsmål.
-                            </p class="faq-answer">
+                        <div class="col-md-5">
+                            <h3 class="faq-question">Hva skjer når jeg har registrert meg?</h3>
+                            <p class="faq-answer">Etter registrering får du mulighet til å fortelle din personlige trener om deg selv og dine mål. Din personlige trener bruker så denne informasjonen til å skreddersy et trenings- og kostholdsopplegg for deg og din hverdag. Du kommer til å bli fulgt opp ukentlig av din personlige trener. Sammen kan dere følge med på din fremgang, og kontinuerlig justere planene dine og sette nye treningsmål.</p>
 
-                            <h3 class="faq-question"> - Hva om jeg vil prøve Online PT, men ikke er helt sikker?</h3>
+                            <h3 class="faq-question">Hva om jeg vil prøve Level up, men ikke er helt sikker?</h3>
                             <p class="faq-answer">Alle får en prøveperiode på 30 dager. Hvis du ikke er fornøyd, så får du pengene tilbake. Det er bare å sende oss en e-post, så ordner vi resten.</p>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="container-fluid orange-area">
-            <div class="padding-area">
-                <div class="col-xs-6 col-md-6">
-                    <div>
-                        <p>
-                            <em>Akkurat nå får du abonnement for 795 kroner!</em>
-                            <p>
-                                <p><span style="text-decoration: line-through; display:inline;">Kr 995,-</span> i måneden
-                                    <br> Ingen bindingstid
-                                    <br> 30 dagers pengene tilbake-garanti
-                                    <br> 14 dagers angrerett
-                                    <br> Bytt PT hvis du ikke er fornøyd
-                                    <br>
-                                </p>
-                            </p>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-md-6">
-                    <ol>
-                        Det er enkelt å komme i gang:
-                        <li>Registrerer deg </li>
-                        <li>Fyll ut ditt skjema</li>
-                        <li>Din PT kontakter deg innen 24 timer</li>
-                        <li>Du mottar en tilpasset utfordring i løpet av noen få dager. Innen en uke har du et detaljert program på plass.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </body>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
